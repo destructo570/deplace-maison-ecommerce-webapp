@@ -7,13 +7,13 @@ function Info() {
         <p>Info</p>
         <ul>
           <li>
-            <a href="#">Faq</a>
+            <a href="google.com">Faq</a>
           </li>
           <li>
-            <a href="#">Returns</a>
+            <a href="google.com">Returns</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="google.com">Contact</a>
           </li>
         </ul>
       </div>

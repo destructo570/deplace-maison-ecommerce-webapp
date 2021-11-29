@@ -7,13 +7,13 @@ function Policy() {
         <p>Info</p>
         <ul>
           <li>
-            <a href="#">Terms</a>
+            <a href="google.com">Terms</a>
           </li>
           <li>
-            <a href="#">Privacy</a>
+            <a href="google.com">Privacy</a>
           </li>
           <li>
-            <a href="#">Cookie</a>
+            <a href="google.com">Cookie</a>
           </li>
         </ul>
       </div>
