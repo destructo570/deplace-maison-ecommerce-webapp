@@ -4,6 +4,7 @@ import {
   StyledDivider,
 } from "./styledComponents";
 import closeIcon from "../../assets/icons/close-fill.svg";
+import { Fragment } from "react";
 function CartOverlay(props) {
   return (
     <StyledCartOverlay>
@@ -15,6 +16,7 @@ function CartOverlay(props) {
         <img src={closeIcon} onClick={props.onClose} alt="Close cart" />
       </StyledCartHeader>
       <StyledDivider />
+      <Fragment>{props.children}</Fragment>
     </StyledCartOverlay>
   );
 }

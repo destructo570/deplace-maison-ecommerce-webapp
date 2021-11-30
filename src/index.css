@@ -9,3 +9,9 @@
   src: local("Cyberthrone"),
     url(./assets/fonts/cyberthrone.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: "TTrailer";
+  src: local("TTrailer"),
+    url(./assets/fonts/tt-trailer-med.ttf) format("truetype");
+}
