@@ -9,6 +9,7 @@ import Testimonials from "./components/testimonials/Testimonials";
 import Footer from "./components/footer/Footer";
 import Cart from "./components/cart/Cart";
 import { useState } from "react";
+import CartProvider from "./store/CartProvider";
 
 const themeLight = {
   color: {
@@ -30,18 +31,20 @@ function App() {
   };
   return (
     <ThemeProvider theme={themeLight}>
-      {isCartShown && <Cart onHideCart={onHideCart} />}
-      <div className="App">
-        <GlobalStyles />
-        <Navigation onShowCart={onShowCart} />
-        <main>
-          <Collections />
-          <ScrollingDivider />
-          <PromoInfo />
-          <Testimonials />
-          <Footer />
-        </main>
-      </div>
+      <CartProvider>
+        {isCartShown && <Cart onHideCart={onHideCart} />}
+        <div className="App">
+          <GlobalStyles />
+          <Navigation onShowCart={onShowCart} />
+          <main>
+            <Collections />
+            <ScrollingDivider />
+            <PromoInfo />
+            <Testimonials />
+            <Footer />
+          </main>
+        </div>
+      </CartProvider>
     </ThemeProvider>
   );
 }
