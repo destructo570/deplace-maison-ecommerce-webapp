@@ -8,7 +8,7 @@ import {
   StyledNavigation,
 } from "./styledComponents";
 
-function Navigation() {
+function Navigation(props) {
   return (
     <StyledNavigation>
       <StyledLogo href="#">
@@ -18,7 +18,9 @@ function Navigation() {
         <img src={nav} alt="nav menu"></img>
       </StyledNavIcon>
       <StyledCartItem>
-        Cart <span> 0</span>
+        <div onClick={props.onShowCart}>
+          Cart <span> 0</span>
+        </div>
       </StyledCartItem>
     </StyledNavigation>
   );
