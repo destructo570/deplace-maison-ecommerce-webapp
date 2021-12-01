@@ -20,6 +20,8 @@ export const StyledNavigationBar = styled.nav`
 
 export const StyledLogo = styled.a`
   width: 80px;
+  filter: ${({ isVisible, theme }) =>
+    isVisible ? theme.color.backgroundFilter : theme.color.primaryTextFilter};
 `;
 
 export const StyledNavIcon = styled.div`
@@ -28,6 +30,9 @@ export const StyledNavIcon = styled.div`
   &:hover {
     cursor: pointer;
   }
+
+  filter: ${({ isVisible, theme }) =>
+    isVisible ? theme.color.backgroundFilter : theme.color.primaryTextFilter};
 `;
 
 export const StyledCartItem = styled.div`
@@ -41,7 +46,6 @@ export const StyledCartItem = styled.div`
 
 export const StyledNavMenu = styled.div`
   background-color: ${({ theme }) => theme.color.primaryText};
-
   padding: 1.6em;
   color: ${({ theme }) => theme.color.background};
   text-transform: uppercase;
@@ -87,7 +91,7 @@ export const StyledNavInfoLinks = styled.ul`
 export const StyledNavSocialLinks = styled.div`
   margin-top: 8.2em;
   img {
-    filter: invert(1) sepia(1) saturate(0) hue-rotate(175deg);
+    filter: invert(1) sepia(1%) saturate(0%) hue-rotate(175deg);
     max-width: 35px;
   }
 

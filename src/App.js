@@ -14,10 +14,13 @@ import CartProvider from "./store/CartProvider";
 const themeLight = {
   color: {
     background: "#fcf9ee",
+    backgroundFilter: "invert(1) sepia(1%) saturate(0%) hue-rotate(175deg);",
     footerBackground: "#FBF8EE",
     primaryAccent: "#e7d6c4",
     secondaryAccent: "#ddc92a",
     primaryText: "#141414",
+    primaryTextFilter:
+      "invert(0%) sepia(26%) saturate(4644%) hue-rotate(10deg);",
   },
 };
 

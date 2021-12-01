@@ -66,10 +66,10 @@ function Navigation(props) {
   return (
     <StyledNavigation isVisible={isNavMenuShown}>
       <StyledNavigationBar>
-        <StyledLogo href="#">
+        <StyledLogo href="#" isVisible={isNavMenuShown}>
           <img src={logo} alt="logo"></img>
         </StyledLogo>
-        <StyledNavIcon>
+        <StyledNavIcon isVisible={isNavMenuShown}>
           <img src={nav} onClick={onNavHandler} alt="nav menu"></img>
         </StyledNavIcon>
         <StyledCartItem>
