@@ -10,6 +10,7 @@ export const StyledCollections = styled.div`
   justify-content: end;
   padding-left: 5rem;
   padding-right: 3rem;
+  margin-top: 6em;
 
   h1 {
     font-size: clamp(4.2rem, 10vw, 20rem);
