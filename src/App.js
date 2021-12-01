@@ -10,6 +10,7 @@ import Footer from "./components/footer/Footer";
 import Cart from "./components/cart/Cart";
 import { useState } from "react";
 import CartProvider from "./store/CartProvider";
+import PromoProducts from "./components/promoProducts/PromoProducts";
 
 const themeLight = {
   color: {
@@ -43,6 +44,7 @@ function App() {
             <Collections />
             <ScrollingDivider />
             <PromoInfo />
+            <PromoProducts />
             <Testimonials />
             <Footer />
           </main>
