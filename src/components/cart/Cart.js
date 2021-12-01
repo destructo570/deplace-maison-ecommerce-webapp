@@ -18,6 +18,7 @@ function Cart(props) {
         return (
           <CartItem
             key={item.id}
+            id={item.id}
             name={item.name}
             price={item.price}
             amount={item.amount}
@@ -38,7 +39,7 @@ function Cart(props) {
       <StyledCheckoutSummary>
         <div>
           <h4>Subtotal</h4>
-          <h4>$ {cartCtx.totalAmount} USD</h4>
+          <h4>$ {cartCtx.finalPrice} USD</h4>
         </div>
         <Button title="Continue To Checkout" />
       </StyledCheckoutSummary>

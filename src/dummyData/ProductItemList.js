@@ -7,7 +7,9 @@ export const ProductItemList = [
     imgUrl: "",
     size: "SS/20",
     discount: 30,
+    color: "black",
     price: 300,
+    amount: 1,
   },
   {
     id: 2,
@@ -17,7 +19,9 @@ export const ProductItemList = [
     imgUrl: "",
     size: "SS/20",
     discount: 30,
+    color: "black",
     price: 240,
+    amount: 1,
   },
   {
     id: 3,
@@ -27,7 +31,9 @@ export const ProductItemList = [
     imgUrl: "",
     size: "SS/20",
     discount: 30,
+    color: "black",
     price: 240,
+    amount: 1,
   },
   {
     id: 4,
@@ -37,7 +43,9 @@ export const ProductItemList = [
     imgUrl: "",
     size: "SS/20",
     discount: 30,
+    color: "black",
     price: 240,
+    amount: 1,
   },
   {
     id: 5,
@@ -47,6 +55,8 @@ export const ProductItemList = [
     imgUrl: "",
     size: "SS/20",
     discount: 30,
+    color: "black",
     price: 240,
+    amount: 1,
   },
 ];

@@ -6,8 +6,11 @@ import {
 } from "./styledComponents";
 
 import productImage from "../../assets/images/products/trek-shoe-1.jpeg";
+import { useContext } from "react";
+import CartContext from "../../store/cart-context";
 
 function CartItem(props) {
+  const cartCtx = useContext(CartContext);
   return (
     <StyledCartItem>
       <StyledCartProductItem>
@@ -20,7 +23,7 @@ function CartItem(props) {
         </div>
         <StytledProductSummary>
           <input type="number" name="amount"></input>
-          <p>Remove</p>
+          <p onClick={cartCtx.removeItem.bind(null, props.id)}>Remove</p>
         </StytledProductSummary>
       </StyledCartProductItem>
       <StyledDivider />
