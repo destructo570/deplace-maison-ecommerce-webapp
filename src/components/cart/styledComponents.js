@@ -9,8 +9,9 @@ export const StyledCart = styled.div``;
 export const StyledCartOverlay = styled.div`
   position: fixed;
   right: 0px;
+  top: 0px;
   height: 100vh;
-  z-index: 101;
+  z-index: 102;
   overflow: scroll;
   background-color: ${({ theme }) => theme.color.background};
 
