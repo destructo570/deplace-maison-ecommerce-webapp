@@ -18,7 +18,6 @@ import {
   StyledNavStoreLinks,
 } from "./styledComponents";
 import CartContext from "../../store/cart-context";
-import Cart from "../cart/Cart";
 
 function Navigation(props) {
   const cartCtx = useContext(CartContext);

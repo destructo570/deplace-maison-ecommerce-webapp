@@ -1,5 +1,4 @@
 import { useReducer } from "react";
-import { CartItemsList } from "../dummyData/CartItemsList";
 import CartContext from "./cart-context";
 import { ProductItemList } from "../dummyData/ProductItemList";
 

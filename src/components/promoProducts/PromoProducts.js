@@ -16,6 +16,7 @@ import CartContext from "../../store/cart-context";
 
 function PromoProducts() {
   const cartCtx = useContext(CartContext);
+  console.log("Hello");
 
   const products = (
     <ul>
