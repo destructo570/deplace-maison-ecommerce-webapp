@@ -11,7 +11,6 @@ export const StyledCollections = styled.div`
   margin-left: ${({ theme }) => theme.mobile.pageLeftPadding};
   margin-right: ${({ theme }) => theme.mobile.pageRightPadding};
   margin-top: 6em;
-  border: 2px solid red;
 
   h1 {
     font-size: clamp(4rem, 15vw, 20rem);
@@ -21,6 +20,7 @@ export const StyledCollections = styled.div`
     display: inline-inline-block;
     text-align: end;
     border: 2px solid red;
+    width: 100%;
   }
 `;
 
@@ -37,8 +37,6 @@ export const StyledSubHeading = styled.h3`
   line-height: 0.85em;
   padding-top: 0.2em;
   text-align: end;
-  width: 100%;
-  border: 2px solid red;
 `;
 
 //
