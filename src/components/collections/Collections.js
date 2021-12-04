@@ -12,8 +12,8 @@ function Collections() {
     <StyledCollections>
       <StyledHeading>
         <h1 className="head-1">SPRING,</h1>
-        <h1 className="head-2">SUMMER</h1>
         <div className="sub-head">
+          <h1 className="head-2">SUMMER</h1>
           <StyledSubHeading>
             COLL.
             <br />

@@ -19,6 +19,7 @@ export const StyledCollections = styled.div`
     font-weight: 400;
     display: inline-inline-block;
     text-align: end;
+    align-self: flex-end;
   }
 
   @media (min-width: 800px) {
@@ -30,26 +31,13 @@ export const StyledCollections = styled.div`
 `;
 
 export const StyledHeading = styled.div`
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-
-  .head-1 {
-    grid-column: 2/-1;
-  }
-
-  .head-2 {
-    grid-column: 1/-2;
-  }
-
   .sub-head {
-    display: grid;
-    grid-auto-flow: row;
-    grid-column-start: -2;
+    display: flex;
+    justify-content: space-between;
   }
 `;
 
 export const StyledSubHeading = styled.h3`
-  grid-row: span 1;
   font-size: clamp(1.1rem, 3.2vw, 10rem);
   font-weight: 400;
   line-height: 1em;
