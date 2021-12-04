@@ -19,14 +19,6 @@ export const StyledCollections = styled.div`
     font-weight: 400;
     display: inline-inline-block;
     text-align: end;
-    align-self: flex-end;
-  }
-
-  @media (min-width: 800px) {
-    main {
-      padding-left: 16rem;
-      padding-right: 8rem;
-    }
   }
 `;
 
