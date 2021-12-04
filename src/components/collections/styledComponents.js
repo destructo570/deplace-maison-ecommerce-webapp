@@ -13,8 +13,8 @@ export const StyledCollections = styled.div`
   margin-top: 6em;
 
   h1 {
-    font-size: clamp(4.2rem, 10vw, 20rem);
-    line-height: 0.8em;
+    font-size: clamp(4.5rem, 10vw, 20rem);
+    line-height: 0.9em;
     letter-spacing: -5px;
     font-weight: 400;
     display: inline-inline-block;
@@ -50,7 +50,7 @@ export const StyledHeading = styled.div`
 
 export const StyledSubHeading = styled.h3`
   grid-row: span 1;
-  font-size: clamp(1rem, 3.2vw, 10rem);
+  font-size: clamp(1.1rem, 3.2vw, 10rem);
   font-weight: 400;
   line-height: 1em;
   padding-top: 0.5rem;
