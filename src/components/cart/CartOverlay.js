@@ -1,8 +1,4 @@
-import {
-  StyledCartHeader,
-  StyledCartOverlay,
-  StyledDivider,
-} from "./styledComponents";
+import { StyledCartHeader, StyledCartOverlay } from "./styledComponents";
 import closeIcon from "../../assets/icons/close-fill.svg";
 import { Fragment } from "react";
 function CartOverlay(props) {
@@ -15,7 +11,6 @@ function CartOverlay(props) {
         </h1>
         <img src={closeIcon} onClick={props.onClose} alt="Close cart" />
       </StyledCartHeader>
-      <StyledDivider />
       <Fragment>{props.children}</Fragment>
     </StyledCartOverlay>
   );

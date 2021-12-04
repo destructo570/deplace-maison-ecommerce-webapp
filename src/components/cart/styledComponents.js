@@ -13,6 +13,9 @@ export const StyledCartOverlay = styled.div`
   height: 100vh;
   z-index: 102;
   overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: ${({ theme }) => theme.color.background};
 
   /* Hide Scrollbars */
@@ -27,6 +30,8 @@ export const StyledCartHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-self: flex-start;
+  border-bottom: 0.5px solid ${({ theme }) => theme.color.primaryText};
   padding: 4.5em;
   h1 {
     font-size: 4rem;
