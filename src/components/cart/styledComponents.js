@@ -11,7 +11,7 @@ export const StyledCartOverlay = styled.div`
   right: 0px;
   top: 0px;
   height: 100vh;
-  max-width: 100vw;
+  width: 100vw;
   z-index: 102;
   overflow: scroll;
   display: flex;
