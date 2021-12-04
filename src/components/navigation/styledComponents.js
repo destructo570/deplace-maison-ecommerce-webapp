@@ -6,7 +6,7 @@ export const StyledNavigation = styled.nav`
   z-index: 101;
   width: 100%;
   background-color: ${({ isVisible, theme }) =>
-    isVisible ? theme.color.primaryText : "transparent"};
+    isVisible ? theme.color.primaryText : theme.color.navBackground};
   color: ${({ isVisible, theme }) =>
     isVisible ? theme.color.background : theme.color.primaryText};
 `;
@@ -15,7 +15,7 @@ export const StyledNavigationBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5em;
+  padding: 0.8em 1.5em;
 `;
 
 export const StyledLogo = styled.a`
