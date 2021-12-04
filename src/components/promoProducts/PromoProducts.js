@@ -7,20 +7,40 @@ import {
   StyledProductSize,
   StyledPromoProduct,
 } from "./styledComponents";
-import { ProductItemList } from "../../dummyData/ProductItemList";
-import productImg from "../../assets/images/products/trek-shoe-1.jpeg";
 import unisexIcon from "../../assets/icons/unisex-label.svg";
 import ActionButton from "../global/ActionButton/ActionButton";
 import { useContext } from "react";
 import CartContext from "../../store/cart-context";
+import useFetch from "../../hooks/useFetch";
 
 function PromoProducts() {
   const cartCtx = useContext(CartContext);
-  console.log("Hello");
+
+  const { data, isLoading, error } = useFetch(
+    "https://deplacemaisontest-default-rtdb.firebaseio.com/promo-products.json"
+  );
+
+  if (error) {
+    console.log(error);
+  }
+
+  const fetchedProductList = [];
+
+  for (let key in data) {
+    fetchedProductList.push({
+      id: key,
+      name: data[key].name,
+      type: data[key].type,
+      size: data[key].size,
+      price: data[key].price,
+      discount: data[key].discount,
+      img: data[key].img,
+    });
+  }
 
   const products = (
     <ul>
-      {ProductItemList.map((item) => {
+      {fetchedProductList.map((item) => {
         return (
           <StyledProductItem
             key={item.id}
@@ -32,8 +52,8 @@ function PromoProducts() {
             price={item.price}
             onClick={cartCtx.addItem.bind(null, item.id)}
           >
-            <img src={productImg} alt=""></img>
-            <img src={unisexIcon} alt=""></img>
+            <img src={item.img} alt=""></img>
+            {item.type === "unisex" ? <img src={unisexIcon} alt=""></img> : ""}
             <StyledProductSize>{item.size}</StyledProductSize>
             <StyledProductName>{item.name}</StyledProductName>
             <StyledProductPrice>${item.price} USD</StyledProductPrice>

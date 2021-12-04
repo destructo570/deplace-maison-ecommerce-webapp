@@ -1,6 +1,6 @@
 export const ProductItemList = [
   {
-    id: 1,
+    id: "prod-p1",
     name: "cactus",
     type: "unisex",
     typeImgUrl: "",
@@ -12,7 +12,7 @@ export const ProductItemList = [
     amount: 1,
   },
   {
-    id: 2,
+    id: "prod-p2",
     name: "the code",
     type: "unisex",
     typeImgUrl: "",
@@ -24,7 +24,7 @@ export const ProductItemList = [
     amount: 1,
   },
   {
-    id: 3,
+    id: "prod-p3",
     name: "carnera",
     type: "unisex",
     typeImgUrl: "",
@@ -36,7 +36,7 @@ export const ProductItemList = [
     amount: 1,
   },
   {
-    id: 4,
+    id: "prod-p4",
     name: "the eye",
     type: "unisex",
     typeImgUrl: "",
@@ -48,7 +48,7 @@ export const ProductItemList = [
     amount: 1,
   },
   {
-    id: 5,
+    id: "prod-p5",
     name: "duran",
     type: "unisex",
     typeImgUrl: "",
