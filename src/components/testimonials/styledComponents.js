@@ -16,11 +16,12 @@ export const StyledTestimonialItem = styled.div`
   position: absolute;
   display: flex;
   padding: 1em;
-  top: 0px;
+  top: -10px;
 
   h2 {
     font-family: "Cyberthrone";
     width: 40%;
+    margin-top: 0.2em;
   }
 
   p {
