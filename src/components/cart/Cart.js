@@ -22,7 +22,7 @@ function Cart(props) {
             name={item.name}
             price={item.price}
             amount={item.amount}
-            img={item.imgUrl}
+            img={item.img}
             size={item.size}
             color={item.color}
           >

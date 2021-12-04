@@ -6,7 +6,6 @@ import {
   StyledProductName,
   StyledProductPrice,
   StyledProductSize,
-  StyledProductType,
   StyledPromoProduct,
 } from "./styledComponents";
 import unisexIcon from "../../assets/icons/unisex-label.svg";
@@ -32,6 +31,7 @@ function PromoProducts() {
     fetchedProductList.push({
       id: key,
       name: data[key].name,
+      color: data[key].color,
       type: data[key].type,
       size: data[key].size,
       price: data[key].price,
@@ -39,6 +39,11 @@ function PromoProducts() {
       img: data[key].img,
     });
   }
+
+  const getProductItemFromId = (id) => {
+    const productList = fetchedProductList.filter((item) => item.id === id);
+    return productList[0];
+  };
 
   const products = (
     <ul>
@@ -48,11 +53,12 @@ function PromoProducts() {
             key={item.id}
             id={item.id}
             name={item.name}
+            color={item.color}
             type={item.type}
             size={item.size}
             discount={item.discount}
             price={item.price}
-            onClick={cartCtx.addItem.bind(null, item.id)}
+            onClick={cartCtx.addItem.bind(null, getProductItemFromId(item.id))}
           >
             <StyledProductImage src={item.img} alt=""></StyledProductImage>
             {item.type === "unisex" ? <img src={unisexIcon} alt=""></img> : ""}

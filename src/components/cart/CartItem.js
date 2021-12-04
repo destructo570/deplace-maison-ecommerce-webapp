@@ -5,16 +5,16 @@ import {
   StytledProductSummary,
 } from "./styledComponents";
 
-import productImage from "../../assets/images/products/trek-shoe-1.jpeg";
 import { useContext } from "react";
 import CartContext from "../../store/cart-context";
 
 function CartItem(props) {
+  console.log(props.img);
   const cartCtx = useContext(CartContext);
   return (
     <StyledCartItem>
       <StyledCartProductItem>
-        <img src={productImage} alt="Product"></img>
+        <img src={props.img} alt="Product"></img>
         <div>
           <h2>{props.name}</h2>
           <h4>$ {props.price}</h4>
