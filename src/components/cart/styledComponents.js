@@ -80,6 +80,13 @@ export const StyledCartItem = styled.li`
   padding-left: 1em;
   padding-right: 1em;
 
+  img {
+    max-width: 130px;
+  }
+`;
+
+export const StyledCartProductDetails = styled.div`
+  min-width: 30%;
   h2 {
     font-family: "TTrailer";
     font-size: 3.5rem;
@@ -95,10 +102,6 @@ export const StyledCartItem = styled.li`
   p {
     font-weight: 400;
     font-size: 0.6rem;
-  }
-
-  img {
-    max-width: 130px;
   }
 `;
 

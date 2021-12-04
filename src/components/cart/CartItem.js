@@ -1,5 +1,6 @@
 import {
   StyledCartItem,
+  StyledCartProductDetails,
   StyledCartProductItem,
   StyledDivider,
   StytledProductSummary,
@@ -15,12 +16,12 @@ function CartItem(props) {
     <StyledCartItem>
       <StyledCartProductItem>
         <img src={props.img} alt="Product"></img>
-        <div>
+        <StyledCartProductDetails>
           <h2>{props.name}</h2>
           <h4>$ {props.price}</h4>
           <p>Color: {props.color}</p>
           <p>Size: {props.size}</p>
-        </div>
+        </StyledCartProductDetails>
         <StytledProductSummary>
           <input type="number" name="amount"></input>
           <p onClick={cartCtx.removeItem.bind(null, props.id)}>Remove</p>
