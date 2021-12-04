@@ -25,6 +25,12 @@ export const StyledCartOverlay = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 `;
 
 export const StyledCartHeader = styled.div`
@@ -71,12 +77,12 @@ export const StyledDivider = styled.div`
 export const StyledCartItem = styled.li`
   text-transform: uppercase;
   padding-top: 2em;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
 
   h2 {
     font-family: "TTrailer";
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 200;
     line-height: 60px;
   }
@@ -97,10 +103,8 @@ export const StyledCartItem = styled.li`
 `;
 
 export const StyledCartProductItem = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
-  justify-items: end;
+  display: flex;
+  justify-content: space-between;
   padding-bottom: 1.5em;
 `;
 
