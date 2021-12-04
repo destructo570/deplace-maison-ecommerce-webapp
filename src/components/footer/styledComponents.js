@@ -5,10 +5,11 @@ export const StyledFooter = styled.footer`
   padding: 2em;
   background-color: ${({ theme }) => theme.color.footerBackground};
   display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
   text-transform: uppercase;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
 `;
 
 //
@@ -16,6 +17,7 @@ export const StyledFooter = styled.footer`
 //
 
 export const StyledNewsLetter = styled.div`
+  display: none;
   img {
     width: 30px;
     margin-top: 0.5rem;
@@ -42,7 +44,12 @@ export const StyledInfo = styled.div`
   a {
     text-decoration: none;
     color: ${({ theme }) => theme.color.primaryText};
-    font-size: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  div:last-child {
+    margin-top: 5em;
   }
 `;
 
@@ -61,7 +68,8 @@ export const StyledPolicy = styled.div`
   a {
     text-decoration: none;
     color: ${({ theme }) => theme.color.primaryText};
-    font-size: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 500;
   }
 `;
 
@@ -83,7 +91,7 @@ export const StytledIcon = styled.a`
   }
 
   img {
-    width: clamp(2rem, 5vw, 3.5rem);
+    width: clamp(3rem, 5vw, 3.5rem);
     transform: rotate(-90deg);
   }
 
@@ -103,7 +111,7 @@ export const StytledIcon = styled.a`
 export const StyledSocial = styled.div`
   display: flex;
   img {
-    width: 12px;
+    width: 24px;
   }
 
   img:hover {

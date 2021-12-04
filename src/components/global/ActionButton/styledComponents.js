@@ -8,8 +8,8 @@ export const StyledActionButton = styled.div`
 
   p {
     text-transform: uppercase;
-    font-size: clamp(0.7rem, 2vw, 2rem);
-    font-weight: 400;
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: 500;
   }
 
   p:hover {

@@ -1,10 +1,12 @@
 import {
   StyledActions,
   StyledProductFinalPrice,
+  StyledProductImage,
   StyledProductItem,
   StyledProductName,
   StyledProductPrice,
   StyledProductSize,
+  StyledProductType,
   StyledPromoProduct,
 } from "./styledComponents";
 import unisexIcon from "../../assets/icons/unisex-label.svg";
@@ -52,7 +54,7 @@ function PromoProducts() {
             price={item.price}
             onClick={cartCtx.addItem.bind(null, item.id)}
           >
-            <img src={item.img} alt=""></img>
+            <StyledProductImage src={item.img} alt=""></StyledProductImage>
             {item.type === "unisex" ? <img src={unisexIcon} alt=""></img> : ""}
             <StyledProductSize>{item.size}</StyledProductSize>
             <StyledProductName>{item.name}</StyledProductName>

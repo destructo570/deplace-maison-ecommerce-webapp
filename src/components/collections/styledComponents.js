@@ -8,8 +8,8 @@ export const StyledCollections = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: end;
-  padding-left: 5rem;
-  padding-right: 3rem;
+  padding-left: ${({ theme }) => theme.mobile.pageLeftPadding};
+  padding-right: ${({ theme }) => theme.mobile.pageRightPadding};
   margin-top: 6em;
 
   h1 {

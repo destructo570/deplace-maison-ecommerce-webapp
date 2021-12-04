@@ -7,7 +7,7 @@ export const StyledPromoProduct = styled.section`
     grid-auto-flow: column;
     grid-gap: 10px;
     overflow: scroll;
-    padding: 0 5em;
+    padding-left: 2.5em;
 
     /* Hide Scrollbars */
     -ms-overflow-style: none;
@@ -21,47 +21,51 @@ export const StyledPromoProduct = styled.section`
 export const StyledProductItem = styled.li`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   border: 1px solid ${({ theme }) => theme.color.primaryText};
   background-color: ${({ theme }) => theme.color.primaryAccent};
   padding: 1em 2em;
-  min-width: 150px;
+  min-width: 250px;
+  text-transform: uppercase;
 
   &:hover {
     cursor: grab;
   }
 
-  img {
-    max-width: 100px;
-  }
-
   img + img {
-    max-width: 40px;
+    max-width: 80px;
   }
 `;
+
+export const StyledProductImage = styled.img`
+  min-width: 200px;
+`;
+
 export const StyledProductSize = styled.p`
-  font-size: 0.6rem;
+  font-size: 1rem;
 `;
 export const StyledProductName = styled.h4`
   text-transform: uppercase;
   font-family: "TTrailer";
   font-weight: 300;
-  font-size: 3.6rem;
+  font-size: 4.6rem;
   letter-spacing: -1.8px;
-  line-height: 0.9em;
+  line-height: 1em;
 `;
 export const StyledProductPrice = styled.p`
   text-decoration: line-through;
   line-height: 0.9em;
   font-weight: 300;
+  font-size: 1.2rem;
 `;
 export const StyledProductFinalPrice = styled.p`
   line-height: 1.3em;
+  font-size: 1.5rem;
   font-weight: 500;
 `;
 
 export const StyledActions = styled.div`
-  padding-left: 5rem;
-  padding-right: 3rem;
+  padding-left: ${({ theme }) => theme.mobile.pageLeftPadding};
+  padding-right: ${({ theme }) => theme.mobile.pageRightPadding};
 `;
