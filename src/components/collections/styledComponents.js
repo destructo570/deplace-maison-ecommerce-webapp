@@ -19,7 +19,6 @@ export const StyledCollections = styled.div`
     font-weight: 400;
     display: inline-inline-block;
     text-align: end;
-    border: 2px solid red;
     width: 100%;
   }
 `;
@@ -36,6 +35,7 @@ export const StyledSubHeading = styled.h3`
   font-weight: 400;
   line-height: 0.85em;
   padding-top: 0.2em;
+  padding-left: 0.2em;
   text-align: end;
 `;
 
