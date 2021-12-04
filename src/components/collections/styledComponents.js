@@ -14,7 +14,7 @@ export const StyledCollections = styled.div`
   border: 2px solid red;
 
   h1 {
-    font-size: clamp(4.5rem, 10vw, 20rem);
+    font-size: clamp(4rem, 15vw, 20rem);
     line-height: 0.9em;
     letter-spacing: -5px;
     font-weight: 400;
@@ -32,10 +32,10 @@ export const StyledHeading = styled.div`
 `;
 
 export const StyledSubHeading = styled.h3`
-  font-size: clamp(1.1rem, 3.2vw, 10rem);
+  font-size: clamp(1.3rem, 3.2vw, 10rem);
   font-weight: 400;
-  line-height: 1em;
-  padding-top: 0.5rem;
+  line-height: 0.85em;
+  padding-top: 0.2em;
   text-align: end;
   width: 100%;
   border: 2px solid red;
