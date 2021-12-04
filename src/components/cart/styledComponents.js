@@ -11,6 +11,7 @@ export const StyledCartOverlay = styled.div`
   right: 0px;
   top: 0px;
   height: 100vh;
+  max-width: 100vw;
   z-index: 102;
   overflow: scroll;
   display: flex;
@@ -32,7 +33,7 @@ export const StyledCartHeader = styled.div`
   align-items: center;
   align-self: flex-start;
   border-bottom: 0.5px solid ${({ theme }) => theme.color.primaryText};
-  padding: 4.5em;
+  padding: 3em;
   h1 {
     font-size: 4rem;
     font-weight: 400;
