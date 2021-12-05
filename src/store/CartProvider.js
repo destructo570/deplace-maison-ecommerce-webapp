@@ -10,7 +10,6 @@ const defaultCartState = {
 const cartReducer = (state, action) => {
   if (action.type === "ADD") {
     const productItem = action.data;
-    console.log(productItem);
     const existingCartItemIndex = state.items.findIndex((item) => {
       return item.id === action.data.id;
     });
@@ -64,6 +63,50 @@ const cartReducer = (state, action) => {
     }
   }
 
+  if (action.type === "UPDATE_ITEM_AMOUNT") {
+    console.log(`InitialState: `);
+    console.log(state);
+
+    let newAmount = parseInt(action.newAmount);
+    let updatedItems = state.items;
+    let updatedFinalPrice;
+    let updatedNumOfItems;
+    const existingCartItemIndex = state.items.findIndex((item) => {
+      return item.id === action.id;
+    });
+
+    const existingCartItem = state.items[existingCartItemIndex];
+
+    if (existingCartItem.amount > newAmount) {
+      updatedFinalPrice =
+        state.finalPrice -
+        existingCartItem.price * (existingCartItem.amount - newAmount);
+
+      updatedNumOfItems =
+        state.numOfItems - (existingCartItem.amount - newAmount);
+    } else {
+      updatedFinalPrice =
+        state.finalPrice +
+        existingCartItem.price * (newAmount - existingCartItem.amount);
+
+      updatedNumOfItems =
+        state.numOfItems + (newAmount - existingCartItem.amount);
+    }
+
+    const newCartItem = existingCartItem;
+    newCartItem.amount = newAmount;
+    updatedItems[existingCartItemIndex] = newCartItem;
+
+    console.log(`UpdatedState: `);
+    console.log(updatedItems, updatedNumOfItems, updatedFinalPrice);
+
+    return {
+      items: updatedItems,
+      finalPrice: updatedFinalPrice,
+      numOfItems: updatedNumOfItems,
+    };
+  }
+
   return defaultCartState;
 };
 
@@ -94,12 +137,21 @@ function CartProvider(props) {
     dispatchCartAction({ type: "REMOVE", id: itemId });
   };
 
+  const updateItemAmountHandler = (itemId, amount) => {
+    dispatchCartAction({
+      type: "UPDATE_ITEM_AMOUNT",
+      id: itemId,
+      newAmount: amount,
+    });
+  };
+
   const cartContext = {
     items: cartState.items,
     finalPrice: cartState.finalPrice,
     numOfItems: cartState.numOfItems,
     addItem: addItemHandler,
     removeItem: removeItemHandler,
+    updateItemAmount: updateItemAmountHandler,
   };
 
   return (

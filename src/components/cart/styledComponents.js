@@ -115,6 +115,8 @@ export const StytledProductSummary = styled.div`
   input {
     max-width: 65px;
     min-height: 40px;
+    text-align: center;
+    font-family: "Favorit";
   }
 
   input:focus {

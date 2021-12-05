@@ -7,9 +7,14 @@ import { StyledCheckoutSummary } from "./styledComponents";
 
 function Cart(props) {
   const cartCtx = useContext(CartContext);
+  console.log(`Curent Cart Price : ${cartCtx.finalPrice}`);
 
   const onCloseHandler = () => {
     props.onHideCart();
+  };
+
+  const amountChangeHandler = (id, newAmount) => {
+    cartCtx.updateItemAmount(id, newAmount);
   };
 
   const CartItems = (
@@ -25,6 +30,7 @@ function Cart(props) {
             img={item.img}
             size={item.size}
             color={item.color}
+            onAmountChange={amountChangeHandler}
           >
             {item.name}
           </CartItem>

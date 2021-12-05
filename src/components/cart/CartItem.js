@@ -10,8 +10,11 @@ import { useContext } from "react";
 import CartContext from "../../store/cart-context";
 
 function CartItem(props) {
-  console.log(props.img);
   const cartCtx = useContext(CartContext);
+  const amountChangeHandler = (event) => {
+    props.onAmountChange(props.id, event.target.value);
+  };
+
   return (
     <StyledCartItem>
       <StyledCartProductItem>
@@ -23,7 +26,14 @@ function CartItem(props) {
           <p>Size: {props.size}</p>
         </StyledCartProductDetails>
         <StytledProductSummary>
-          <input type="number" name="amount"></input>
+          <input
+            type="number"
+            name="amount"
+            min="0"
+            max="10"
+            value={props.amount}
+            onChange={amountChangeHandler}
+          ></input>
           <p onClick={cartCtx.removeItem.bind(null, props.id)}>Remove</p>
         </StytledProductSummary>
       </StyledCartProductItem>
