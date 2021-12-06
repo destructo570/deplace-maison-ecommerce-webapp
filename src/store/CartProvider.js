@@ -20,7 +20,7 @@ const cartReducer = (state, action) => {
     if (existingCartItem) {
       const updatedItem = {
         ...existingCartItem,
-        amount: existingCartItem.amount + productItem.amount,
+        quantity: existingCartItem.quantity + productItem.quantity,
       };
 
       updatedItems = [...state.items];
@@ -30,9 +30,9 @@ const cartReducer = (state, action) => {
     }
 
     const updatedFinalPrice =
-      state.finalPrice + productItem.price * productItem.amount;
+      state.finalPrice + productItem.price * productItem.quantity;
 
-    const updatedNumOfItems = state.numOfItems + productItem.amount;
+    const updatedNumOfItems = state.numOfItems + productItem.quantity;
 
     return {
       items: updatedItems,
@@ -51,9 +51,9 @@ const cartReducer = (state, action) => {
 
     if (existingCartItem) {
       const updatedFinalPrice =
-        state.finalPrice - existingCartItem.price * existingCartItem.amount;
+        state.finalPrice - existingCartItem.price * existingCartItem.quantity;
 
-      const updatedNumOfItems = state.numOfItems - existingCartItem.amount;
+      const updatedNumOfItems = state.numOfItems - existingCartItem.quantity;
 
       return {
         items: updatedItems,
@@ -63,11 +63,11 @@ const cartReducer = (state, action) => {
     }
   }
 
-  if (action.type === "UPDATE_ITEM_AMOUNT") {
+  if (action.type === "UPDATE_ITEM_quantity") {
     console.log(`InitialState: `);
     console.log(state);
 
-    let newAmount = parseInt(action.newAmount);
+    let newQuantity = parseInt(action.newQuantity);
     let updatedItems = state.items;
     let updatedFinalPrice;
     let updatedNumOfItems;
@@ -77,24 +77,24 @@ const cartReducer = (state, action) => {
 
     const existingCartItem = state.items[existingCartItemIndex];
 
-    if (existingCartItem.amount > newAmount) {
+    if (existingCartItem.quantity > newQuantity) {
       updatedFinalPrice =
         state.finalPrice -
-        existingCartItem.price * (existingCartItem.amount - newAmount);
+        existingCartItem.price * (existingCartItem.quantity - newQuantity);
 
       updatedNumOfItems =
-        state.numOfItems - (existingCartItem.amount - newAmount);
+        state.numOfItems - (existingCartItem.quantity - newQuantity);
     } else {
       updatedFinalPrice =
         state.finalPrice +
-        existingCartItem.price * (newAmount - existingCartItem.amount);
+        existingCartItem.price * (newQuantity - existingCartItem.quantity);
 
       updatedNumOfItems =
-        state.numOfItems + (newAmount - existingCartItem.amount);
+        state.numOfItems + (newQuantity - existingCartItem.quantity);
     }
 
     const newCartItem = existingCartItem;
-    newCartItem.amount = newAmount;
+    newCartItem.quantity = newQuantity;
     updatedItems[existingCartItemIndex] = newCartItem;
 
     console.log(`UpdatedState: `);
@@ -127,7 +127,7 @@ function CartProvider(props) {
         price: item.price,
         size: item.size,
         type: item.type,
-        amount: 1,
+        quantity: item.amount,
         discount: item.discount,
       },
     });
@@ -137,11 +137,11 @@ function CartProvider(props) {
     dispatchCartAction({ type: "REMOVE", id: itemId });
   };
 
-  const updateItemAmountHandler = (itemId, amount) => {
+  const updateItemQuantityHandler = (itemId, quantity) => {
     dispatchCartAction({
-      type: "UPDATE_ITEM_AMOUNT",
+      type: "UPDATE_ITEM_quantity",
       id: itemId,
-      newAmount: amount,
+      newQuantity: quantity,
     });
   };
 
@@ -151,7 +151,7 @@ function CartProvider(props) {
     numOfItems: cartState.numOfItems,
     addItem: addItemHandler,
     removeItem: removeItemHandler,
-    updateItemAmount: updateItemAmountHandler,
+    updateItemQuantity: updateItemQuantityHandler,
   };
 
   return (

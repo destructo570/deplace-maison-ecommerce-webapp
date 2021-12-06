@@ -11,8 +11,8 @@ import CartContext from "../../store/cart-context";
 
 function CartItem(props) {
   const cartCtx = useContext(CartContext);
-  const amountChangeHandler = (event) => {
-    props.onAmountChange(props.id, event.target.value);
+  const quantityChangeHandler = (event) => {
+    props.onQuantityChange(props.id, event.target.value);
   };
 
   return (
@@ -28,11 +28,11 @@ function CartItem(props) {
         <StytledProductSummary>
           <input
             type="number"
-            name="amount"
+            name="quantity"
             min="0"
             max="10"
-            value={props.amount}
-            onChange={amountChangeHandler}
+            value={props.quantity}
+            onChange={quantityChangeHandler}
           ></input>
           <p onClick={cartCtx.removeItem.bind(null, props.id)}>Remove</p>
         </StytledProductSummary>

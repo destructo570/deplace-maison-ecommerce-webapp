@@ -13,8 +13,8 @@ function Cart(props) {
     props.onHideCart();
   };
 
-  const amountChangeHandler = (id, newAmount) => {
-    cartCtx.updateItemAmount(id, newAmount);
+  const quantityChangeHandler = (id, newQuantity) => {
+    cartCtx.updateItemQuantity(id, newQuantity);
   };
 
   const CartItems = (
@@ -26,11 +26,11 @@ function Cart(props) {
             id={item.id}
             name={item.name}
             price={item.price}
-            amount={item.amount}
+            quantity={item.quantity}
             img={item.img}
             size={item.size}
             color={item.color}
-            onAmountChange={amountChangeHandler}
+            onQuantityChange={quantityChangeHandler}
           >
             {item.name}
           </CartItem>

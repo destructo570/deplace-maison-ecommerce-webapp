@@ -30,6 +30,7 @@ function PromoProducts() {
   for (let key in data) {
     fetchedProductList.push({
       id: key,
+      amount: data[key].amount,
       name: data[key].name,
       color: data[key].color,
       type: data[key].type,
@@ -58,6 +59,7 @@ function PromoProducts() {
             size={item.size}
             discount={item.discount}
             price={item.price}
+            amount={item.amount}
             onClick={cartCtx.addItem.bind(null, getProductItemFromId(item.id))}
           >
             <StyledProductImage src={item.img} alt=""></StyledProductImage>
