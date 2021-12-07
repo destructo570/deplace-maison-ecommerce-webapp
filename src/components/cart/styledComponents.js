@@ -114,6 +114,7 @@ export const StyledCartProductItem = styled.div`
 `;
 
 export const StytledProductSummary = styled.div`
+  position: relative;
   input {
     width: 60px;
     min-height: 40px;
@@ -125,6 +126,7 @@ export const StytledProductSummary = styled.div`
   input:focus {
     outline: none;
   }
+
   p {
     text-decoration: underline;
     margin-top: 2em;

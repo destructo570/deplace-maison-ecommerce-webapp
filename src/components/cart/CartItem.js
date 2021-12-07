@@ -1,3 +1,5 @@
+import { useState } from "react";
+import Tooltip from "../global/Tooltip/Tooltip";
 import {
   StyledCartItem,
   StyledCartProductDetails,
@@ -7,12 +9,15 @@ import {
 } from "./styledComponents";
 
 function CartItem(props) {
+  const [hasError, setHasError] = useState(false);
+
   const quantityChangeHandler = (event) => {
     if (
       event.target.value === "" ||
       event.target.value < 0 ||
       event.target.value > 10
     ) {
+      setHasError(true);
       return;
     }
 
@@ -20,6 +25,7 @@ function CartItem(props) {
       props.onRemoveItem(props.id);
       return;
     }
+    setHasError(false);
     props.onQuantityChange(props.id, event.target.value);
   };
 
@@ -42,6 +48,7 @@ function CartItem(props) {
             defaultValue={props.quantity}
             onChange={quantityChangeHandler}
           ></input>
+          {hasError && <Tooltip content="Please match the requested format" />}
           <p onClick={props.onRemoveItem.bind(null, props.id)}>Remove</p>
         </StytledProductSummary>
       </StyledCartProductItem>
