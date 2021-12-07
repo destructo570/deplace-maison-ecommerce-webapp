@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import Collections from "./components/collections/Collections";
 import Navigation from "./components/navigation/Navigation";
 import ScrollingDivider from "./components/scrollingDivider/ScrollingDivider";
-import PromoInfo from "./components/promoInfo/PromoInfo";
+import PromoInfo from "./components/PromoInfo/PromoInfo";
 import Testimonials from "./components/testimonials/Testimonials";
 import Footer from "./components/footer/Footer";
 import Cart from "./components/cart/Cart";
