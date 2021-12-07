@@ -65,7 +65,7 @@ const cartReducer = (state, action) => {
 
   if (action.type === "UPDATE_ITEM_quantity") {
     let newQuantity = parseInt(action.newQuantity);
-    let updatedItems = state.items;
+    let updatedItems = [...state.items];
     let updatedFinalPrice;
     let updatedNumOfItems;
     const existingCartItemIndex = state.items.findIndex((item) => {
@@ -90,8 +90,7 @@ const cartReducer = (state, action) => {
         state.numOfItems + (newQuantity - existingCartItem.quantity);
     }
 
-    const newCartItem = existingCartItem;
-    newCartItem.quantity = newQuantity;
+    const newCartItem = { ...existingCartItem, quantity: newQuantity };
     updatedItems[existingCartItemIndex] = newCartItem;
 
     return {
@@ -121,7 +120,7 @@ function CartProvider(props) {
         price: item.price,
         size: item.size,
         type: item.type,
-        quantity: item.amount,
+        quantity: item.quantity,
         discount: item.discount,
       },
     });
