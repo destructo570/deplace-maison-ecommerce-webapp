@@ -116,7 +116,6 @@ export const StyledCartProductItem = styled.div`
 export const StytledProductSummary = styled.div`
   input {
     width: 60px;
-
     min-height: 40px;
     text-align: center;
     font-family: "Favorit";
