@@ -63,7 +63,7 @@ const cartReducer = (state, action) => {
     }
   }
 
-  if (action.type === "UPDATE_ITEM_quantity") {
+  if (action.type === "UPDATE_ITEM_QUANTITY") {
     let newQuantity = parseInt(action.newQuantity);
     let updatedItems = [...state.items];
     let updatedFinalPrice;
@@ -132,7 +132,7 @@ function CartProvider(props) {
 
   const updateItemQuantityHandler = (itemId, quantity) => {
     dispatchCartAction({
-      type: "UPDATE_ITEM_quantity",
+      type: "UPDATE_ITEM_QUANTITY",
       id: itemId,
       newQuantity: quantity,
     });
