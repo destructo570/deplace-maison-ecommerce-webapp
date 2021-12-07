@@ -12,18 +12,6 @@ import CartContext from "../../store/cart-context";
 function CartItem(props) {
   const cartCtx = useContext(CartContext);
   const quantityChangeHandler = (event) => {
-    if (
-      event.target.value === "" ||
-      event.target.value < 0 ||
-      event.target.value > 10
-    ) {
-      return;
-    }
-
-    if (event.target.value === "0") {
-      cartCtx.removeItem(props.id);
-      return;
-    }
     props.onQuantityChange(props.id, event.target.value);
   };
 
@@ -43,7 +31,7 @@ function CartItem(props) {
             name="quantity"
             min="0"
             max="10"
-            defaultValue={props.quantity}
+            value={props.quantity}
             onChange={quantityChangeHandler}
           ></input>
           <p onClick={cartCtx.removeItem.bind(null, props.id)}>Remove</p>
