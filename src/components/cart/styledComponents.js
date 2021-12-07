@@ -137,10 +137,6 @@ export const StyledCheckoutSummary = styled.div`
   background-color: ${({ theme }) => theme.color.primaryText};
   color: ${({ theme }) => theme.color.background};
   text-transform: uppercase;
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-  width: 100%;
 
   div {
     display: flex;
