@@ -11,7 +11,7 @@ export const StyledCartOverlay = styled.div`
   right: 0px;
   top: 0px;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   z-index: 102;
   overflow: scroll;
   display: flex;
@@ -40,11 +40,13 @@ export const StyledCartHeader = styled.div`
   align-self: flex-start;
   border-bottom: 0.5px solid ${({ theme }) => theme.color.primaryText};
   padding: 3em;
+  width: 100%;
+
   h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 400;
     text-transform: uppercase;
-    line-height: 50px;
+    line-height: 60px;
     letter-spacing: -5px;
   }
 
@@ -113,10 +115,12 @@ export const StyledCartProductItem = styled.div`
 
 export const StytledProductSummary = styled.div`
   input {
-    max-width: 65px;
+    width: 60px;
+
     min-height: 40px;
     text-align: center;
     font-family: "Favorit";
+    border: 1px solid rgba(0, 0, 0, 0.3);
   }
 
   input:focus {
