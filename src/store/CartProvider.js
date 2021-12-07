@@ -64,9 +64,6 @@ const cartReducer = (state, action) => {
   }
 
   if (action.type === "UPDATE_ITEM_quantity") {
-    console.log(`InitialState: `);
-    console.log(state);
-
     let newQuantity = parseInt(action.newQuantity);
     let updatedItems = state.items;
     let updatedFinalPrice;
@@ -96,9 +93,6 @@ const cartReducer = (state, action) => {
     const newCartItem = existingCartItem;
     newCartItem.quantity = newQuantity;
     updatedItems[existingCartItemIndex] = newCartItem;
-
-    console.log(`UpdatedState: `);
-    console.log(updatedItems, updatedNumOfItems, updatedFinalPrice);
 
     return {
       items: updatedItems,

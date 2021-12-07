@@ -11,15 +11,15 @@ function Collections() {
   return (
     <StyledCollections>
       <StyledHeading>
-        <h1 className="head-1">SPRING,</h1>
-        <div className="sub-head">
-          <h1 className="head-2">SUMMER</h1>
-          <StyledSubHeading>
+        <h1>SPRING,</h1>
+        <StyledSubHeading>
+          <h1>SUMMER</h1>
+          <h3>
             COLL.
             <br />
             2021
-          </StyledSubHeading>
-        </div>
+          </h3>
+        </StyledSubHeading>
       </StyledHeading>
       <StyledCategorySection>
         <CategoryItems />

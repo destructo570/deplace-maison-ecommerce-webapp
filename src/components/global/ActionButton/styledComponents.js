@@ -4,7 +4,7 @@ export const StyledActionButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-top: 2rem;
+  margin-top: 2em;
 
   p {
     text-transform: uppercase;
@@ -19,7 +19,7 @@ export const StyledActionButton = styled.div`
 
 export const StytledIcon = styled.a`
   position: relative;
-  margin-left: 0.7rem;
+  margin-left: 0.7em;
 
   &:hover {
     cursor: pointer;

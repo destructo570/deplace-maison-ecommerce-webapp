@@ -4,14 +4,16 @@ import styled from "styled-components";
 // Collections Section
 //
 
-export const StyledCollections = styled.div`
+export const StyledCollections = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: end;
   padding-left: ${({ theme }) => theme.mobile.pageLeftPadding};
   padding-right: ${({ theme }) => theme.mobile.pageRightPadding};
   margin-top: 6em;
+`;
 
+export const StyledHeading = styled.div`
   h1 {
     font-size: clamp(4rem, 15vw, 20rem);
     line-height: 0.9em;
@@ -21,22 +23,20 @@ export const StyledCollections = styled.div`
     text-align: end;
     width: 100%;
   }
-`;
 
-export const StyledHeading = styled.div`
-  .sub-head {
-    display: flex;
-    justify-content: space-between;
+  h3 {
+    font-size: clamp(1.3rem, 3.2vw, 10rem);
+    font-weight: 400;
+    line-height: 0.85em;
+    padding-top: 0.2em;
+    padding-left: 0.2em;
+    text-align: end;
   }
 `;
 
-export const StyledSubHeading = styled.h3`
-  font-size: clamp(1.3rem, 3.2vw, 10rem);
-  font-weight: 400;
-  line-height: 0.85em;
-  padding-top: 0.2em;
-  padding-left: 0.2em;
-  text-align: end;
+export const StyledSubHeading = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
 
 //

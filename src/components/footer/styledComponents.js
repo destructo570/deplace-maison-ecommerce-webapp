@@ -5,7 +5,7 @@ export const StyledFooter = styled.footer`
   padding: 2em;
   background-color: ${({ theme }) => theme.color.footerBackground};
   display: grid;
-  grid-gap: 2.5rem;
+  grid-gap: 2.5em;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   text-transform: uppercase;
@@ -20,11 +20,11 @@ export const StyledNewsLetter = styled.div`
   display: none;
   img {
     width: 30px;
-    margin-top: 0.5rem;
+    margin-top: 0.5em;
   }
 
   form {
-    margin-top: 3.5rem;
+    margin-top: 3.5em;
   }
 `;
 
@@ -37,7 +37,7 @@ export const StyledInfo = styled.div`
   flex-direction: column;
   justify-content: space-between;
   ul {
-    margin-top: 0.4rem;
+    margin-top: 0.4em;
     list-style: none;
   }
 
@@ -61,7 +61,7 @@ export const StyledPolicy = styled.div`
   flex-direction: column;
   justify-content: space-between;
   ul {
-    margin-top: 0.4rem;
+    margin-top: 0.4em;
     list-style: none;
   }
 
@@ -119,6 +119,6 @@ export const StyledSocial = styled.div`
   }
 
   img + img {
-    margin-left: 0.5rem;
+    margin-left: 0.5em;
   }
 `;

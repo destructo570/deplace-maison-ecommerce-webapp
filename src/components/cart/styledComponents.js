@@ -130,6 +130,10 @@ export const StytledProductSummary = styled.div`
     margin-top: 2em;
     font-size: 0.8rem;
   }
+
+  p:hover {
+    cursor: pointer;
+  }
 `;
 
 export const StyledCheckoutSummary = styled.div`

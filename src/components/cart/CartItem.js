@@ -6,11 +6,7 @@ import {
   StytledProductSummary,
 } from "./styledComponents";
 
-import { useContext } from "react";
-import CartContext from "../../store/cart-context";
-
 function CartItem(props) {
-  const cartCtx = useContext(CartContext);
   const quantityChangeHandler = (event) => {
     if (
       event.target.value === "" ||
@@ -21,7 +17,7 @@ function CartItem(props) {
     }
 
     if (event.target.value === "0") {
-      cartCtx.removeItem(props.id);
+      props.onRemoveItem(props.id);
       return;
     }
     props.onQuantityChange(props.id, event.target.value);
@@ -46,7 +42,7 @@ function CartItem(props) {
             defaultValue={props.quantity}
             onChange={quantityChangeHandler}
           ></input>
-          <p onClick={cartCtx.removeItem.bind(null, props.id)}>Remove</p>
+          <p onClick={props.onRemoveItem.bind(null, props.id)}>Remove</p>
         </StytledProductSummary>
       </StyledCartProductItem>
       <StyledDivider />

@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const StyledInputField = styled.div`
   display: flex;
   font-family: Favorit;
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
 
   input {
     -webkit-appearance: none;

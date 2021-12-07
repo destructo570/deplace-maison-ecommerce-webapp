@@ -7,7 +7,6 @@ import { StyledCheckoutSummary } from "./styledComponents";
 
 function Cart(props) {
   const cartCtx = useContext(CartContext);
-  console.log(`Curent Cart Price : ${cartCtx.finalPrice}`);
 
   const onCloseHandler = () => {
     props.onHideCart();
@@ -15,6 +14,10 @@ function Cart(props) {
 
   const quantityChangeHandler = (id, newQuantity) => {
     cartCtx.updateItemQuantity(id, newQuantity);
+  };
+
+  const removeItemHandler = (id) => {
+    cartCtx.removeItem(id);
   };
 
   const CartItems = (
@@ -31,6 +34,7 @@ function Cart(props) {
             size={item.size}
             color={item.color}
             onQuantityChange={quantityChangeHandler}
+            onRemoveItem={removeItemHandler}
           >
             {item.name}
           </CartItem>

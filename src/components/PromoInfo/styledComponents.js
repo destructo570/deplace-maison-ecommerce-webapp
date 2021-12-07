@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledPromoInfo = styled.div`
+export const StyledPromoInfo = styled.section`
   margin-top: 3em;
   margin-bottom: 3em;
   padding-left: ${({ theme }) => theme.mobile.pageLeftPadding};
@@ -10,7 +10,7 @@ export const StyledPromoInfo = styled.div`
     font-size: 0.8rem;
     text-transform: uppercase;
     text-decoration: underline;
-    margin-right: 2rem;
+    margin-right: 2em;
   }
   span:last-child {
     text-decoration: underline;
