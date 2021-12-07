@@ -8,20 +8,16 @@ import { StyledCheckoutSummary } from "./styledComponents";
 function Cart(props) {
   const cartCtx = useContext(CartContext);
 
-  const cartCloseHandler = () => {
+  const onCloseHandler = () => {
     props.onHideCart();
   };
 
-  const quantityChangeHandler = (item) => {
-    cartCtx.updateItemQuantity(item);
+  const quantityChangeHandler = (id, newQuantity) => {
+    cartCtx.updateItemQuantity(id, newQuantity);
   };
 
   const removeItemHandler = (id) => {
     cartCtx.removeItem(id);
-  };
-
-  const addItemHandler = (item) => {
-    cartCtx.addItem(item);
   };
 
   const CartItems = (
@@ -37,11 +33,8 @@ function Cart(props) {
             img={item.img}
             size={item.size}
             color={item.color}
-            type={item.type}
-            discount={item.discount}
             onQuantityChange={quantityChangeHandler}
             onRemoveItem={removeItemHandler}
-            onAddItem={addItemHandler}
           >
             {item.name}
           </CartItem>
@@ -51,7 +44,7 @@ function Cart(props) {
   );
 
   return (
-    <CartModal onClose={cartCloseHandler}>
+    <CartModal onClose={onCloseHandler}>
       {CartItems}
       <StyledCheckoutSummary>
         <div>

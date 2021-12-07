@@ -8,17 +8,6 @@ import {
 
 function CartItem(props) {
   const quantityChangeHandler = (event) => {
-    // props.onAddItem({
-    //   id: props.id,
-    //   quantity: event.target.value,
-    //   name: props.name,
-    //   color: props.color,
-    //   type: props.type,
-    //   size: props.size,
-    //   price: props.price,
-    //   discount: props.discount,
-    //   img: props.img,
-    // });
     if (
       event.target.value === "" ||
       event.target.value < 0 ||
@@ -31,17 +20,7 @@ function CartItem(props) {
       props.onRemoveItem(props.id);
       return;
     }
-    props.onQuantityChange({
-      id: props.id,
-      quantity: parseInt(event.target.value),
-      name: props.name,
-      color: props.color,
-      type: props.type,
-      size: props.size,
-      price: props.price,
-      discount: props.discount,
-      img: props.img,
-    });
+    props.onQuantityChange(props.id, event.target.value);
   };
 
   return (

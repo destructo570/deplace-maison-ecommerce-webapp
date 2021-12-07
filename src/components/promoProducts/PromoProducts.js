@@ -30,7 +30,7 @@ function PromoProducts() {
   for (let key in data) {
     fetchedProductList.push({
       id: key,
-      quantity: data[key].quantity,
+      amount: data[key].amount,
       name: data[key].name,
       color: data[key].color,
       type: data[key].type,
