@@ -14,9 +14,8 @@ export const StyledCartOverlay = styled.div`
   width: 100%;
   z-index: 102;
   overflow: scroll;
-  display: flex;
-  flex-direction: column;
-
+  display: grid;
+  grid-template-rows: 200px 1fr 150px;
   background-color: ${({ theme }) => theme.color.background};
 
   /* Hide Scrollbars */
