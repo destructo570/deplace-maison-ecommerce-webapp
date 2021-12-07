@@ -29,8 +29,6 @@ export const StyledCartOverlay = styled.div`
   ul {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    height: 100%;
   }
 `;
 
@@ -139,6 +137,10 @@ export const StyledCheckoutSummary = styled.div`
   background-color: ${({ theme }) => theme.color.primaryText};
   color: ${({ theme }) => theme.color.background};
   text-transform: uppercase;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
 
   div {
     display: flex;
