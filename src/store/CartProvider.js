@@ -64,35 +64,36 @@ const cartReducer = (state, action) => {
   }
 
   if (action.type === "UPDATE_ITEM_quantity") {
-    let newQuantity = parseInt(action.newQuantity);
-    let updatedItems = state.items;
+    let updatedCartItem = action.data;
+    let updatedItems = [...state.items];
     let updatedFinalPrice;
     let updatedNumOfItems;
     const existingCartItemIndex = state.items.findIndex((item) => {
-      return item.id === action.id;
+      return item.id === action.data.id;
     });
 
     const existingCartItem = state.items[existingCartItemIndex];
+    updatedItems[existingCartItemIndex] = updatedCartItem;
 
-    if (existingCartItem.quantity > newQuantity) {
+    if (existingCartItem.quantity > updatedCartItem.quantity) {
       updatedFinalPrice =
         state.finalPrice -
-        existingCartItem.price * (existingCartItem.quantity - newQuantity);
+        existingCartItem.price *
+          (existingCartItem.quantity - updatedCartItem.quantity);
 
       updatedNumOfItems =
-        state.numOfItems - (existingCartItem.quantity - newQuantity);
+        state.numOfItems -
+        (existingCartItem.quantity - updatedCartItem.quantity);
     } else {
       updatedFinalPrice =
         state.finalPrice +
-        existingCartItem.price * (newQuantity - existingCartItem.quantity);
+        existingCartItem.price *
+          (updatedCartItem.quantity - existingCartItem.quantity);
 
       updatedNumOfItems =
-        state.numOfItems + (newQuantity - existingCartItem.quantity);
+        state.numOfItems +
+        (updatedCartItem.quantity - existingCartItem.quantity);
     }
-
-    const newCartItem = existingCartItem;
-    newCartItem.quantity = newQuantity;
-    updatedItems[existingCartItemIndex] = newCartItem;
 
     return {
       items: updatedItems,
@@ -121,7 +122,7 @@ function CartProvider(props) {
         price: item.price,
         size: item.size,
         type: item.type,
-        quantity: item.amount,
+        quantity: item.quantity,
         discount: item.discount,
       },
     });
@@ -131,11 +132,20 @@ function CartProvider(props) {
     dispatchCartAction({ type: "REMOVE", id: itemId });
   };
 
-  const updateItemQuantityHandler = (itemId, quantity) => {
+  const updateItemQuantityHandler = (item) => {
     dispatchCartAction({
       type: "UPDATE_ITEM_quantity",
-      id: itemId,
-      newQuantity: quantity,
+      data: {
+        id: item.id,
+        name: item.name,
+        color: item.color,
+        img: item.img,
+        price: item.price,
+        size: item.size,
+        type: item.type,
+        quantity: item.quantity,
+        discount: item.discount,
+      },
     });
   };
 
