@@ -27,13 +27,7 @@ function Cart(props) {
         return (
           <CartItem
             key={item.id}
-            id={item.id}
-            name={item.name}
-            price={item.price}
-            quantity={item.quantity}
-            img={item.img}
-            size={item.size}
-            color={item.color}
+            item={item}
             onQuantityChange={quantityChangeHandler}
             onRemoveItem={removeItemHandler}
           >
