@@ -10,12 +10,12 @@ import {
 } from "./styledComponents";
 import unisexIcon from "../../assets/icons/unisex-label.svg";
 import ActionButton from "../global/ActionButton/ActionButton";
-import { useContext } from "react";
-import CartContext from "../../store/cart-context";
 import useFetch from "../../hooks/useFetch";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../../store/cart";
 
 function PromoProducts() {
-  const cartCtx = useContext(CartContext);
+  const dispatch = useDispatch();
 
   const { data, isLoading, error } = useFetch(
     "https://deplacemaisontest-default-rtdb.firebaseio.com/promo-products.json"
@@ -42,8 +42,13 @@ function PromoProducts() {
   }
 
   const getProductItemFromId = (id) => {
-    const productList = fetchedProductList.filter((item) => item.id === id);
-    return productList[0];
+    const indexOfItem = fetchedProductList.findIndex((item) => item.id === id);
+
+    return fetchedProductList[indexOfItem];
+  };
+
+  const addItemHandler = (item) => {
+    dispatch(cartActions.addItem(item));
   };
 
   const products = (
@@ -59,8 +64,8 @@ function PromoProducts() {
             size={item.size}
             discount={item.discount}
             price={item.price}
-            amount={item.amount}
-            onClick={cartCtx.addItem.bind(null, getProductItemFromId(item.id))}
+            quantity={item.quantity}
+            onClick={addItemHandler.bind(null, item)}
           >
             <StyledProductImage src={item.img} alt=""></StyledProductImage>
             {item.type === "unisex" ? <img src={unisexIcon} alt=""></img> : ""}
@@ -73,6 +78,7 @@ function PromoProducts() {
       })}
     </ul>
   );
+
   return (
     <StyledPromoProduct>
       {products}

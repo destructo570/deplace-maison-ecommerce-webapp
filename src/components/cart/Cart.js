@@ -1,28 +1,29 @@
-import { useContext } from "react";
-import CartContext from "../../store/cart-context";
+import { useDispatch, useSelector } from "react-redux";
+import { cartActions } from "../../store/cart";
 import Button from "../global/Button/Button";
 import CartItem from "./CartItem";
 import CartModal from "./CartModal";
 import { StyledCheckoutSummary } from "./styledComponents";
 
 function Cart(props) {
-  const cartCtx = useContext(CartContext);
+  const dispatch = useDispatch();
+  const cartState = useSelector((state) => state.cart);
 
   const onCloseHandler = () => {
     props.onHideCart();
   };
 
-  const quantityChangeHandler = (id, newQuantity) => {
-    cartCtx.updateItemQuantity(id, newQuantity);
+  const quantityChangeHandler = (item) => {
+    dispatch(cartActions.updateItemQuantity(item));
   };
 
   const removeItemHandler = (id) => {
-    cartCtx.removeItem(id);
+    dispatch(cartActions.removeItem(id));
   };
 
   const CartItems = (
     <ul>
-      {cartCtx.items.map((item) => {
+      {cartState.items.map((item) => {
         return (
           <CartItem
             key={item.id}
@@ -49,7 +50,7 @@ function Cart(props) {
       <StyledCheckoutSummary>
         <div>
           <h4>Subtotal</h4>
-          <h4>$ {cartCtx.finalPrice} USD</h4>
+          <h4>$ {cartState.totalAmount} USD</h4>
         </div>
         <Button title="Continue To Checkout" />
       </StyledCheckoutSummary>

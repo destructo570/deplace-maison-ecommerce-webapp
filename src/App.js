@@ -9,7 +9,6 @@ import Testimonials from "./components/testimonials/Testimonials";
 import Footer from "./components/footer/Footer";
 import Cart from "./components/cart/Cart";
 import { useState } from "react";
-import CartProvider from "./store/CartProvider";
 import PromoProducts from "./components/promoProducts/PromoProducts";
 
 const themeLight = {
@@ -40,21 +39,19 @@ function App() {
   };
   return (
     <ThemeProvider theme={themeLight}>
-      <CartProvider>
-        {isCartShown && <Cart onHideCart={onHideCart} />}
-        <div className="App">
-          <GlobalStyles />
-          <Navigation onShowCart={onShowCart} />
-          <main>
-            <Collections />
-            <ScrollingDivider />
-            <PromoInfo />
-            <PromoProducts />
-            <Testimonials />
-            <Footer />
-          </main>
-        </div>
-      </CartProvider>
+      {isCartShown && <Cart onHideCart={onHideCart} />}
+      <div className="App">
+        <GlobalStyles />
+        <Navigation onShowCart={onShowCart} />
+        <main>
+          <Collections />
+          <ScrollingDivider />
+          <PromoInfo />
+          <PromoProducts />
+          <Testimonials />
+          <Footer />
+        </main>
+      </div>
     </ThemeProvider>
   );
 }

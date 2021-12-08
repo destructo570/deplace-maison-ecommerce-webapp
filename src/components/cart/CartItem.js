@@ -10,6 +10,16 @@ import {
 
 function CartItem(props) {
   const [hasError, setHasError] = useState(false);
+  const item = {
+    id: props.id,
+    name: props.name,
+    quantity: props.quantity,
+    color: props.color,
+    size: props.size,
+    price: props.price,
+    type: props.type,
+    img: props.img,
+  };
 
   const quantityChangeHandler = (event) => {
     if (
@@ -26,7 +36,9 @@ function CartItem(props) {
       return;
     }
     setHasError(false);
-    props.onQuantityChange(props.id, event.target.value);
+
+    const updatedItem = { ...item, quantity: event.target.value };
+    props.onQuantityChange(updatedItem);
   };
 
   return (

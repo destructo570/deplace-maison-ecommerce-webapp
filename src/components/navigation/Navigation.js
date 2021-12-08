@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import logo from "../../assets/icons/logo.svg";
 import nav from "../../assets/icons/nav-icon.svg";
 import facebookIcon from "../../assets/icons/facebook.svg";
@@ -17,10 +17,10 @@ import {
   StyledNavSocialLinks,
   StyledNavStoreLinks,
 } from "./styledComponents";
-import CartContext from "../../store/cart-context";
+import { useSelector } from "react-redux";
 
 function Navigation(props) {
-  const cartCtx = useContext(CartContext);
+  const cartState = useSelector((state) => state.cart);
   const [isNavMenuShown, setIsNavMenuShown] = useState(false);
   const onNavHandler = () => {
     setIsNavMenuShown((prevState) => {
@@ -76,7 +76,7 @@ function Navigation(props) {
         </StyledNavIcon>
         <StyledCartItem>
           <div onClick={props.onShowCart}>
-            Cart <span> {cartCtx.numOfItems}</span>
+            Cart <span> {cartState.totalItems}</span>
           </div>
         </StyledCartItem>
       </StyledNavigationBar>
