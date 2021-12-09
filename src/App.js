@@ -8,8 +8,10 @@ import PromoInfo from "./components/PromoInfo/PromoInfo";
 import Testimonials from "./components/testimonials/Testimonials";
 import Footer from "./components/footer/Footer";
 import Cart from "./components/cart/Cart";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PromoProducts from "./components/promoProducts/PromoProducts";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCartData, sendCartData } from "./store/cart";
 
 const themeLight = {
   color: {
@@ -29,8 +31,25 @@ const themeLight = {
   },
 };
 
+let isInitial = true;
+
 function App() {
   const [isCartShown, setIsCartShown] = useState(false);
+  const cartState = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchCartData());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (isInitial) {
+      isInitial = false;
+      return;
+    }
+
+    dispatch(sendCartData(cartState));
+  }, [cartState, dispatch]);
   const onShowCart = () => {
     setIsCartShown(true);
   };

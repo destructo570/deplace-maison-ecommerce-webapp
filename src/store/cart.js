@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const { createSlice } = require("@reduxjs/toolkit");
 
 const initialCartState = {
@@ -10,10 +12,14 @@ const cartSlice = createSlice({
   name: "cart",
   initialState: initialCartState,
   reducers: {
+    replaceCart(state, action) {
+      state.items = action.payload.items;
+      state.totalAmount = action.payload.totalAmount;
+      state.totalItems = action.payload.totalItems;
+    },
     addItem(state, action) {
       let newItem = action.payload;
       const updatedItems = [...state.items];
-
       const existingCartItemIndex = state.items.findIndex((item) => {
         return item.id === newItem.id;
       });
@@ -58,6 +64,8 @@ const cartSlice = createSlice({
           existingCartItem.price * existingCartItem.quantity;
         updatedTotalItems = state.totalItems - existingCartItem.quantity;
 
+        console.log(updatedItems);
+
         return {
           items: updatedItems,
           totalAmount: updatedTotalAmount,
@@ -70,6 +78,7 @@ const cartSlice = createSlice({
       const updatedItems = [...state.items];
       let updatedTotalAmount;
       let updatedTotalItems;
+
       const existingCartItemIndex = state.items.findIndex((item) => {
         return item.id === newItem.id;
       });
@@ -104,6 +113,38 @@ const cartSlice = createSlice({
     },
   },
 });
+
+export const sendCartData = (cart) => {
+  return async (dispatch) => {
+    try {
+      const response = await axios.put(
+        "https://deplacemaisontest-default-rtdb.firebaseio.com/cart.json",
+        cart
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+export const fetchCartData = () => {
+  return async (dispatch) => {
+    try {
+      const response = await axios.get(
+        "https://deplacemaisontest-default-rtdb.firebaseio.com/cart.json"
+      );
+
+      if (response.data.items === undefined) {
+        response.data.items = [];
+      }
+      dispatch(cartActions.replaceCart(response.data));
+
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
 
 export const cartActions = cartSlice.actions;
 export default cartSlice.reducer;
