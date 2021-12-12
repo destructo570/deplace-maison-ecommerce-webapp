@@ -1,16 +1,17 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@font-face {
+  font-family: "Favorit";
+  src: local("Favorit"),
+    url(../assets/fonts/favorit-trial-var.ttf) format("truetype");
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+  font-family: "Cyberthrone";
+  src: local("Cyberthrone"),
+    url(../assets/fonts/cyberthrone.ttf) format("truetype");
 }
 
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: "TTrailer";
+  src: local("TTrailer"),
+    url(../assets/fonts/tt-trailer-med.ttf) format("truetype");
 }
