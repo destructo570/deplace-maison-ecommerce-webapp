@@ -11,8 +11,11 @@ import {
 import unisexIcon from "../../assets/icons/unisex-label.svg";
 import ActionButton from "../global/ActionButton/ActionButton";
 import useFetch from "../../hooks/useFetch";
+import { useContext } from "react";
+import CartContext from "../../store/cart-context";
 
 function PromoProducts() {
+  const cartCtx = useContext(CartContext);
   const { data, isLoading, error } = useFetch(
     "https://deplacemaisontest-default-rtdb.firebaseio.com/promo-products.json"
   );
@@ -43,7 +46,9 @@ function PromoProducts() {
     return fetchedProductList[indexOfItem];
   };
 
-  const addItemHandler = (item) => {};
+  const addItemHandler = (item) => {
+    cartCtx.addItem(item);
+  };
 
   const products = (
     <ul>

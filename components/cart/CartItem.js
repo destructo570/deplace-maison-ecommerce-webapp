@@ -27,7 +27,11 @@ function CartItem(props) {
     }
     setHasError(false);
 
-    const updatedItem = { ...props.item, quantity: event.target.value };
+    const updatedItem = {
+      ...props.item,
+      quantity: parseInt(event.target.value),
+    };
+
     props.onQuantityChange(updatedItem);
   };
 

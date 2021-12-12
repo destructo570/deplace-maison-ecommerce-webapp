@@ -5,6 +5,7 @@ import Footer from "../components/footer/Footer";
 import Cart from "../components/cart/Cart";
 import { useState } from "react";
 import "../styles/globals.css";
+import CartContextProvider from "../store/CartContextProvider";
 
 const themeLight = {
   color: {
@@ -35,11 +36,13 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeProvider theme={themeLight}>
-      {isCartShown && <Cart onHideCart={onShowCart} />}
-      <GlobalStyles />
-      <Navigation onShowCart={onShowCart} />
-      <Component {...pageProps} />
-      <Footer />
+      <CartContextProvider>
+        {isCartShown && <Cart onHideCart={onShowCart} />}
+        <GlobalStyles />
+        <Navigation onShowCart={onShowCart} />
+        <Component {...pageProps} />
+        <Footer />
+      </CartContextProvider>
     </ThemeProvider>
   );
 }
