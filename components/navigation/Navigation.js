@@ -3,6 +3,7 @@ import logo from "../../assets/icons/logo.svg";
 import nav from "../../assets/icons/nav-icon.svg";
 import facebookIcon from "../../assets/icons/facebook.svg";
 import instagramIcon from "../../assets/icons/instagram.svg";
+import Link from "next/link";
 
 import {
   StyledCartItem,
@@ -31,27 +32,27 @@ function Navigation(props) {
       <StyledNavLinkTitle>Tabs</StyledNavLinkTitle>
       <StyledNavStoreLinks>
         <li>
-          <a href="/">Shop</a>
+          <Link href="/">Shop</Link>
         </li>
         <li>
-          <a href="/">Collections</a>
+          <Link href="/">Collections</Link>
         </li>
         <li>
-          <a href="/">About</a>
+          <Link href="/">About</Link>
         </li>
       </StyledNavStoreLinks>
       <StyledNavInfoLinks>
         <li>
-          <a href="/">Faq</a>
+          <Link href="/">Faq</Link>
         </li>
         <li>
-          <a href="/">Returns</a>
+          <Link href="/">Returns</Link>
         </li>
         <li>
-          <a href="/">Terms</a>
+          <Link href="/">Terms</Link>
         </li>
         <li>
-          <a href="/">Privacy</a>
+          <Link href="/">Privacy</Link>
         </li>
       </StyledNavInfoLinks>
       <StyledNavSocialLinks>
