@@ -18,10 +18,14 @@ export const StyledNavigationBar = styled.nav`
   padding: 1em 1.5em;
 `;
 
-export const StyledLogo = styled.a`
+export const StyledLogo = styled.div`
   width: 80px;
   filter: ${({ isVisible, theme }) =>
     isVisible ? theme.color.backgroundFilter : theme.color.primaryTextFilter};
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const StyledNavIcon = styled.div`

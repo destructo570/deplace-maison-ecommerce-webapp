@@ -19,14 +19,20 @@ import {
   StyledNavStoreLinks,
 } from "./styledComponents";
 import CartContext from "../../store/cart-context";
+import { useRouter } from "next/router";
 
 function Navigation(props) {
   const cartCtx = useContext(CartContext);
+  const router = useRouter();
   const [isNavMenuShown, setIsNavMenuShown] = useState(false);
   const onNavHandler = () => {
     setIsNavMenuShown((prevState) => {
       return !prevState;
     });
+  };
+
+  const navLogoHandler = () => {
+    router.push("/");
   };
 
   const NavMenu = (
@@ -69,7 +75,7 @@ function Navigation(props) {
   return (
     <StyledNavigation isVisible={isNavMenuShown}>
       <StyledNavigationBar>
-        <StyledLogo href="/" isVisible={isNavMenuShown}>
+        <StyledLogo onClick={navLogoHandler} isVisible={isNavMenuShown}>
           <img src={logo.src} alt="logo"></img>
         </StyledLogo>
         <StyledNavIcon isVisible={isNavMenuShown}>

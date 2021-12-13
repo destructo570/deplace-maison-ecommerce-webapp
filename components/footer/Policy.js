@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { StyledPolicy } from "./styledComponents";
 
 function Policy() {
@@ -7,13 +8,13 @@ function Policy() {
         <p>Policy</p>
         <ul>
           <li>
-            <a href="/terms">Terms</a>
+            <Link href="/terms">Terms</Link>
           </li>
           <li>
-            <a href="/privacy">Privacy</a>
+            <Link href="/privacy">Privacy</Link>
           </li>
           <li>
-            <a href="/cookie">Cookie</a>
+            <Link href="/cookie">Cookie</Link>
           </li>
         </ul>
       </div>
