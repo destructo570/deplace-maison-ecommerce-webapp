@@ -1,4 +1,5 @@
-import { StyledInfo } from "./styledComponents";
+import Link from "next/link";
+import { StyledInfo, StyledSecondaryLink } from "./styledComponents";
 
 function Info() {
   return (
@@ -7,17 +8,19 @@ function Info() {
         <p>Info</p>
         <ul>
           <li>
-            <a href="google.com">Faq</a>
+            <Link href="/faq">Faq</Link>
           </li>
           <li>
-            <a href="google.com">Returns</a>
+            <Link href="/returns">Returns</Link>
           </li>
           <li>
-            <a href="google.com">Contact</a>
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
       </div>
-      <div>Credits</div>
+      <StyledSecondaryLink>
+        <Link href="/credits">Credits</Link>
+      </StyledSecondaryLink>
     </StyledInfo>
   );
 }

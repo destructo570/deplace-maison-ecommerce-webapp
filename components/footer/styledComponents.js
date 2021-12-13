@@ -53,6 +53,12 @@ export const StyledInfo = styled.div`
   }
 `;
 
+export const StyledSecondaryLink = styled.div`
+  a {
+    font-size: 0.7rem;
+  }
+`;
+
 //
 // Policy Component
 //

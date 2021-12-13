@@ -10,7 +10,7 @@ export const StyledCollections = styled.section`
   justify-content: end;
   padding-left: ${({ theme }) => theme.mobile.pageLeftPadding};
   padding-right: ${({ theme }) => theme.mobile.pageRightPadding};
-  margin-top: 6em;
+  margin-top: ${({ theme }) => theme.mobile.pageTopMargin};
 `;
 
 export const StyledHeading = styled.div`

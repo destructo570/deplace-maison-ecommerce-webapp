@@ -24,6 +24,7 @@ const themeLight = {
   mobile: {
     pageLeftPadding: "1.5em",
     pageRightPadding: "2.5em",
+    pageTopMargin: "8em",
   },
 };
 
