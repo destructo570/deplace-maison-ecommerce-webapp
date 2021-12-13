@@ -4,16 +4,16 @@ function Policy() {
   return (
     <StyledPolicy>
       <div>
-        <p>Info</p>
+        <p>Policy</p>
         <ul>
           <li>
-            <a href="google.com">Terms</a>
+            <a href="/terms">Terms</a>
           </li>
           <li>
-            <a href="google.com">Privacy</a>
+            <a href="/privacy">Privacy</a>
           </li>
           <li>
-            <a href="google.com">Cookie</a>
+            <a href="/cookie">Cookie</a>
           </li>
         </ul>
       </div>
