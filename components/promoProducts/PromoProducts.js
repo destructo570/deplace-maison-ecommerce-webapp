@@ -40,12 +40,6 @@ function PromoProducts() {
     });
   }
 
-  const getProductItemFromId = (id) => {
-    const indexOfItem = fetchedProductList.findIndex((item) => item.id === id);
-
-    return fetchedProductList[indexOfItem];
-  };
-
   const addItemHandler = (item) => {
     cartCtx.addItem(item);
   };

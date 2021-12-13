@@ -4,6 +4,10 @@ import CartContext from "./cart-context";
 const defaultCartState = { items: [], totalAmount: 0, totalItems: 0 };
 
 const cartReducer = (state, action) => {
+  if (action.type === "REPLACE_CART") {
+    return action.cart;
+  }
+
   if (action.type === "ADD_ITEM") {
     let newItem = action.item;
     const updatedItems = [...state.items];
@@ -110,6 +114,9 @@ function CartContextProvider(props) {
   const updateItemQuantityHandler = (item) => {
     dispatchCartAction({ type: "UPDATE_ITEM_QUANTITY", item });
   };
+  const replaceCartHandler = (cart) => {
+    dispatchCartAction({ type: "REPLACE_CART", cart });
+  };
 
   const cartContext = {
     items: cartState.items,
@@ -118,6 +125,7 @@ function CartContextProvider(props) {
     addItem: addItemHandler,
     removeItem: removeItemHandler,
     updateItemQuantity: updateItemQuantityHandler,
+    replaceCart: replaceCartHandler,
   };
 
   return (
