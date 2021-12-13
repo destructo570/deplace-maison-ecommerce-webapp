@@ -116,26 +116,27 @@ function Cookie() {
             accessing another area of the Site or selecting an element of the
             same (a link), the user automatically consents to the use of
             cookies. You can change and manage your cookie preferences, either
-            through the Site or through your browser settings: ‍ <br />
+            through the Site or through your browser settings: <br />
             <br />
             a. Through the websiteYou can express or deny your consent to the
             use of profiling cookies when you access any page of the site
             www.deplacemaison.com . In addition, through the opt-out links
             indicated in the previous paragraph, it is possible to disable
-            third-party cookies. ‍ <br />
+            third-party cookies. <br />
             <br />
             b. Through the web browser settingsIf you wish to block or delete
             cookies received from the Site or any other site, you can also do so
-            by changing your browser settings through the function provided. ‍
+            by changing your browser settings through the function provided.
             <br />
             <br />
             Below we provide links to the instructions of the following
             browsers: Internet Explorer -
             http://windows.microsoft.com/en-gb/windows-vista/block-or-allow-cookies
             Chrome - https://support.google.com/chrome/answer/95647 Firefox -
-            https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences
-            Opera - http://www.opera.com/help/tutorials/security/privacy/Safari
-            - http://support.apple.com/kb/PH17191 ‍ <br />
+            https://support.mozilla.org/en-US/kb/enable-and-disable
+            -cookies-website-preferences Opera -
+            http://www.opera.com/help/tutorials/ security/privacy/Safari -
+            http://support.apple.com/kb/PH17191 <br />
             <br />
             We remind you that disabling all cookies, including navigation and
             functionality cookies, may cause inconvenience to the navigation on
