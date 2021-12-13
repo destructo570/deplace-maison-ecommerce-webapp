@@ -74,9 +74,7 @@ function Privacy() {
             here:https://webflow.com/legal/privacy. We also use Google Analytics
             to help us understand how our customers use the Site - you can learn
             more about how Google uses your personal information here:
-            https://www.google.com/intl/en/policies/privacy/. You can also opt
-            out of Google Analytics here:
-            https://tools.google.com/dlpage/gaoptout. <br />
+            <br />
             <br />
             Finally, we may also share your personal information to comply with
             applicable laws and regulations, to respond to a subpoena, search
