@@ -98,15 +98,6 @@ function Privacy() {
             links below:-
             <br />
             <br />
-            Facebook: https://www.facebook.com/settings/?tab=ads Google:
-            https://www.google.com/settings/ads/anonymous
-            Bing:https://advertise.bingads.microsoft.com/en/us/resources/policies
-            Mailchimp - You must unsubscribe using the link at the bottom of any
-            Dèplacé Maison direct newsletter or email. <br />
-            <br />
-            In addition, you can opt out of some of these services by visiting
-            the Digital Advertising Alliance's opt-out portal at:
-            http://optout.aboutads.info/.
           </p>
         </li>
         <li>
