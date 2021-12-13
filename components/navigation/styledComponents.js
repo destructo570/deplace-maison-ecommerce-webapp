@@ -15,7 +15,7 @@ export const StyledNavigationBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8em 1.5em;
+  padding: 1em 1.5em;
 `;
 
 export const StyledLogo = styled.a`
@@ -37,7 +37,6 @@ export const StyledNavIcon = styled.div`
 
 export const StyledCartItem = styled.div`
   text-transform: uppercase;
-  font-size: 0.8rem;
 
   &:hover {
     cursor: pointer;
