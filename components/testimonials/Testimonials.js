@@ -4,7 +4,7 @@ import quoteIcon from "../../assets/icons/quote-mark.svg";
 function Testimonials() {
   return (
     <StyledTestimonials>
-      <img src={quoteIcon} alt=""></img>
+      <img src={quoteIcon.src} alt=""></img>
       <StyledTestimonialItem>
         <h2>William Gibson</h2>
         <p>
