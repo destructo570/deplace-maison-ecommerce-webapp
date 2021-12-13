@@ -45,16 +45,16 @@ function Navigation(props) {
       </StyledNavStoreLinks>
       <StyledNavInfoLinks>
         <li>
-          <Link href="/">Faq</Link>
+          <Link href="/faq">Faq</Link>
         </li>
         <li>
-          <Link href="/">Returns</Link>
+          <Link href="/returns">Returns</Link>
         </li>
         <li>
-          <Link href="/">Terms</Link>
+          <Link href="/terms">Terms</Link>
         </li>
         <li>
-          <Link href="/">Privacy</Link>
+          <Link href="/privacy">Privacy</Link>
         </li>
       </StyledNavInfoLinks>
       <StyledNavSocialLinks>
@@ -69,7 +69,7 @@ function Navigation(props) {
   return (
     <StyledNavigation isVisible={isNavMenuShown}>
       <StyledNavigationBar>
-        <StyledLogo href="#" isVisible={isNavMenuShown}>
+        <StyledLogo href="/" isVisible={isNavMenuShown}>
           <img src={logo.src} alt="logo"></img>
         </StyledLogo>
         <StyledNavIcon isVisible={isNavMenuShown}>
