@@ -1,3 +1,5 @@
+import axios from "axios";
+import { useRouter } from "next/router";
 import { useContext } from "react";
 import CartContext from "../../store/cart-context";
 import Button from "../global/Button/Button";
@@ -7,6 +9,7 @@ import { StyledCheckoutSummary } from "./styledComponents";
 
 function Cart(props) {
   const cartCtx = useContext(CartContext);
+  const router = useRouter();
   const onCloseHandler = () => {
     props.onHideCart();
   };
@@ -17,6 +20,10 @@ function Cart(props) {
 
   const removeItemHandler = (id) => {
     cartCtx.removeItem(id);
+  };
+
+  const checkoutHandler = () => {
+    router.push("/checkout");
   };
 
   const CartItems = (
@@ -44,7 +51,7 @@ function Cart(props) {
           <h4>Subtotal</h4>
           <h4>$ {cartCtx.totalAmount} USD</h4>
         </div>
-        <Button title="Continue To Checkout" />
+        <Button onClick={checkoutHandler} title="Continue To Checkout" />
       </StyledCheckoutSummary>
     </CartModal>
   );
