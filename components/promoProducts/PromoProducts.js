@@ -14,14 +14,14 @@ import useFetch from "../../hooks/useFetch";
 import { useContext } from "react";
 import CartContext from "../../store/cart-context";
 
-function PromoProducts() {
+function PromoProducts(props) {
   const cartCtx = useContext(CartContext);
-  const { data, isLoading, error } = useFetch(
-    "https://deplacemaisontest-default-rtdb.firebaseio.com/promo-products.json"
-  );
+  const data = props.products.data;
+  const error = props.products.error;
 
-  if (error) {
+  if (error && !data) {
     console.log(error);
+    return;
   }
 
   const fetchedProductList = [];
