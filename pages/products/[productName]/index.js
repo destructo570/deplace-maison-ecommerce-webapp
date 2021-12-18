@@ -9,7 +9,7 @@ export async function getStaticPaths() {
   return {
     paths: [
       { params: { productName: "the-eye" } },
-      { params: { productName: "the-side" } },
+      { params: { productName: "the-code" } },
       { params: { productName: "carnera" } },
       { params: { productName: "duran" } },
       { params: { productName: "cactus" } },
