@@ -51,7 +51,6 @@ export const StyledProductOtherInfo = styled.section`
   position: relative;
 
   img {
-    background-color: red;
     margin-top: 3em;
   }
 `;
