@@ -32,6 +32,10 @@ export async function getStaticProps() {
     console.log(error.message);
   }
 
+  if (promoProducts === null) {
+    return { notFound: true };
+  }
+
   return {
     props: {
       promoProducts: {

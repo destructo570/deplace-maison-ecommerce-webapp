@@ -10,38 +10,28 @@ import {
 } from "./styledComponents";
 import unisexIcon from "../../assets/icons/unisex-label.svg";
 import ActionButton from "../global/ActionButton/ActionButton";
-import useFetch from "../../hooks/useFetch";
-import { useContext } from "react";
-import CartContext from "../../store/cart-context";
+import { useRouter } from "next/router";
 
 function PromoProducts(props) {
-  const cartCtx = useContext(CartContext);
   const data = props.products.data;
-  const error = props.products.error;
-
-  if (error && !data) {
-    console.log(error);
-    return;
-  }
+  const router = useRouter();
 
   const fetchedProductList = [];
 
   for (let key in data) {
     fetchedProductList.push({
-      id: key,
-      quantity: data[key].quantity,
+      id: data[key].id,
       name: data[key].name,
       color: data[key].color,
       type: data[key].type,
-      size: data[key].size,
       price: data[key].price,
-      discount: data[key].discount,
+      finalPrice: data[key]["final-price"],
       img: data[key].img,
     });
   }
 
-  const addItemHandler = (item) => {
-    cartCtx.addItem(item);
+  const openProductLinkHandler = (id) => {
+    router.push(`/products/${id}`);
   };
 
   const products = (
@@ -50,22 +40,20 @@ function PromoProducts(props) {
         return (
           <StyledProductItem
             key={item.id}
-            id={item.id}
-            name={item.name}
-            color={item.color}
-            type={item.type}
-            size={item.size}
-            discount={item.discount}
-            price={item.price}
-            quantity={item.quantity}
-            onClick={addItemHandler.bind(null, item)}
+            onClick={openProductLinkHandler.bind(null, item.id)}
           >
             <StyledProductImage src={item.img} alt=""></StyledProductImage>
-            {item.type === "unisex" ? <img src={unisexIcon} alt=""></img> : ""}
+            {item.type === "unisex" ? (
+              <img src={unisexIcon.src} alt=""></img>
+            ) : (
+              ""
+            )}
             <StyledProductSize>{item.size}</StyledProductSize>
             <StyledProductName>{item.name}</StyledProductName>
             <StyledProductPrice>${item.price} USD</StyledProductPrice>
-            <StyledProductFinalPrice>${item.price} USD</StyledProductFinalPrice>
+            <StyledProductFinalPrice>
+              ${item.finalPrice} USD
+            </StyledProductFinalPrice>
           </StyledProductItem>
         );
       })}
