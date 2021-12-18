@@ -16,7 +16,8 @@ function ProductDetails(props) {
   const product = props.data;
   const cartCtx = useContext(CartContext);
 
-  const addToCartHandler = () => {
+  const addToCartHandler = (event) => {
+    event.preventDefault();
     cartCtx.addItem({
       id: product.name,
       quantity: 1,
