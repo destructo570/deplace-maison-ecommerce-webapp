@@ -2,7 +2,7 @@
 
 ## Disclaimer
 
-This project was made only for educational purposes, I do not own any of the content (product images, fonts etc.). All the credit goes to Deplace maison. This project was only meant to be created as part of frontend React/NextJs practice and learning. This project is not meant to be used for economic purposes.
+This project was made only for educational purposes, I do not own any of the content (product images, fonts etc.). All the credit goes to Deplace maison. This project was only meant to be created as part of frontend React/NextJs practice and learning. This project is not meant to be used for any other purposes.
 
 ## Building the project
 
