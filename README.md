@@ -1,5 +1,9 @@
 # Deplace Maison Ecommerce Webapp NextJs
 
+A clone of deplace maison ecoomerce website using React/Next JS with stripe payment integration and firebase for storing orders.
+
+[Live Demo](https://deplace-maison-ecommerce-webapp.vercel.app/)
+
 ## Disclaimer
 
 This project was made only for educational purposes, I do not own any of the content (product images, fonts etc.). All the credit goes to Deplace maison. This project was only meant to be created as part of frontend React/NextJs practice and learning. This project is not meant to be used for any other purposes.
