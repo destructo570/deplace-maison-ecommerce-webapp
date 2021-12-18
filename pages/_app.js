@@ -3,11 +3,9 @@ import GlobalStyles from "../styles/globalStyles";
 import Navigation from "../components/navigation/Navigation";
 import Footer from "../components/footer/Footer";
 import Cart from "../components/cart/Cart";
-import { useContext, useEffect, useState } from "react";
+import { useState } from "react";
 import "../styles/globals.css";
 import CartContextProvider from "../store/CartContextProvider";
-import CartContext from "../store/cart-context";
-import axios from "axios";
 
 const themeLight = {
   color: {
