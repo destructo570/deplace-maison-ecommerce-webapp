@@ -45,7 +45,7 @@ function ProductDetails(props) {
         <StyledProductImage>
           <div>
             <img
-              src={product.images["side-view"]}
+              src={product.images.sideView}
               alt={`${product.name} side view`}
             />
           </div>
@@ -64,7 +64,7 @@ function ProductDetails(props) {
         <StyledProductImage>
           <div>
             <img
-              src={product.images["front-view"]}
+              src={product.images.frontView}
               alt={`${product.name} front view`}
             />
           </div>
@@ -76,7 +76,7 @@ function ProductDetails(props) {
         <StyledProductImage>
           <div>
             <img
-              src={product.images["back-view"]}
+              src={product.images.backView}
               alt={`${product.name} back view`}
             />
           </div>

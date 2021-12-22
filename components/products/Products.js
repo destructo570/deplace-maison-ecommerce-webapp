@@ -1,9 +1,10 @@
+import ProductsList from "../productsList/ProductsList";
 import { StyledProducts } from "./styledComponents";
 
-function Products() {
+function Products(props) {
   return (
     <StyledProducts>
-      <h1>ALL PRODUCTS</h1>
+      <ProductsList products={props.productsList}></ProductsList>
     </StyledProducts>
   );
 }
