@@ -25,7 +25,7 @@ function PromoProducts(props) {
       color: data[key].color,
       type: data[key].type,
       price: data[key].price,
-      finalPrice: data[key]["final-price"],
+      finalPrice: data[key].finalPrice,
       img: data[key].img,
     });
   }
