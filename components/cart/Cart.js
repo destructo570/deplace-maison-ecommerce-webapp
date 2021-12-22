@@ -24,6 +24,7 @@ function Cart(props) {
 
   const checkoutHandler = () => {
     router.push("/checkout");
+    props.onHideCart();
   };
 
   const CartItems = (
