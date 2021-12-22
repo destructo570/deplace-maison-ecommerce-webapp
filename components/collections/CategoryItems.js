@@ -3,9 +3,6 @@ import {
   StyledCategoryItem,
   StyledCategoryImage,
 } from "./styledComponents";
-import womanCollectionImg from "../../assets/images/category/man-section.jpeg";
-import manCollectionImg from "../../assets/images/category/woman-section.jpeg";
-import Image from "next/image";
 
 function CategoryItems() {
   return (
