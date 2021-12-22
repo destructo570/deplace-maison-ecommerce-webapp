@@ -72,9 +72,12 @@ export const StyledNavLinkTitle = styled.p`
 
 export const StyledNavStoreLinks = styled.ul`
   margin: 2em 0;
-  a {
+  p {
     font-size: 2.5rem;
     font-weight: 600;
+  }
+  p:hover {
+    cursor: pointer;
   }
 `;
 

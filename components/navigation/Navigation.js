@@ -35,18 +35,24 @@ function Navigation(props) {
     router.push("/");
   };
 
+  const shopLinkHandler = (event) => {
+    event.preventDefault();
+    router.push("/products");
+    onNavHandler();
+  };
+
   const NavMenu = (
     <StyledNavMenu>
       <StyledNavLinkTitle>Tabs</StyledNavLinkTitle>
       <StyledNavStoreLinks>
         <li>
-          <Link href="/">Shop</Link>
+          <p onClick={shopLinkHandler}>Shop</p>
         </li>
         <li>
-          <Link href="/">Collections</Link>
+          <p>Collections</p>
         </li>
         <li>
-          <Link href="/">About</Link>
+          <p>About</p>
         </li>
       </StyledNavStoreLinks>
       <StyledNavInfoLinks>
