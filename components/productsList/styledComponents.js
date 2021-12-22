@@ -7,21 +7,23 @@ export const StyledProductItem = styled.li`
   align-items: center;
   border: 1px solid ${({ theme }) => theme.color.primaryText};
   background-color: ${({ theme }) => theme.color.primaryAccent};
-  padding: 1em 2em;
-  min-width: 250px;
+  padding: 1em 0;
+
   text-transform: uppercase;
 
   &:hover {
     cursor: grab;
   }
 
+  //Set max with for product type label (e.g. unisex)
   img + img {
     max-width: 80px;
   }
 `;
 
 export const StyledProductImage = styled.img`
-  min-width: 200px;
+  max-height: 150px;
+  object-fit: contain;
 `;
 
 export const StyledProductSize = styled.p`

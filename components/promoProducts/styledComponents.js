@@ -16,6 +16,10 @@ export const StyledPromoProduct = styled.section`
       display: none;
     }
   }
+
+  li {
+    min-width: 200px;
+  }
 `;
 
 export const StyledActions = styled.div`
