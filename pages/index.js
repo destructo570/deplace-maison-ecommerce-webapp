@@ -11,7 +11,7 @@ export default function Home(props) {
       <Collections />
       <ScrollingDivider />
       <PromoInfo />
-      <PromoProducts products={props.promoProducts} />
+      <PromoProducts products={props.promoProducts.data} />
       <Testimonials />
     </main>
   );
