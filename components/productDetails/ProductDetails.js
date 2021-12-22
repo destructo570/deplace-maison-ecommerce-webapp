@@ -14,6 +14,7 @@ import {
 
 function ProductDetails(props) {
   const product = props.data;
+  console.log(product);
   const cartCtx = useContext(CartContext);
 
   const addToCartHandler = (event) => {
@@ -26,8 +27,8 @@ function ProductDetails(props) {
       type: "unisex",
       size: "EU 36|US 3|UK 2",
       price: product.price,
-      finalPrice: product["final-price"],
-      img: product.images["side-view"],
+      finalPrice: product.finalPrice,
+      img: product.images.sideView,
     });
   };
 
@@ -40,7 +41,7 @@ function ProductDetails(props) {
         </StyledProductTitle>
         <SytledProductPriceInfo>
           <p>$ {product.price} usd</p>
-          <h3>$ {product["final-price"]} USD</h3>
+          <h3>$ {product.finalPrice} USD</h3>
         </SytledProductPriceInfo>
         <StyledProductImage>
           <div>
