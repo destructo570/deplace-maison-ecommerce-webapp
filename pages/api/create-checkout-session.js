@@ -30,12 +30,12 @@ export default async (req, res) => {
     cancel_url: `${process.env.HOST}/order-failure`,
     metadata: {
       email: customerInfo.email,
-      name: customerInfo.eneteredName,
-      address: customerInfo.enteredStreet,
-      phone: customerInfo.enteredTelephone,
-      zipcode: customerInfo.enteredZipcode,
-      city: customerInfo.enteredCity,
-      state: customerInfo.enteredState,
+      name: customerInfo.name,
+      address: customerInfo.address,
+      phone: customerInfo.phone,
+      zipcode: customerInfo.zipcode,
+      city: customerInfo.city,
+      state: customerInfo.state,
       images: JSON.stringify(cartInfo.items.map((item) => item.img)),
     },
   });
