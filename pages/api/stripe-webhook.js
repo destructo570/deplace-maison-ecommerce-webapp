@@ -25,6 +25,12 @@ const completeOrder = async (session) => {
       amount: session.amount_total / 100,
       amount_shipping: session.total_details.amount_shipping / 100,
       images: JSON.parse(session.metadata.images),
+      address: session.metadata.address,
+      phone: session.metadata.phone,
+      customerName: session.metadata.name,
+      city: session.metadata.city,
+      state: session.metadata.state,
+      zipcode: session.metadata.zipcode,
       timestamp: admin.firestore.FieldValue.serverTimestamp(),
     })
     .then(() => {
