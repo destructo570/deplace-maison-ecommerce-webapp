@@ -120,3 +120,13 @@ export const StyledNavInquiry = styled.div`
   border-top: 1.5px solid ${({ theme }) => theme.color.background};
   border-bottom: 1.5px solid ${({ theme }) => theme.color.background};
 `;
+
+export const StyledLoginButton = styled.p`
+  text-transform: uppercase;
+  border: none;
+  text-decoration: underline;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;

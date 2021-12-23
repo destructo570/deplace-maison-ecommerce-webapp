@@ -6,6 +6,7 @@ import Cart from "../components/cart/Cart";
 import { useState } from "react";
 import "../styles/globals.css";
 import CartContextProvider from "../store/CartContextProvider";
+import { SessionProvider } from "next-auth/react";
 
 const themeLight = {
   color: {
@@ -26,7 +27,7 @@ const themeLight = {
   },
 };
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   const [isCartShown, setIsCartShown] = useState(false);
 
   const onShowCart = () => {
@@ -37,13 +38,15 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeProvider theme={themeLight}>
-      <CartContextProvider>
-        {isCartShown && <Cart onHideCart={onShowCart} />}
-        <GlobalStyles />
-        <Navigation onShowCart={onShowCart} />
-        <Component {...pageProps} />
-        <Footer />
-      </CartContextProvider>
+      <SessionProvider session={session}>
+        <CartContextProvider>
+          {isCartShown && <Cart onHideCart={onShowCart} />}
+          <GlobalStyles />
+          <Navigation onShowCart={onShowCart} />
+          <Component {...pageProps} />
+          <Footer />
+        </CartContextProvider>
+      </SessionProvider>
     </ThemeProvider>
   );
 }

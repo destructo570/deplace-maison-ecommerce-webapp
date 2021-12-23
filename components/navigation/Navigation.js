@@ -1,9 +1,7 @@
 import { useContext, useState } from "react";
 import logo from "../../assets/icons/logo.svg";
 import nav from "../../assets/icons/nav-icon.svg";
-import facebookIcon from "../../assets/icons/facebook.svg";
-import instagramIcon from "../../assets/icons/instagram.svg";
-import Link from "next/link";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 import {
   StyledCartItem,
@@ -11,19 +9,16 @@ import {
   StyledNavIcon,
   StyledNavigation,
   StyledNavigationBar,
-  StyledNavInfoLinks,
-  StyledNavInquiry,
-  StyledNavLinkTitle,
-  StyledNavMenu,
-  StyledNavSocialLinks,
-  StyledNavStoreLinks,
+  StyledLoginButton,
 } from "./styledComponents";
 import CartContext from "../../store/cart-context";
 import { useRouter } from "next/router";
+import NavMenu from "./NavMenu";
 
 function Navigation(props) {
   const cartCtx = useContext(CartContext);
   const router = useRouter();
+  const { data: session } = useSession();
   const [isNavMenuShown, setIsNavMenuShown] = useState(false);
   const onNavHandler = () => {
     setIsNavMenuShown((prevState) => {
@@ -35,49 +30,6 @@ function Navigation(props) {
     router.push("/");
   };
 
-  const shopLinkHandler = (event) => {
-    event.preventDefault();
-    router.push("/products");
-    onNavHandler();
-  };
-
-  const NavMenu = (
-    <StyledNavMenu>
-      <StyledNavLinkTitle>Tabs</StyledNavLinkTitle>
-      <StyledNavStoreLinks>
-        <li>
-          <p onClick={shopLinkHandler}>Shop</p>
-        </li>
-        <li>
-          <p>Collections</p>
-        </li>
-        <li>
-          <p>About</p>
-        </li>
-      </StyledNavStoreLinks>
-      <StyledNavInfoLinks>
-        <li>
-          <Link href="/faq">Faq</Link>
-        </li>
-        <li>
-          <Link href="/returns">Returns</Link>
-        </li>
-        <li>
-          <Link href="/terms">Terms</Link>
-        </li>
-        <li>
-          <Link href="/privacy">Privacy</Link>
-        </li>
-      </StyledNavInfoLinks>
-      <StyledNavSocialLinks>
-        <img src={facebookIcon.src} alt=""></img>
-        <img src={instagramIcon.src} alt=""></img>
-      </StyledNavSocialLinks>
-      <StyledNavInquiry>
-        Inquiries <br /> info@deplacemaison.com
-      </StyledNavInquiry>
-    </StyledNavMenu>
-  );
   return (
     <StyledNavigation isVisible={isNavMenuShown}>
       <StyledNavigationBar>
@@ -87,13 +39,16 @@ function Navigation(props) {
         <StyledNavIcon isVisible={isNavMenuShown}>
           <img src={nav.src} onClick={onNavHandler} alt="nav menu"></img>
         </StyledNavIcon>
+        <StyledLoginButton onClick={!session ? signIn : signOut}>
+          {!session ? "Login" : "Logout"}
+        </StyledLoginButton>
         <StyledCartItem>
           <div onClick={props.onShowCart}>
             Cart <span> {cartCtx.totalItems}</span>
           </div>
         </StyledCartItem>
       </StyledNavigationBar>
-      {isNavMenuShown && NavMenu}
+      {isNavMenuShown && <NavMenu onNavClick={onNavHandler} />}
     </StyledNavigation>
   );
 }
