@@ -4,6 +4,7 @@ import { StyledCheckoutProductList } from "./styledComponents";
 function CheckoutProductList(props) {
   const productItems = props.productList.map((product) => (
     <CheckoutProductItem
+      key={product.name}
       name={product.name}
       price={product.price}
       quantity={product.quantity}
