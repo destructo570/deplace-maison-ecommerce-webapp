@@ -14,7 +14,6 @@ import {
 
 function ProductDetails(props) {
   const product = props.data;
-  console.log(product);
   const cartCtx = useContext(CartContext);
 
   const addToCartHandler = (event) => {
