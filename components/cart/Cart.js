@@ -6,10 +6,13 @@ import Button from "../global/Button/Button";
 import CartItem from "./CartItem";
 import CartModal from "./CartModal";
 import { StyledCheckoutSummary } from "./styledComponents";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 function Cart(props) {
   const cartCtx = useContext(CartContext);
   const router = useRouter();
+  const { data: session } = useSession();
+
   const onCloseHandler = () => {
     props.onHideCart();
   };
@@ -52,7 +55,10 @@ function Cart(props) {
           <h4>Subtotal</h4>
           <h4>$ {cartCtx.totalAmount} USD</h4>
         </div>
-        <Button onClick={checkoutHandler} title="Continue To Checkout" />
+        <Button
+          onClick={session ? checkoutHandler : signIn}
+          title={session ? "Continue To Checkout" : "Login to checkout"}
+        />
       </StyledCheckoutSummary>
     </CartModal>
   );
