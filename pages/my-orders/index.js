@@ -4,9 +4,8 @@ import { collection, query, getDocs } from "firebase/firestore";
 import moment from "moment";
 import { getSession } from "next-auth/react";
 
-function MyOrdersPage(orders) {
-  console.log(orders);
-  return <MyOrders orders={orders} />;
+function MyOrdersPage(props) {
+  return <MyOrders orders={props.orders} />;
 }
 
 export default MyOrdersPage;
