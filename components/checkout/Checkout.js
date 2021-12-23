@@ -1,4 +1,4 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useRef } from "react";
 import CartContext from "../../store/cart-context";
 import {
   StyledCheckout,
@@ -11,7 +11,9 @@ import CheckoutSummary from "./CheckoutSummary";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 
-const stripePromise = loadStripe(process.env.stripe_public_key);
+const stripePromise = loadStripe(
+  "pk_test_51K6THjSHw2d4uoKkCWjB5qbUf3ZG1aaSqyEkO5sgKNxTu4cE8tjWUEinla6MwWuH9l7UUirRe4zgVLDgvSFojmPf002UhOkJBi"
+);
 
 function Checkout() {
   const cartCtx = useContext(CartContext);
@@ -46,6 +48,7 @@ function Checkout() {
         state: enteredState,
       },
     });
+
     const result = await stripe.redirectToCheckout({
       sessionId: response.data.id,
     });
