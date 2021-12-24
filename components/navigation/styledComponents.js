@@ -5,6 +5,7 @@ export const StyledNavigation = styled.nav`
   top: 0px;
   z-index: 101;
   width: 100%;
+  height: ${({ isVisible }) => (isVisible ? "100%" : "auto")};
   background-color: ${({ isVisible, theme }) =>
     isVisible ? theme.color.primaryText : theme.color.navBackground};
   color: ${({ isVisible, theme }) =>
@@ -107,9 +108,13 @@ export const StyledNavInfoLinks = styled.ul`
   justify-items: space-evenly;
   grid-gap: 1em;
 
-  a {
+  p {
     font-size: 1.2rem;
     font-weight: 600;
+  }
+
+  p:hover {
+    cursor: pointer;
   }
 `;
 

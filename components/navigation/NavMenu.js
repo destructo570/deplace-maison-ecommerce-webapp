@@ -14,11 +14,46 @@ import { useRouter } from "next/router";
 function NavMenu(props) {
   const router = useRouter();
 
+  const closeNav = () => {
+    props.onNavClick();
+  };
+
   const shopLinkHandler = (event) => {
     event.preventDefault();
     router.push("/products");
     props.onNavClick();
   };
+
+  const myOrderLinkHandler = (event) => {
+    event.preventDefault();
+    router.push("/my-orders");
+    closeNav();
+  };
+
+  const faqLinkHandler = (event) => {
+    event.preventDefault();
+    router.push("/faq");
+    closeNav();
+  };
+
+  const returnsLinkHandler = (event) => {
+    event.preventDefault();
+    router.push("/returns");
+    closeNav();
+  };
+
+  const termsLinkHandler = (event) => {
+    event.preventDefault();
+    router.push("/terms");
+    closeNav();
+  };
+
+  const privacyLinkHandler = (event) => {
+    event.preventDefault();
+    router.push("/privacy");
+    closeNav();
+  };
+
   return (
     <StyledNavMenu>
       <StyledNavLinkTitle>Tabs</StyledNavLinkTitle>
@@ -27,7 +62,7 @@ function NavMenu(props) {
           <p onClick={shopLinkHandler}>Shop</p>
         </li>
         <li>
-          <p>Collections</p>
+          <p onClick={myOrderLinkHandler}>My Orders</p>
         </li>
         <li>
           <p>About</p>
@@ -35,16 +70,16 @@ function NavMenu(props) {
       </StyledNavStoreLinks>
       <StyledNavInfoLinks>
         <li>
-          <Link href="/faq">Faq</Link>
+          <p onClick={faqLinkHandler}>Faq</p>
         </li>
         <li>
-          <Link href="/returns">Returns</Link>
+          <p onClick={returnsLinkHandler}>Returns</p>
         </li>
         <li>
-          <Link href="/terms">Terms</Link>
+          <p onClick={termsLinkHandler}>Terms</p>
         </li>
         <li>
-          <Link href="/privacy">Privacy</Link>
+          <p onClick={privacyLinkHandler}>Privacy</p>
         </li>
       </StyledNavInfoLinks>
       <StyledNavSocialLinks>
