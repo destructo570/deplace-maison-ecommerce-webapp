@@ -26,12 +26,12 @@ export const StyledOrderItem = styled.li`
 export const StyledOrderInfo = styled.div`
   min-width: 40%;
   margin-left: 1em;
+  h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
   p {
     font-size: 0.8rem;
   }
-`;
-
-export const StyledOrderPriceInfo = styled.div`
-  margin-left: 1em;
 `;
