@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import logo from "../../assets/icons/logo.svg";
 import nav from "../../assets/icons/nav-icon.svg";
+import cartIcon from "../../assets/icons/cartIcon.svg";
 import { signIn, signOut, useSession } from "next-auth/react";
 
 import {
@@ -42,10 +43,9 @@ function Navigation(props) {
         <StyledLoginButton onClick={!session ? signIn : signOut}>
           {!session ? "Login" : "Logout"}
         </StyledLoginButton>
-        <StyledCartItem>
-          <div onClick={props.onShowCart}>
-            Cart <span> {cartCtx.totalItems}</span>
-          </div>
+        <StyledCartItem onClick={props.onShowCart} isVisible={isNavMenuShown}>
+          <img src={cartIcon.src} alt="my cart" />
+          <p>{cartCtx.totalItems}</p>
         </StyledCartItem>
       </StyledNavigationBar>
       {isNavMenuShown && <NavMenu onNavClick={onNavHandler} />}

@@ -41,9 +41,28 @@ export const StyledNavIcon = styled.div`
 
 export const StyledCartItem = styled.div`
   text-transform: uppercase;
+  position: relative;
 
   &:hover {
     cursor: pointer;
+  }
+
+  p {
+    font-size: 0.7rem;
+    position: absolute;
+    bottom: 0px;
+    right: -10px;
+    background-color: ${({ isVisible, theme }) =>
+      isVisible ? theme.color.background : theme.color.primaryText};
+    color: ${({ isVisible, theme }) =>
+      isVisible ? theme.color.primaryText : theme.color.background};
+    border-radius: 50px;
+    padding: 0.2em 0.4em;
+  }
+
+  img {
+    filter: ${({ isVisible, theme }) =>
+      isVisible ? theme.color.backgroundFilter : theme.color.primaryTextFilter};
   }
 `;
 
