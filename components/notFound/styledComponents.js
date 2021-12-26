@@ -13,7 +13,8 @@ export const StyledNotFound = styled.section`
   img {
     position: absolute;
     top: 25vh;
-    max-width: 50%;
+    width: 50%;
+    max-width: 400px;
   }
 
   marquee {
