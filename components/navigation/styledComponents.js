@@ -99,6 +99,13 @@ export const StyledNavStoreLinks = styled.ul`
   p:hover {
     cursor: pointer;
   }
+
+  @media (min-width: ${({ theme }) => theme.layout.medium}) {
+    //Hide the login button in medium and large screens
+    li:nth-child(3) {
+      display: none;
+    }
+  }
 `;
 
 export const StyledNavInfoLinks = styled.ul`
@@ -149,8 +156,24 @@ export const StyledLoginButton = styled.p`
   text-transform: uppercase;
   border: none;
   text-decoration: underline;
+  display: none;
 
   &:hover {
     cursor: pointer;
+  }
+
+  @media (min-width: ${({ theme }) => theme.layout.medium}) {
+    display: block;
+  }
+`;
+
+export const StyledNavActions = styled.div`
+  display: flex;
+
+  @media (min-width: ${({ theme }) => theme.layout.medium}) {
+    //Add left margin to cart icon when login button is visible
+    div {
+      margin-left: 1em;
+    }
   }
 `;

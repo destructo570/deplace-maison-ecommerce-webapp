@@ -10,9 +10,11 @@ import facebookIcon from "../../assets/icons/facebook.svg";
 import instagramIcon from "../../assets/icons/instagram.svg";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 function NavMenu(props) {
   const router = useRouter();
+  const { data: session } = useSession();
 
   const closeNav = () => {
     props.onNavClick();
@@ -63,6 +65,11 @@ function NavMenu(props) {
         </li>
         <li>
           <p onClick={myOrderLinkHandler}>My Orders</p>
+        </li>
+        <li>
+          <p onClick={!session ? signIn : signOut}>
+            {!session ? "Login" : "Logout"}
+          </p>
         </li>
         <li>
           <p>About</p>
