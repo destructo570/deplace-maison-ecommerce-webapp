@@ -25,6 +25,10 @@ const themeLight = {
     pageRightPadding: "2.5em",
     pageTopMargin: "8em",
   },
+  layout: {
+    medium: "800px",
+    large: "1200px",
+  },
 };
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {

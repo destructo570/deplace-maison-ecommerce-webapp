@@ -18,7 +18,7 @@ export const StyledNotFound = styled.section`
   }
 
   marquee {
-    font-size: 25rem;
+    font-size: clamp(25rem, 40vw, 40rem);
     font-family: "TTrailer";
   }
 
@@ -29,5 +29,12 @@ export const StyledNotFound = styled.section`
 
   a {
     color: ${({ theme }) => theme.color.primaryText};
+  }
+
+  @media (min-width: ${({ theme }) => theme.layout.large}) {
+    img {
+      top: 18vh;
+      max-width: 550px;
+    }
   }
 `;
