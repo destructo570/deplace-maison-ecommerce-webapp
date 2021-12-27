@@ -8,10 +8,13 @@ export const StyledInputField = styled.div`
 
   input {
     -webkit-appearance: none;
+    width: 100%;
+    max-width: 350px;
     outline: none;
     border: none;
     padding: 0.5em;
     font-family: Favorit;
+    font-size: clamp(0.8rem, 10vw, 1rem);
     border-bottom: 1px solid black;
     display: inline-block;
     background-color: ${({ theme }) => theme.color.background};
@@ -24,6 +27,6 @@ export const StyledInputField = styled.div`
     border-bottom: 1px solid black;
     text-transform: uppercase;
 
-    font-size: 0.6rem;
+    font-size: clamp(0.6rem, 10vw, 0.8rem);
   }
 `;

@@ -9,10 +9,10 @@ export const StyledFooter = styled.footer`
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   text-transform: uppercase;
-  font-size: 0.7rem;
+  font-size: clamp(0.7rem, 10vw, 0.9rem);
 
   @media (min-width: ${({ theme }) => theme.layout.medium}) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 2fr repeat(3, 1fr);
   }
 `;
 
@@ -22,6 +22,7 @@ export const StyledFooter = styled.footer`
 
 export const StyledNewsLetter = styled.div`
   display: none;
+  width: 100%;
 
   img {
     width: 50px;
@@ -65,7 +66,8 @@ export const StyledInfo = styled.div`
 
 export const StyledSecondaryLink = styled.div`
   a {
-    font-size: 0.7rem;
+    font-size: clamp(0.7rem, 10vw, 0.9rem);
+    font-weight: 400;
   }
 `;
 
