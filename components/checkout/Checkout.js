@@ -4,6 +4,7 @@ import {
   StyledCheckout,
   StyledSubmitOrder,
   StyledSubCheckoutForm,
+  StyledCheckoutDetails,
 } from "./styledComponents";
 import TextInput from "../global/TextInput/TextInput";
 import CheckoutProductList from "./CheckoutProductList";
@@ -58,68 +59,75 @@ function Checkout() {
   return (
     <StyledCheckout>
       <form onSubmit={submitHandler}>
-        <h2>General information</h2>
-        <TextInput
-          label="email"
-          type="email"
-          placeholder=""
-          name="email"
-          ref={emailInputRef}
-        />
-        <h2>Shipping Address</h2>
-        <TextInput
-          label="full name"
-          name="fullname"
-          type="text"
-          placeholder=""
-          ref={nameInputRef}
-        />
-        <TextInput
-          label="street address"
-          name="street address"
-          type="text"
-          placeholder=""
-          ref={streetAddressInputRef}
-        />
+        <div>
+          <h2>General information</h2>
+          <TextInput
+            label="email"
+            type="email"
+            placeholder=""
+            name="email"
+            ref={emailInputRef}
+          />
+          <h2>Shipping Address</h2>
+          <TextInput
+            label="full name"
+            name="fullname"
+            type="text"
+            placeholder=""
+            ref={nameInputRef}
+          />
+          <TextInput
+            label="street address"
+            name="street address"
+            type="text"
+            placeholder=""
+            ref={streetAddressInputRef}
+          />
 
-        <StyledSubCheckoutForm>
+          <StyledSubCheckoutForm>
+            <TextInput
+              label="city"
+              name="city"
+              type="text"
+              placeholder=""
+              ref={cityInputRef}
+            />
+            <TextInput
+              label="state/province"
+              name="state/province"
+              type="text"
+              placeholder=""
+              ref={stateInputRef}
+            />
+            <TextInput
+              label="zip/postal code"
+              name="zip/postal"
+              type="number"
+              placeholder=""
+              ref={zipcodeInputRef}
+            />
+          </StyledSubCheckoutForm>
+          <h2>Additional information</h2>
+
           <TextInput
-            label="city"
-            name="city"
+            label="telephone"
+            name="telephone"
             type="text"
-            placeholder=""
-            ref={cityInputRef}
+            placeholder="Enter telephone number"
+            ref={telephoneInputRef}
           />
-          <TextInput
-            label="state/province"
-            name="state/province"
-            type="text"
-            placeholder=""
-            ref={stateInputRef}
+        </div>
+        <StyledCheckoutDetails>
+          <CheckoutProductList
+            productList={cartCtx.items}
+          ></CheckoutProductList>
+          <CheckoutSummary
+            subTotal={cartCtx.totalAmount}
+            discount="0"
+            total={cartCtx.totalAmount}
           />
-          <TextInput
-            label="zip/postal code"
-            name="zip/postal"
-            type="number"
-            placeholder=""
-            ref={zipcodeInputRef}
-          />
-        </StyledSubCheckoutForm>
-        <h2>Additional information</h2>
-        <TextInput
-          label="telephone"
-          name="telephone"
-          type="text"
-          placeholder="Enter telephone number"
-          ref={telephoneInputRef}
-        />
-        <CheckoutProductList productList={cartCtx.items}></CheckoutProductList>
-        <CheckoutSummary
-          subTotal={cartCtx.totalAmount}
-          discount="0"
-          total={cartCtx.totalAmount}
-        />
-        <StyledSubmitOrder type="submit">Confirm and Pay</StyledSubmitOrder>
+          <StyledSubmitOrder type="submit">Confirm and Pay</StyledSubmitOrder>
+        </StyledCheckoutDetails>
       </form>
     </StyledCheckout>
   );

@@ -100,7 +100,7 @@ export const StyledNavStoreLinks = styled.ul`
     cursor: pointer;
   }
 
-  @media (min-width: ${({ theme }) => theme.layout.medium}) {
+  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
     //Hide the login button in medium and large screens
     li:nth-child(3) {
       display: none;
@@ -162,15 +162,16 @@ export const StyledLoginButton = styled.p`
     cursor: pointer;
   }
 
-  @media (min-width: ${({ theme }) => theme.layout.medium}) {
+  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
     display: block;
+    align-self: center;
   }
 `;
 
 export const StyledNavActions = styled.div`
   display: flex;
 
-  @media (min-width: ${({ theme }) => theme.layout.medium}) {
+  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
     //Add left margin to cart icon when login button is visible
     div {
       margin-left: 1em;

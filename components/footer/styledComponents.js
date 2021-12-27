@@ -11,7 +11,7 @@ export const StyledFooter = styled.footer`
   text-transform: uppercase;
   font-size: clamp(0.7rem, 10vw, 0.9rem);
 
-  @media (min-width: ${({ theme }) => theme.layout.medium}) {
+  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
     grid-template-columns: 2fr repeat(3, 1fr);
   }
 `;
@@ -32,7 +32,7 @@ export const StyledNewsLetter = styled.div`
     margin-top: 3.5em;
   }
 
-  @media (min-width: ${({ theme }) => theme.layout.medium}) {
+  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

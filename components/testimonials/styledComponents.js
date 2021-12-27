@@ -6,9 +6,15 @@ export const StyledTestimonials = styled.section`
   padding-left: ${({ theme }) => theme.mobile.pageLeftPadding};
   padding-right: ${({ theme }) => theme.mobile.pageRightPadding};
   position: relative;
+  max-width: 1000px;
 
   img {
     max-width: 60px;
+  }
+
+  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
@@ -20,13 +26,20 @@ export const StyledTestimonialItem = styled.div`
 
   h2 {
     font-family: "Cyberthrone";
-    width: 40%;
+    font-size: clamp(0.5rem, 5vw, 3rem);
+    display: inline;
+    min-width: 30%;
     margin-top: 0.2em;
   }
 
   p {
-    font-size: 0.8rem;
-    width: 60%;
-    line-height: 12px;
+    font-size: clamp(0.5rem, 5vw, 0.8rem);
+    margin-left: 2em;
+    line-height: 1em;
+  }
+  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
+    p {
+      font-size: clamp(0.5rem, 5vw, 1.1rem);
+    }
   }
 `;

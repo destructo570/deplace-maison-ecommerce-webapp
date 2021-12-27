@@ -4,11 +4,13 @@ export const StyledCreditsHeader = styled.div`
   padding-left: ${({ theme }) => theme.mobile.pageLeftPadding};
   padding-right: ${({ theme }) => theme.mobile.pageRightPadding};
   margin-top: ${({ theme }) => theme.mobile.pageTopMargin};
+  max-width: ${({ theme }) => theme.layout.medium.size};
+
   text-transform: uppercase;
 
   h1 {
     text-align: right;
-    font-size: clamp(7.5rem, 20vw, 20rem);
+    font-size: clamp(7.5rem, 20vw, 8rem);
     font-weight: 350;
     letter-spacing: -7px;
     line-height: 0.8em;
@@ -32,5 +34,14 @@ export const StyledCreditsHeader = styled.div`
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 20px;
+  }
+
+  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
+    margin-left: auto;
+    margin-right: auto;
+
+    li {
+      grid-template-columns: 1fr 2fr;
+    }
   }
 `;

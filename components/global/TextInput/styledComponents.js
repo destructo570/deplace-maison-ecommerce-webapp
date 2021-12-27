@@ -12,6 +12,7 @@ export const StyledTextInput = styled.div`
 export const StyledInput = styled.input`
   padding: 0.4em;
   width: 100%;
+  max-width: 350px;
   font-size: 1.2rem;
   margin-top: 0.6em;
   font-family: "Favorit";

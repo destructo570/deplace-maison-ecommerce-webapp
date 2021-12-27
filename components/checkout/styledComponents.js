@@ -5,11 +5,21 @@ export const StyledCheckout = styled.section`
   padding-right: ${({ theme }) => theme.mobile.pageRightPadding};
   margin-top: ${({ theme }) => theme.mobile.pageTopMargin};
   margin-bottom: ${({ theme }) => theme.mobile.pageTopMargin};
+  max-width: 1000px;
 
   h2 {
     text-transform: uppercase;
     font-weight: 300;
     font-size: 1.5rem;
+  }
+
+  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
+    margin-left: auto;
+    margin-right: auto;
+    form {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 `;
 
@@ -79,6 +89,11 @@ export const StyledCheckoutSummary = styled.div`
     font-size: 1.5rem;
     font-weight: 300;
   }
+`;
+
+export const StyledCheckoutDetails = styled.div`
+  width: 50%;
+  margin-left: 2em;
 `;
 
 export const StyledSubmitOrder = styled.button`
