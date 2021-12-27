@@ -1,4 +1,5 @@
 import { useReducer } from "react";
+import { setCart } from "../lib/CartUtil";
 import CartContext from "./cart-context";
 
 const defaultCartState = { items: [], totalAmount: 0, totalItems: 0 };
@@ -30,6 +31,12 @@ const cartReducer = (state, action) => {
       state.totalAmount + newItem.quantity * newItem.price;
     const updatedTotalItems = state.totalItems + newItem.quantity;
 
+    setCart({
+      items: updatedItems,
+      totalAmount: updatedTotalAmount,
+      totalItems: updatedTotalItems,
+    });
+
     return {
       items: updatedItems,
       totalAmount: updatedTotalAmount,
@@ -52,6 +59,12 @@ const cartReducer = (state, action) => {
       updatedTotalAmount =
         state.totalAmount - existingCartItem.price * existingCartItem.quantity;
       updatedTotalItems = state.totalItems - existingCartItem.quantity;
+
+      setCart({
+        items: updatedItems,
+        totalAmount: updatedTotalAmount,
+        totalItems: updatedTotalItems,
+      });
 
       return {
         items: updatedItems,
@@ -90,6 +103,12 @@ const cartReducer = (state, action) => {
     }
 
     updatedItems[existingCartItemIndex] = newItem;
+
+    setCart({
+      items: updatedItems,
+      totalAmount: updatedTotalAmount,
+      totalItems: updatedTotalItems,
+    });
 
     return {
       items: updatedItems,
