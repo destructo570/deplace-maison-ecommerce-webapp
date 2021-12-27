@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const StyledNotFound = styled.section`
-  margin-top: ${({ theme }) => theme.mobile.pageTopMargin};
-  margin-bottom: ${({ theme }) => theme.mobile.pageTopMargin};
+  margin-top: ${({ theme }) => theme.layout.small.pageTopMargin};
+  margin-bottom: ${({ theme }) => theme.layout.small.pageTopMargin};
   display: flex;
   flex-direction: column;
   justify-content: space-around;

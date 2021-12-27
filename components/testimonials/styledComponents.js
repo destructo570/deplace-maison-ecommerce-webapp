@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const StyledTestimonials = styled.section`
   margin-top: 4em;
   margin-bottom: 8em;
-  padding-left: ${({ theme }) => theme.mobile.pageLeftPadding};
-  padding-right: ${({ theme }) => theme.mobile.pageRightPadding};
+  padding-left: ${({ theme }) => theme.layout.small.pageLeftPadding};
+  padding-right: ${({ theme }) => theme.layout.small.pageRightPadding};
   position: relative;
-  max-width: 1000px;
+  max-width: ${({ theme }) => theme.layout.maxWidth};
 
   img {
     max-width: 60px;

@@ -20,12 +20,8 @@ const themeLight = {
     primaryTextFilter:
       "invert(0%) sepia(26%) saturate(4644%) hue-rotate(10deg);",
   },
-  mobile: {
-    pageLeftPadding: "1.5em",
-    pageRightPadding: "2.5em",
-    pageTopMargin: "8em",
-  },
   layout: {
+    maxWidth: "1000px",
     small: {
       pageLeftPadding: "1.5em",
       pageRightPadding: "2.5em",

@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const StyledMyOrders = styled.section`
-  padding-left: ${({ theme }) => theme.mobile.pageLeftPadding};
-  padding-right: ${({ theme }) => theme.mobile.pageLeftPadding};
-  margin-top: ${({ theme }) => theme.mobile.pageTopMargin};
-  margin-bottom: ${({ theme }) => theme.mobile.pageTopMargin};
+  padding-left: ${({ theme }) => theme.layout.small.pageLeftPadding};
+  padding-right: ${({ theme }) => theme.layout.small.pageLeftPadding};
+  margin-top: ${({ theme }) => theme.layout.small.pageTopMargin};
+  margin-bottom: ${({ theme }) => theme.layout.small.pageTopMargin};
   min-height: 50vh;
-
+  max-width: ${({ theme }) => theme.layout.maxWidth};
   h1 {
     text-transform: uppercase;
     margin-bottom: 1em;
@@ -16,7 +16,9 @@ export const StyledMyOrders = styled.section`
     list-style: none;
   }
 
-  @media (min-width: ${({ theme }) => theme.layout.medium}) {
+  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
+    margin-left: auto;
+    margin-right: auto;
     ul {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -24,7 +26,7 @@ export const StyledMyOrders = styled.section`
     }
   }
 
-  @media (min-width: ${({ theme }) => theme.layout.large}) {
+  @media (min-width: ${({ theme }) => theme.layout.large.size}) {
     ul {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -42,7 +44,7 @@ export const StyledOrderItem = styled.li`
     max-width: 100px;
   }
 
-  @media (min-width: ${({ theme }) => theme.layout.medium}) {
+  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
     margin: 0;
   } ;
 `;

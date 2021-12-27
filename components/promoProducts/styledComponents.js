@@ -23,6 +23,6 @@ export const StyledPromoProduct = styled.section`
 `;
 
 export const StyledActions = styled.div`
-  padding-left: ${({ theme }) => theme.mobile.pageLeftPadding};
-  padding-right: ${({ theme }) => theme.mobile.pageRightPadding};
+  padding-left: ${({ theme }) => theme.layout.small.pageLeftPadding};
+  padding-right: ${({ theme }) => theme.layout.small.pageRightPadding};
 `;

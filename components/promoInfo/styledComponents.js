@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const StyledPromoInfo = styled.section`
   margin-top: 3em;
   margin-bottom: 3em;
-  padding-left: ${({ theme }) => theme.mobile.pageLeftPadding};
-  padding-right: ${({ theme }) => theme.mobile.pageRightPadding};
-  max-width: 1000px;
+  padding-left: ${({ theme }) => theme.layout.small.pageLeftPadding};
+  padding-right: ${({ theme }) => theme.layout.small.pageRightPadding};
+  max-width: ${({ theme }) => theme.layout.maxWidth};
 
   span:first-child {
     font-size: clamp(0.8rem, 3vw, 1.2rem);

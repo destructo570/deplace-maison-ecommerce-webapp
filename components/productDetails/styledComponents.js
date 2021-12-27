@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const StyledProductDetails = styled.section`
-  margin-top: ${({ theme }) => theme.mobile.pageTopMargin};
-  margin-bottom: ${({ theme }) => theme.mobile.pageTopMargin};
+  margin-top: ${({ theme }) => theme.layout.small.pageTopMargin};
+  margin-bottom: ${({ theme }) => theme.layout.small.pageTopMargin};
   position: relative;
+
   section {
-    padding-left: ${({ theme }) => theme.mobile.pageLeftPadding};
-    padding-right: ${({ theme }) => theme.mobile.pageRightPadding};
+    padding-left: ${({ theme }) => theme.layout.small.pageLeftPadding};
+    padding-right: ${({ theme }) => theme.layout.small.pageRightPadding};
   }
 
   h1,

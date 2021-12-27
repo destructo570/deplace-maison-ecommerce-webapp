@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const StyledCheckout = styled.section`
-  padding-left: ${({ theme }) => theme.mobile.pageLeftPadding};
-  padding-right: ${({ theme }) => theme.mobile.pageRightPadding};
-  margin-top: ${({ theme }) => theme.mobile.pageTopMargin};
-  margin-bottom: ${({ theme }) => theme.mobile.pageTopMargin};
-  max-width: 1000px;
+  padding-left: ${({ theme }) => theme.layout.small.pageLeftPadding};
+  padding-right: ${({ theme }) => theme.layout.small.pageRightPadding};
+  margin-top: ${({ theme }) => theme.layout.small.pageTopMargin};
+  margin-bottom: ${({ theme }) => theme.layout.small.pageTopMargin};
+  max-width: ${({ theme }) => theme.layout.maxWidth};
 
   h2 {
     text-transform: uppercase;

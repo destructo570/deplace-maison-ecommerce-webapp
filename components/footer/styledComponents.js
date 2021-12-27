@@ -10,7 +10,7 @@ export const StyledFooter = styled.footer`
   justify-content: space-between;
   text-transform: uppercase;
   font-size: clamp(0.7rem, 10vw, 0.9rem);
-  max-width: 1000px;
+  max-width: ${({ theme }) => theme.layout.maxWidth};
 
   @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
     grid-template-columns: 2fr repeat(3, 1fr);
