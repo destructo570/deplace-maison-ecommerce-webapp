@@ -9,7 +9,7 @@ import moment from "moment";
 function MyOrders(props) {
   const orders = props.orders;
   const { data: session } = useSession();
-  let ordersContent = <p>Please SignIn to see your orders.</p>;
+  let ordersContent = <p>Please login to see your orders.</p>;
   let ordersList = <li>No orders found.</li>;
 
   if (orders) {
@@ -18,7 +18,7 @@ function MyOrders(props) {
         <StyledOrderItem key={order.id}>
           <img src={order.images[0]} alt=""></img>
           <StyledOrderInfo>
-            <h3>{order.id}</h3>
+            <h3>{order.id.slice(0, 20) + "..."}</h3>
             <p>Items: {order.items.length}</p>
             <p>Total: ${order.amount} USD</p>
             <p>

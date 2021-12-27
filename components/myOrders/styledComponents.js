@@ -7,9 +7,29 @@ export const StyledMyOrders = styled.section`
   margin-bottom: ${({ theme }) => theme.mobile.pageTopMargin};
   min-height: 50vh;
 
+  h1 {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+
   li {
     list-style: none;
   }
+
+  @media (min-width: ${({ theme }) => theme.layout.medium}) {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1em;
+    }
+  }
+
+  @media (min-width: ${({ theme }) => theme.layout.large}) {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  } ;
 `;
 
 export const StyledOrderItem = styled.li`
@@ -21,15 +41,14 @@ export const StyledOrderItem = styled.li`
   img {
     max-width: 100px;
   }
+
+  @media (min-width: ${({ theme }) => theme.layout.medium}) {
+    margin: 0;
+  } ;
 `;
 
 export const StyledOrderInfo = styled.div`
-  min-width: 40%;
   margin-left: 1em;
-  h3 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
 
   p {
     font-size: 0.8rem;
