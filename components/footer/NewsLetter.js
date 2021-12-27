@@ -6,7 +6,7 @@ function NewsLetter() {
   return (
     <StyledNewsLetter>
       <p>Subscribe to newsletter</p>
-      <img src={emailIcon} alt=""></img>
+      <img src={emailIcon.src} alt=""></img>
       <form>
         <h4>Subscribe to our newsletter</h4>
         <InputField

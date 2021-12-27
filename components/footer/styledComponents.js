@@ -10,6 +10,10 @@ export const StyledFooter = styled.footer`
   justify-content: space-between;
   text-transform: uppercase;
   font-size: 0.7rem;
+
+  @media (min-width: ${({ theme }) => theme.layout.medium}) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `;
 
 //
@@ -18,13 +22,19 @@ export const StyledFooter = styled.footer`
 
 export const StyledNewsLetter = styled.div`
   display: none;
+
   img {
-    width: 30px;
-    margin-top: 0.5em;
+    width: 50px;
   }
 
   form {
     margin-top: 3.5em;
+  }
+
+  @media (min-width: ${({ theme }) => theme.layout.medium}) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 `;
 
