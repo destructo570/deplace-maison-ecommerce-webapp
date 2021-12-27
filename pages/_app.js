@@ -26,7 +26,7 @@ const themeLight = {
     pageTopMargin: "8em",
   },
   layout: {
-    medium: "800px",
+    medium: "768px",
     large: "1200px",
   },
 };
