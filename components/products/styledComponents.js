@@ -21,5 +21,6 @@ export const StyledProductsHeader = styled.header`
     border: 1px solid ${({ theme }) => theme.color.primaryText};
     text-align: center;
     font-weight: 400;
+    font-size: clamp(1rem, 10vw, 1.2rem);
   }
 `;
