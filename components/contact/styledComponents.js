@@ -5,11 +5,13 @@ export const StyledContact = styled.div`
   padding-right: ${({ theme }) => theme.mobile.pageRightPadding};
   margin-top: ${({ theme }) => theme.mobile.pageTopMargin};
   margin-bottom: ${({ theme }) => theme.mobile.pageTopMargin};
+  max-width: ${({ theme }) => theme.layout.medium.size};
 
   h1 {
     font-weight: 400;
-    font-size: 2.2rem;
     line-height: 1.1em;
+    font-size: clamp(1.5rem, 15vw, 2rem);
+    margin-bottom: 0.4em;
   }
 
   a {
@@ -25,19 +27,45 @@ export const StyledContact = styled.div`
     font-size: 1.2rem;
     font-weight: 500;
   }
+
+  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
+    margin-left: auto;
+    margin-right: auto;
+
+    a {
+      font-size: 1.2rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+      margin-bottom: 0.4em;
+    }
+  }
 `;
 
 export const StyledContactItem = styled.section`
   margin: 4em 0;
+  display: grid;
 
-  div,
-  address {
-    margin: 2em 0;
+  div {
+    margin: 1em 0;
   }
 
-  address h2 {
+  div h2 {
     font-size: 1.7rem;
     font-weight: 500;
     line-height: 1.2em;
+  }
+
+  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
+    grid-template-columns: 1fr 1fr;
+
+    h1 {
+      grid-column-start: 2;
+    }
+
+    div h2 {
+      font-size: 1.2rem;
+    }
   }
 `;

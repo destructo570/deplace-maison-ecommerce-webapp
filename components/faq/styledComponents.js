@@ -5,9 +5,10 @@ export const StyledFaq = styled.div`
   padding-right: ${({ theme }) => theme.mobile.pageRightPadding};
   margin-top: ${({ theme }) => theme.mobile.pageTopMargin};
   margin-bottom: ${({ theme }) => theme.mobile.pageTopMargin};
+  max-width: ${({ theme }) => theme.layout.medium.size};
 
   h1 {
-    font-size: clamp(2.5rem, 15vw, 20rem);
+    font-size: clamp(2.5rem, 15vw, 8rem);
     font-weight: 350;
     letter-spacing: -7px;
     line-height: 0.8em;
@@ -39,5 +40,10 @@ export const StyledFaq = styled.div`
   a {
     color: ${({ theme }) => theme.color.primaryText};
     font-size: 1.4rem;
+  }
+
+  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
