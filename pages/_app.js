@@ -1,12 +1,9 @@
 import { ThemeProvider } from "styled-components";
-import GlobalStyles from "../styles/globalStyles";
-import Navigation from "../components/navigation/Navigation";
-import Footer from "../components/footer/Footer";
-import Cart from "../components/cart/Cart";
-import { useState } from "react";
 import "../styles/globals.css";
 import CartContextProvider from "../store/CartContextProvider";
 import { SessionProvider } from "next-auth/react";
+import Layout from "../components/layout/Layout";
+import GlobalStyles from "../styles/globalStyles";
 
 const themeLight = {
   color: {
@@ -43,23 +40,14 @@ const themeLight = {
 };
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
-  const [isCartShown, setIsCartShown] = useState(false);
-
-  const onShowCart = () => {
-    setIsCartShown((prevState) => {
-      return !prevState;
-    });
-  };
-
   return (
     <ThemeProvider theme={themeLight}>
+      <GlobalStyles />
       <SessionProvider session={session}>
         <CartContextProvider>
-          {isCartShown && <Cart onHideCart={onShowCart} />}
-          <GlobalStyles />
-          <Navigation onShowCart={onShowCart} />
-          <Component {...pageProps} />
-          <Footer />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
         </CartContextProvider>
       </SessionProvider>
     </ThemeProvider>
