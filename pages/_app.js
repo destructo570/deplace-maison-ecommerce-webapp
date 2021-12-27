@@ -26,8 +26,23 @@ const themeLight = {
     pageTopMargin: "8em",
   },
   layout: {
-    medium: "768px",
-    large: "1200px",
+    small: {
+      pageLeftPadding: "1.5em",
+      pageRightPadding: "2.5em",
+      pageTopMargin: "8em",
+    },
+    medium: {
+      size: "768px",
+      pageLeftPadding: "1.5em",
+      pageRightPadding: "2.5em",
+      pageTopMargin: "8em",
+    },
+    large: {
+      size: "1200px",
+      pageLeftPadding: "1.5em",
+      pageRightPadding: "2.5em",
+      pageTopMargin: "8em",
+    },
   },
 };
 
