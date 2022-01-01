@@ -5,7 +5,7 @@ import cassette from "../../assets/icons/cassette.svg";
 function NotFound() {
   return (
     <StyledNotFound>
-      <img src={cassette.src}></img>
+      <img src={cassette.src} alt="" />
       <marquee>
         404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404
         404 404 404 404 404 404

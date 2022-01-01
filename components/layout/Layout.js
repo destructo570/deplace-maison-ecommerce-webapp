@@ -11,7 +11,7 @@ function Layout(props) {
   //Load the stored cart from localStorage
   useEffect(() => {
     cartCtx.replaceCart(getCart());
-  }, []);
+  }, [cartCtx]);
 
   const onShowCart = () => {
     setIsCartShown((prevState) => {

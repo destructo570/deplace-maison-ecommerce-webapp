@@ -4,7 +4,7 @@ const calculateOrderAmount = (cart) => {
   //Calculate order amount on the backend
 };
 
-export default async (req, res) => {
+export default async function (req, res) {
   const { cartInfo, customerInfo } = req.body;
 
   const transformedItems = cartInfo.items.map((item) => ({
@@ -41,4 +41,4 @@ export default async (req, res) => {
   });
 
   res.status(200).json({ id: session.id });
-};
+}

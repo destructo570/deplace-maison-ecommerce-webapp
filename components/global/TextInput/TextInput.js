@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledLabel, StyledTextInput, StyledInput } from "./styledComponents";
 
-const TextInput = React.forwardRef((props, ref) => {
+const TextInput = React.forwardRef(function TextInput(props, ref) {
   return (
     <StyledTextInput>
       <StyledLabel name={props.name}>{props.label}</StyledLabel>

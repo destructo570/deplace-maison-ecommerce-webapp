@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { StyledPrivacy } from "./styledComponents";
 
 function Privacy() {
@@ -9,7 +10,7 @@ function Privacy() {
           <p>
             This Privacy Policy describes how we collect, use and share your
             personal information when you visit or make a purchase from
-            <a href="/"> deplacemaison.com</a>
+            <Link href="/"> deplacemaison.com</Link>
             (the "Site").
           </p>
         </li>
