@@ -14,12 +14,18 @@ function MyOrders(props) {
 
   if (orders) {
     ordersList = orders.map((order) => {
+      let itemsString = "Items: ";
+
+      order.items.forEach((item) => {
+        itemsString = itemsString + `${item.quantity} ${item.description}, `;
+      });
+
       return (
         <StyledOrderItem key={order.id}>
           <img src={order.images[0]} alt=""></img>
           <StyledOrderInfo>
             <h3>{order.id.slice(0, 20) + "..."}</h3>
-            <p>Items: {order.items.length}</p>
+            <p>{itemsString}</p>
             <p>Total: ${order.amount} USD</p>
             <p>
               Ordered On: {moment.unix(order.timestamp).format("DD MMM YYYY")}
