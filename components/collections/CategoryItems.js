@@ -1,9 +1,5 @@
 import Image from "next/image";
-import {
-  StyledCategoryDetails,
-  StyledCategoryItem,
-  StyledCategoryImage,
-} from "./styledComponents";
+import { StyledCategoryDetails, StyledCategoryItem } from "./styledComponents";
 
 function CategoryItems() {
   return (
