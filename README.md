@@ -8,6 +8,9 @@ A clone of deplace maison ecoomerce website using React/Next JS with stripe paym
 
 This project was made only for educational purposes, I do not own any of the content (product images, fonts etc.). All the credit goes to Deplace maison. This project was only meant to be created as part of frontend React/NextJs practice and learning. This project is not meant to be used for any other purposes.
 
+I found out about the website on [FrontendPractice](https://www.frontendpractice.com/)
+You can checkout the original website [here.](https://www.deplacemaison.com/)
+
 ## Screenshots
 
 ## Features & Tech Stack
