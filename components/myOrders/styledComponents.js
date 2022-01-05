@@ -25,13 +25,6 @@ export const StyledMyOrders = styled.section`
       grid-gap: 1em;
     }
   }
-
-  @media (min-width: ${({ theme }) => theme.layout.large.size}) {
-    ul {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
-  } ;
 `;
 
 export const StyledOrderItem = styled.li`
