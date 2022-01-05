@@ -10,6 +10,7 @@ export const StyledFooter = styled.footer`
   justify-content: space-between;
   text-transform: uppercase;
   font-size: clamp(0.7rem, 10vw, 0.9rem);
+  font-weight: 300;
   max-width: ${({ theme }) => theme.layout.maxWidth};
 
   @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
@@ -26,6 +27,10 @@ export const StyledFooter = styled.footer`
 export const StyledNewsLetter = styled.div`
   display: none;
   width: 100%;
+
+  h4 {
+    font-weight: 400;
+  }
 
   img {
     width: 50px;
@@ -59,7 +64,6 @@ export const StyledInfo = styled.div`
     text-decoration: none;
     color: ${({ theme }) => theme.color.primaryText};
     font-size: 1.3rem;
-    font-weight: 500;
   }
 
   div:last-child {
@@ -70,7 +74,6 @@ export const StyledInfo = styled.div`
 export const StyledSecondaryLink = styled.div`
   a {
     font-size: clamp(0.7rem, 10vw, 0.9rem);
-    font-weight: 400;
   }
 `;
 
@@ -90,7 +93,6 @@ export const StyledPolicy = styled.div`
     text-decoration: none;
     color: ${({ theme }) => theme.color.primaryText};
     font-size: 1.3rem;
-    font-weight: 500;
   }
 `;
 
