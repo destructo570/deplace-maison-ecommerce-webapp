@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledProductDetails = styled.section`
   margin-top: ${({ theme }) => theme.layout.small.pageTopMargin};
   margin-bottom: ${({ theme }) => theme.layout.small.pageTopMargin};
+  max-width: ${({ theme }) => theme.layout.maxWidth};
   position: relative;
 
   section {
@@ -14,6 +15,11 @@ export const StyledProductDetails = styled.section`
   h4,
   h3 {
     text-transform: uppercase;
+  }
+
+  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
