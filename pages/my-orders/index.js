@@ -42,9 +42,14 @@ export async function getServerSideProps(context) {
     }))
   );
 
+  //Sort the orders by date
+  const sortedOrders = orders.sort((first, second) => {
+    return second.timestamp - first.timestamp;
+  });
+
   return {
     props: {
-      orders,
+      orders: sortedOrders,
     },
   };
 }
