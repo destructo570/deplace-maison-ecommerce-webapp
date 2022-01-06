@@ -18,7 +18,7 @@ You can checkout the original website [here.](https://www.deplacemaison.com/)
 - NextJs/ReactJS - Frontend and UI development
 - NodeJS - Backend development
 - Axios - Making asynchronus HTTP requests
-- NextAuth - For user authentication via gmail
+- NextAuth v4 - For user authentication via gmail
 - Stripe payment integration (webhooks)
 - StyledComponents - Styling all the react components.
 - Firebase Realtime DB - Getting products and other data.
@@ -34,6 +34,36 @@ You can checkout the original website [here.](https://www.deplacemaison.com/)
 
 ```bash
 npm install
+```
+
+## Environment variable file
+- In the root folder create a .env.local file and define these constants in there
+- You can checkout the respective docs of stripe, google, firebase etc. on how to get the public and private keys.
+- Stripe: https://stripe.com/docs/keys
+- Stripe CLI: https://stripe.com/docs/stripe-cli
+- Firebase Service Account: https://firebase.google.com/docs/admin/setup#set-up-project-and-service-account
+- Google cloud auth: https://support.google.com/cloud/answer/6158849?hl=en
+- Next Auth Secret: https://next-auth.js.org/configuration/options#secret
+
+```
+#Stripe
+STRIPE_PUBLIC_KEY= 
+STRIPE_SECRET_KEY= 
+
+#Stripe Terminal/CLI
+STRIPE_SIGNING_SECRET= 
+
+HOST=http://localhost:3000
+
+#Database
+FIREBASE_SERVICE_ACC_KEY= 
+
+#Authentication
+GOOGLE_CLIENT_ID= 
+GOOGLE_CLIENT_SECRET= 
+
+//A random string used to hash tokens by NextAuth
+SECRET= 
 ```
 
 ## Building the project
