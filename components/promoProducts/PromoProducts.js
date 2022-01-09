@@ -14,7 +14,7 @@ function PromoProducts(props) {
     <StyledPromoProduct>
       <ProductsList products={props.products} />
       <StyledActions>
-        <ActionButton title="Shop All" onShopAll={shopAllHandler} />
+        <ActionButton title="Shop All" onClick={shopAllHandler} />
       </StyledActions>
     </StyledPromoProduct>
   );

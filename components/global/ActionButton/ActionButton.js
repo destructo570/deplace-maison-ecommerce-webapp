@@ -4,7 +4,7 @@ import arrowIcon from "../../../assets/icons/arrow.svg";
 
 function ActionButton(props) {
   return (
-    <StyledActionButton onClick={props.onShopAll}>
+    <StyledActionButton onClick={props.onClick}>
       <p>{props.title}</p>
       <StytledIcon>
         <img src={circleContainerIcon.src} alt=""></img>
