@@ -31,7 +31,9 @@ function Navigation(props) {
 
   const navLogoHandler = () => {
     router.push("/");
-    onNavHandler();
+    if (isNavMenuShown) {
+      setIsNavMenuShown(false);
+    }
   };
 
   const ordersHandler = () => {
