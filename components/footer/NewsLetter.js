@@ -3,11 +3,14 @@ import InputField from "../global/InputField/InputField";
 import { StyledNewsLetter } from "./styledComponents";
 
 function NewsLetter() {
+  const submitHandler = (event) => {
+    event.preventDefault();
+  };
   return (
     <StyledNewsLetter>
       <p>Subscribe to newsletter</p>
       <img src={emailIcon.src} alt=""></img>
-      <form>
+      <form onSubmit={submitHandler}>
         <h4>Subscribe to our newsletter</h4>
         <InputField
           type="email"
