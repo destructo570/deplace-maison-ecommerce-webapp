@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledCheckout = styled.section`
   padding-left: ${({ theme }) => theme.layout.small.pageLeftPadding};
-  padding-right: ${({ theme }) => theme.layout.small.pageRightPadding};
+  padding-right: ${({ theme }) => theme.layout.small.pageLeftPadding};
   margin-top: ${({ theme }) => theme.layout.small.pageTopMargin};
   margin-bottom: ${({ theme }) => theme.layout.small.pageTopMargin};
   max-width: ${({ theme }) => theme.layout.maxWidth};
@@ -29,7 +29,17 @@ export const StyledSubCheckoutForm = styled.div`
   grid-auto-flow: column;
 `;
 
-//ProductList
+//-------
+//ProductList Preview
+//-------
+
+export const StyledCheckoutDetails = styled.div`
+  min-width: 350px;
+  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
+    margin-left: 2em;
+    width: 50%;
+  }
+`;
 
 export const StyledCheckoutProductList = styled.section`
   border: 2px solid ${({ theme }) => theme.color.primaryText};
@@ -89,11 +99,6 @@ export const StyledCheckoutSummary = styled.div`
     font-size: 1.5rem;
     font-weight: 300;
   }
-`;
-
-export const StyledCheckoutDetails = styled.div`
-  width: 50%;
-  margin-left: 2em;
 `;
 
 export const StyledSubmitOrder = styled.button`
