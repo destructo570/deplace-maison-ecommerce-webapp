@@ -1,25 +1,6 @@
 import styled from "styled-components";
 
-export const StyledCart = styled.div``;
-
-//
-//Styled BackDrop
-//
-
-export const StyledBackDrop = styled.div`
-  background-color: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 0px;
-  height: 100vh;
-  width: 100vw;
-  z-index: 101;
-`;
-
-//
-//Styled Cart Overlay
-//
-
-export const StyledCartOverlay = styled.div`
+export const StyledCart = styled.div`
   position: fixed;
   right: 0px;
   top: 0px;
@@ -45,6 +26,23 @@ export const StyledCartOverlay = styled.div`
     flex-grow: 2;
   }
 `;
+
+//
+//Styled BackDrop
+//
+
+export const StyledBackDrop = styled.div`
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 100vw;
+  z-index: 101;
+`;
+
+//
+//Styled Cart Overlay
+//
 
 export const StyledCartHeader = styled.div`
   display: flex;

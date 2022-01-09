@@ -9,6 +9,7 @@ import {
 } from "./styledComponents";
 
 function CartItem(props) {
+  const { id, name, price, color, size, img, quantity } = props.item;
   const [hasError, setHasError] = useState(false);
 
   const quantityChangeHandler = (event) => {
@@ -42,12 +43,12 @@ function CartItem(props) {
   return (
     <StyledCartItem>
       <StyledCartProductItem>
-        <img src={props.item.img} alt="Product"></img>
+        <img src={img} alt="Product"></img>
         <StyledCartProductDetails>
-          <h2>{props.item.name}</h2>
-          <h4>$ {props.item.price}</h4>
-          <p>Color: {props.item.color}</p>
-          <p>Size: {props.item.size}</p>
+          <h2>{name}</h2>
+          <h4>$ {price}</h4>
+          <p>Color: {color}</p>
+          <p>Size: {size}</p>
         </StyledCartProductDetails>
         <StytledProductSummary>
           <input
@@ -55,11 +56,11 @@ function CartItem(props) {
             name="quantity"
             min="0"
             max="10"
-            defaultValue={props.item.quantity}
+            defaultValue={quantity}
             onChange={quantityChangeHandler}
           ></input>
           {hasError && <Tooltip content="Please match the requested format" />}
-          <p onClick={props.onRemoveItem.bind(null, props.item.id)}>Remove</p>
+          <p onClick={props.onRemoveItem.bind(null, id)}>Remove</p>
         </StytledProductSummary>
       </StyledCartProductItem>
       <StyledDivider />
