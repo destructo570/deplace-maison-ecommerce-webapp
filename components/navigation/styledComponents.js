@@ -38,6 +38,10 @@ export const StyledNavIcon = styled.div`
 
   filter: ${({ isVisible, theme }) =>
     isVisible ? theme.color.backgroundFilter : theme.color.primaryTextFilter};
+
+  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
+    display: none;
+  }
 `;
 
 export const StyledCartItem = styled.div`
@@ -152,7 +156,7 @@ export const StyledNavInquiry = styled.div`
   border-bottom: 1.5px solid ${({ theme }) => theme.color.background};
 `;
 
-export const StyledLoginButton = styled.p`
+export const StyledNavLink = styled.p`
   text-transform: uppercase;
   border: none;
   text-decoration: underline;
@@ -176,5 +180,13 @@ export const StyledNavActions = styled.div`
     div {
       margin-left: 1em;
     }
+  }
+`;
+
+export const StyledActions = styled.div`
+  display: flex;
+
+  p + p {
+    margin-left: 1em;
   }
 `;

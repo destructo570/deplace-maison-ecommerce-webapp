@@ -10,8 +10,9 @@ import {
   StyledNavIcon,
   StyledNavigation,
   StyledNavigationBar,
-  StyledLoginButton,
+  StyledNavLink,
   StyledNavActions,
+  StyledActions,
 } from "./styledComponents";
 import CartContext from "../../store/cart-context";
 import { useRouter } from "next/router";
@@ -30,6 +31,15 @@ function Navigation(props) {
 
   const navLogoHandler = () => {
     router.push("/");
+    onNavHandler();
+  };
+
+  const ordersHandler = () => {
+    router.push("/my-orders");
+  };
+
+  const shopHandler = () => {
+    router.push("/products");
   };
 
   return (
@@ -42,9 +52,13 @@ function Navigation(props) {
           <img src={nav.src} onClick={onNavHandler} alt="nav menu"></img>
         </StyledNavIcon>
         <StyledNavActions>
-          <StyledLoginButton onClick={!session ? signIn : signOut}>
-            {!session ? "Login" : "Logout"}
-          </StyledLoginButton>
+          <StyledActions>
+            <StyledNavLink onClick={shopHandler}>Shop</StyledNavLink>
+            <StyledNavLink onClick={ordersHandler}>My Orders</StyledNavLink>
+            <StyledNavLink onClick={!session ? signIn : signOut}>
+              {!session ? "Login" : "Logout"}
+            </StyledNavLink>
+          </StyledActions>
           <StyledCartItem onClick={props.onShowCart} isVisible={isNavMenuShown}>
             <img src={cartIcon.src} alt="my cart" />
             <p>{cartCtx.totalItems}</p>

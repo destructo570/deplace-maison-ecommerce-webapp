@@ -57,7 +57,7 @@ function NavMenu(props) {
   };
 
   return (
-    <StyledNavMenu>
+    <StyledNavMenu isNavShown={props.isNavShown}>
       <StyledNavLinkTitle>Tabs</StyledNavLinkTitle>
       <StyledNavStoreLinks>
         <li>
