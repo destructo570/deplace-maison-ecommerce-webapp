@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const StyledNotFound = styled.section`
-  /* margin-top: 2em;
-  margin-bottom: 2em; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;

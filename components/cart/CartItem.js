@@ -12,6 +12,7 @@ function CartItem(props) {
   const [hasError, setHasError] = useState(false);
 
   const quantityChangeHandler = (event) => {
+    //Show error if Qty is invalid
     if (
       event.target.value === "" ||
       event.target.value < 0 ||
@@ -21,10 +22,13 @@ function CartItem(props) {
       return;
     }
 
+    //Remove Item from cart if Qty is 0
     if (event.target.value === "0") {
       props.onRemoveItem(props.item.id);
       return;
     }
+
+    //Remove any error if Qty is valid and dispatch cart update
     setHasError(false);
 
     const updatedItem = {

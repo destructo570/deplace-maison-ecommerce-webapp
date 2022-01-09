@@ -1,12 +1,6 @@
 import styled from "styled-components";
 
 export const StyledFaq = styled.div`
-  padding-left: ${({ theme }) => theme.layout.small.pageLeftPadding};
-  padding-right: ${({ theme }) => theme.layout.small.pageRightPadding};
-  margin-top: ${({ theme }) => theme.layout.small.pageTopMargin};
-  margin-bottom: ${({ theme }) => theme.layout.small.pageTopMargin};
-  max-width: ${({ theme }) => theme.layout.medium.size};
-
   h1 {
     font-size: clamp(2.5rem, 15vw, 8rem);
     font-weight: 350;

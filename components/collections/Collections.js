@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import ActionButton from "../global/ActionButton/ActionButton";
+import Wrapper from "../wrapper/Wrapper";
 import CategoryItems from "./CategoryItems";
 import {
   StyledCategorySection,
@@ -15,23 +16,25 @@ function Collections() {
     router.push("/products/");
   };
   return (
-    <StyledCollections>
-      <StyledHeading>
-        <h1>SPRING,</h1>
-        <StyledSubHeading>
-          <h1>SUMMER</h1>
-          <h3>
-            COLL.
-            <br />
-            2021
-          </h3>
-        </StyledSubHeading>
-      </StyledHeading>
-      <StyledCategorySection>
-        <CategoryItems />
-      </StyledCategorySection>
-      <ActionButton title="Explore" onClick={exploreHandler} />
-    </StyledCollections>
+    <Wrapper>
+      <StyledCollections>
+        <StyledHeading>
+          <h1>SPRING,</h1>
+          <StyledSubHeading>
+            <h1>SUMMER</h1>
+            <h3>
+              COLL.
+              <br />
+              2021
+            </h3>
+          </StyledSubHeading>
+        </StyledHeading>
+        <StyledCategorySection>
+          <CategoryItems />
+        </StyledCategorySection>
+        <ActionButton title="Explore" onClick={exploreHandler} />
+      </StyledCollections>
+    </Wrapper>
   );
 }
 

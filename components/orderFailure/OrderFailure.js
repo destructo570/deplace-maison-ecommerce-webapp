@@ -1,3 +1,4 @@
+import Wrapper from "../wrapper/Wrapper";
 import { StyledOrderFailure } from "./styledComponents";
 
 // TODO: Style the page better with more info.
@@ -5,9 +6,11 @@ import { StyledOrderFailure } from "./styledComponents";
 
 function OrderFailure() {
   return (
-    <StyledOrderFailure>
-      <h1>Sorry, Your order was unsuccesfull.</h1>
-    </StyledOrderFailure>
+    <Wrapper>
+      <StyledOrderFailure>
+        <h1>Sorry, Your order was unsuccesfull.</h1>
+      </StyledOrderFailure>
+    </Wrapper>
   );
 }
 

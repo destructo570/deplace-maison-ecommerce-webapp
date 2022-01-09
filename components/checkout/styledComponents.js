@@ -1,12 +1,6 @@
 import styled from "styled-components";
 
 export const StyledCheckout = styled.section`
-  padding-left: ${({ theme }) => theme.layout.small.pageLeftPadding};
-  padding-right: ${({ theme }) => theme.layout.small.pageLeftPadding};
-  margin-top: ${({ theme }) => theme.layout.small.pageTopMargin};
-  margin-bottom: ${({ theme }) => theme.layout.small.pageTopMargin};
-  max-width: ${({ theme }) => theme.layout.maxWidth};
-
   h2 {
     text-transform: uppercase;
     font-weight: 300;
@@ -14,8 +8,6 @@ export const StyledCheckout = styled.section`
   }
 
   @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
-    margin-left: auto;
-    margin-right: auto;
     form {
       display: flex;
       justify-content: space-between;

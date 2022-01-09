@@ -1,12 +1,8 @@
 import styled from "styled-components";
 
 export const StyledMyOrders = styled.section`
-  padding-left: ${({ theme }) => theme.layout.small.pageLeftPadding};
-  padding-right: ${({ theme }) => theme.layout.small.pageLeftPadding};
-  margin-top: ${({ theme }) => theme.layout.small.pageTopMargin};
-  margin-bottom: ${({ theme }) => theme.layout.small.pageTopMargin};
   min-height: 50vh;
-  max-width: ${({ theme }) => theme.layout.maxWidth};
+
   h1 {
     text-transform: uppercase;
     margin-bottom: 1em;
@@ -17,8 +13,6 @@ export const StyledMyOrders = styled.section`
   }
 
   @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
-    margin-left: auto;
-    margin-right: auto;
     ul {
       display: grid;
       grid-template-columns: 1fr 1fr;

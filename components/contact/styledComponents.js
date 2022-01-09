@@ -1,12 +1,6 @@
 import styled from "styled-components";
 
 export const StyledContact = styled.div`
-  padding-left: ${({ theme }) => theme.layout.small.pageLeftPadding};
-  padding-right: ${({ theme }) => theme.layout.small.pageRightPadding};
-  margin-top: ${({ theme }) => theme.layout.small.pageTopMargin};
-  margin-bottom: ${({ theme }) => theme.layout.small.pageTopMargin};
-  max-width: ${({ theme }) => theme.layout.medium.size};
-
   h1 {
     font-weight: 400;
     line-height: 1.1em;
@@ -29,9 +23,6 @@ export const StyledContact = styled.div`
   }
 
   @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
-    margin-left: auto;
-    margin-right: auto;
-
     a {
       font-size: 1.2rem;
     }

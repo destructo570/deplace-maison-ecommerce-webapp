@@ -1,11 +1,6 @@
 import styled from "styled-components";
 
 export const StyledCreditsHeader = styled.div`
-  padding-left: ${({ theme }) => theme.layout.small.pageLeftPadding};
-  padding-right: ${({ theme }) => theme.layout.small.pageRightPadding};
-  margin-top: ${({ theme }) => theme.layout.small.pageTopMargin};
-  max-width: ${({ theme }) => theme.layout.medium.size};
-
   text-transform: uppercase;
 
   h1 {

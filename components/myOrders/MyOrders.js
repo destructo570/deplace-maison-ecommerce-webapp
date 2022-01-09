@@ -5,13 +5,19 @@ import {
 } from "./styledComponents";
 import { useSession } from "next-auth/react";
 import moment from "moment";
+import Wrapper from "../../components/wrapper/Wrapper";
 
 function MyOrders(props) {
   const orders = props.orders;
   const { data: session } = useSession();
+
+  //Show this if user is not logged in yet
   let ordersContent = <p>Please login to see your orders.</p>;
+
+  //Show this if there are no orders
   let ordersList = <li>No orders found.</li>;
 
+  //Map the order data
   if (orders) {
     ordersList = orders.map((order) => {
       let itemsString = "Items: ";
@@ -35,14 +41,18 @@ function MyOrders(props) {
       );
     });
   }
+
+  //Set the orders content if user is logged in
   if (session) {
     ordersContent = <ul>{ordersList}</ul>;
   }
   return (
-    <StyledMyOrders>
-      <h1>My Orders</h1>
-      {ordersContent}
-    </StyledMyOrders>
+    <Wrapper>
+      <StyledMyOrders>
+        <h1>My Orders</h1>
+        {ordersContent}
+      </StyledMyOrders>
+    </Wrapper>
   );
 }
 

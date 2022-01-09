@@ -1,8 +1,9 @@
+import Wrapper from "../wrapper/Wrapper";
 import { StyledCreditsHeader } from "./styledComponents";
 
 function Credits() {
   return (
-    <>
+    <Wrapper>
       <StyledCreditsHeader>
         <h1>
           Cre-
@@ -24,7 +25,7 @@ function Credits() {
           </li>
         </ul>
       </StyledCreditsHeader>
-    </>
+    </Wrapper>
   );
 }
 

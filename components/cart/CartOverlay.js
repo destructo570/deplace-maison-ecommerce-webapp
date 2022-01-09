@@ -9,7 +9,7 @@ function CartOverlay(props) {
           Your <br />
           <span>Cart</span>
         </h1>
-        <img src={closeIcon.src} onClick={props.onClose} alt="Close cart" />
+        <img src={closeIcon.src} onClick={props.onClose} alt="close cart" />
       </StyledCartHeader>
       <Fragment>{props.children}</Fragment>
     </StyledCartOverlay>

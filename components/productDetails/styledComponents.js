@@ -1,25 +1,12 @@
 import styled from "styled-components";
 
 export const StyledProductDetails = styled.section`
-  margin-top: ${({ theme }) => theme.layout.small.pageTopMargin};
-  margin-bottom: ${({ theme }) => theme.layout.small.pageTopMargin};
-  max-width: ${({ theme }) => theme.layout.maxWidth};
   position: relative;
-
-  section {
-    padding-left: ${({ theme }) => theme.layout.small.pageLeftPadding};
-    padding-right: ${({ theme }) => theme.layout.small.pageRightPadding};
-  }
 
   h1,
   h4,
   h3 {
     text-transform: uppercase;
-  }
-
-  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
-    margin-left: auto;
-    margin-right: auto;
   }
 `;
 
@@ -145,11 +132,11 @@ export const StyledDropDown = styled.div`
   }
 `;
 
-export const StyledAddToCartModal = styled.div`
+export const StyledAddToCartButton = styled.div`
   position: sticky;
   bottom: 0.6em;
+  left: 0px;
   padding: 1.5em;
-  margin: 1em;
   background-color: ${({ theme }) => theme.color.primaryText};
 
   a {

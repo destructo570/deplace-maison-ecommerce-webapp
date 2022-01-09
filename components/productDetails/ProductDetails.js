@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import CartContext from "../../store/cart-context";
+import Wrapper from "../wrapper/Wrapper";
 import {
   StyledProductTitle,
   StyledProductDetails,
@@ -9,7 +10,7 @@ import {
   StyledProductOtherInfo,
   StyledProductShippingInfo,
   StyledProductOtherInfoTitle,
-  StyledAddToCartModal,
+  StyledAddToCartButton,
 } from "./styledComponents";
 
 function ProductDetails(props) {
@@ -32,71 +33,73 @@ function ProductDetails(props) {
   };
 
   return (
-    <StyledProductDetails>
-      <section>
-        <StyledProductTitle>
-          <h4>{product.category}</h4>
-          <h1>{product.name}</h1>
-        </StyledProductTitle>
-        <SytledProductPriceInfo>
-          <p>$ {product.price} usd</p>
-          <h3>$ {product.finalPrice} USD</h3>
-        </SytledProductPriceInfo>
-        <StyledProductImage>
-          <div>
-            <img
-              src={product.images.sideView}
-              alt={`${product.name} side view`}
-            />
-          </div>
-          <div>
-            <p>side</p>
-          </div>
-        </StyledProductImage>
-        <StyledProductDescription>
-          {product.description}
-        </StyledProductDescription>
-      </section>
-      <StyledProductOtherInfo>
-        <StyledProductOtherInfoTitle>
-          {product["manufactured-title"]}
-        </StyledProductOtherInfoTitle>
-        <StyledProductImage>
-          <div>
-            <img
-              src={product.images.frontView}
-              alt={`${product.name} front view`}
-            />
-          </div>
-          <div>
-            <p>view</p>
-            <p>(01)</p>
-          </div>
-        </StyledProductImage>
-        <StyledProductImage>
-          <div>
-            <img
-              src={product.images.backView}
-              alt={`${product.name} back view`}
-            />
-          </div>
-          <div>
-            <p>view</p>
-            <p>(01)</p>
-          </div>
-        </StyledProductImage>
-        <StyledProductShippingInfo>
-          <p>{product["shipping-info"]}</p>
-          <p>{product["shipping-cost-info"]}</p>
-        </StyledProductShippingInfo>
-      </StyledProductOtherInfo>
-      <StyledAddToCartModal>
-        <a href="#" onClick={addToCartHandler}>
-          Add to cart
-        </a>
-      </StyledAddToCartModal>
-      <hr />
-    </StyledProductDetails>
+    <Wrapper>
+      <StyledProductDetails>
+        <section>
+          <StyledProductTitle>
+            <h4>{product.category}</h4>
+            <h1>{product.name}</h1>
+          </StyledProductTitle>
+          <SytledProductPriceInfo>
+            <p>$ {product.price} usd</p>
+            <h3>$ {product.finalPrice} USD</h3>
+          </SytledProductPriceInfo>
+          <StyledProductImage>
+            <div>
+              <img
+                src={product.images.sideView}
+                alt={`${product.name} side view`}
+              />
+            </div>
+            <div>
+              <p>side</p>
+            </div>
+          </StyledProductImage>
+          <StyledProductDescription>
+            {product.description}
+          </StyledProductDescription>
+        </section>
+        <StyledProductOtherInfo>
+          <StyledProductOtherInfoTitle>
+            {product["manufactured-title"]}
+          </StyledProductOtherInfoTitle>
+          <StyledProductImage>
+            <div>
+              <img
+                src={product.images.frontView}
+                alt={`${product.name} front view`}
+              />
+            </div>
+            <div>
+              <p>view</p>
+              <p>(01)</p>
+            </div>
+          </StyledProductImage>
+          <StyledProductImage>
+            <div>
+              <img
+                src={product.images.backView}
+                alt={`${product.name} back view`}
+              />
+            </div>
+            <div>
+              <p>view</p>
+              <p>(01)</p>
+            </div>
+          </StyledProductImage>
+          <StyledProductShippingInfo>
+            <p>{product["shipping-info"]}</p>
+            <p>{product["shipping-cost-info"]}</p>
+          </StyledProductShippingInfo>
+        </StyledProductOtherInfo>
+        <StyledAddToCartButton>
+          <a href="#" onClick={addToCartHandler}>
+            Add to cart
+          </a>
+        </StyledAddToCartButton>
+        <hr />
+      </StyledProductDetails>
+    </Wrapper>
   );
 }
 
