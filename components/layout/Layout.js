@@ -13,6 +13,7 @@ function Layout(props) {
 
   //Load the stored cart from localStorage
   useEffect(() => {
+    //Only get the cart if this is the first render
     if (isFirstRender) {
       cartCtx.replaceCart(getCart());
       isFirstRender = false;
