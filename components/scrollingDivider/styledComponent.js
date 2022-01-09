@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledScrollingDivider = styled.marquee`
+export const StyledScrollingDivider = styled.h4`
   margin-top: 2em;
   margin-bottom: 2em;
   padding-top: 0.5em;
