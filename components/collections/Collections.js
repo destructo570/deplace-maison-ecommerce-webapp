@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import ActionButton from "../global/ActionButton/ActionButton";
 import CategoryItems from "./CategoryItems";
 import {
@@ -8,6 +9,11 @@ import {
 } from "./styledComponents";
 
 function Collections() {
+  const router = useRouter();
+
+  const exploreHandler = () => {
+    router.push("/products/");
+  };
   return (
     <StyledCollections>
       <StyledHeading>
@@ -24,7 +30,7 @@ function Collections() {
       <StyledCategorySection>
         <CategoryItems />
       </StyledCategorySection>
-      <ActionButton title="Explore" />
+      <ActionButton title="Explore" onClick={exploreHandler} />
     </StyledCollections>
   );
 }
