@@ -1,13 +1,14 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const StyledNavigation = styled.nav`
+export const StyledNavigation = styled(motion.nav)`
   position: fixed;
   top: 0px;
   z-index: 101;
   width: 100%;
   height: ${({ isVisible }) => (isVisible ? "100%" : "auto")};
-  background-color: ${({ isVisible, theme }) =>
-    isVisible ? theme.color.primaryText : theme.color.navBackground};
+  /* background-color: ${({ isVisible, theme }) =>
+    isVisible ? theme.color.primaryText : theme.color.navBackground}; */
   color: ${({ isVisible, theme }) =>
     isVisible ? theme.color.background : theme.color.primaryText};
 `;
@@ -71,15 +72,26 @@ export const StyledCartItem = styled.div`
   }
 `;
 
-export const StyledNavMenu = styled.div`
+export const StyledNavMenu = styled(motion.div)`
   background-color: ${({ theme }) => theme.color.primaryText};
   padding: 1.6em;
   color: ${({ theme }) => theme.color.background};
   text-transform: uppercase;
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -100;
 
   ul {
     list-style: none;
+  }
+
+  li {
+    overflow: hidden;
+    min-height: 3em;
+    position: relative;
   }
 
   a {
@@ -89,7 +101,7 @@ export const StyledNavMenu = styled.div`
 `;
 
 export const StyledNavLinkTitle = styled.p`
-  margin-top: 4.2em;
+  margin-top: 8.2em;
   padding-bottom: 0.3em;
   border-bottom: 1.5px solid ${({ theme }) => theme.color.background};
 `;
@@ -129,7 +141,7 @@ export const StyledNavInfoLinks = styled.ul`
   }
 `;
 
-export const StyledNavSocialLinks = styled.div`
+export const StyledNavSocialLinks = styled(motion.div)`
   margin-top: 8.2em;
   img {
     filter: invert(1) sepia(1%) saturate(0%) hue-rotate(175deg);
@@ -145,7 +157,7 @@ export const StyledNavSocialLinks = styled.div`
   }
 `;
 
-export const StyledNavInquiry = styled.div`
+export const StyledNavInquiry = styled(motion.div)`
   margin-top: 2.2em;
   margin-bottom: 3em;
   padding: 0.8em 0;
