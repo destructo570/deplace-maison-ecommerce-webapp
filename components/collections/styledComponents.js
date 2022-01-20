@@ -1,16 +1,17 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 //
 // Collections Section
 //
 
-export const StyledCollections = styled.section`
+export const StyledCollections = styled(motion.section)`
   display: flex;
   flex-direction: column;
   justify-content: end;
 `;
 
-export const StyledHeading = styled.div`
+export const StyledHeading = styled(motion.div)`
   h1 {
     font-size: clamp(4rem, 15vw, 8rem);
     line-height: 0.9em;
@@ -53,7 +54,7 @@ export const StyledCategorySection = styled.div`
 // Category Item Component
 //
 
-export const StyledCategoryItem = styled.div`
+export const StyledCategoryItem = styled(motion.div)`
   margin-top: 1em;
 
   & + & {

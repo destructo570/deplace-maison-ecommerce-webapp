@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import Wrapper from "../wrapper/Wrapper";
 import { StyledFaq } from "./styledComponents";
 

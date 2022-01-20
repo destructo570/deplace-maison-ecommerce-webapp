@@ -5,7 +5,7 @@ function ScrollingDivider() {
   return (
     <StyledScrollingDivider>
       <Marquee
-        duration={40000}
+        duration={70000}
         width="100%"
         height="30px"
         axis="x"
@@ -13,7 +13,7 @@ function ScrollingDivider() {
         pauseOnHover={false}
         reverse={true}
       >
-        DO NOT SCROLL • DEPLACE SHOP • DO NOT SCROLL • DEPLACE SHOP • DO NOT
+        • DO NOT SCROLL • DEPLACE SHOP • DO NOT SCROLL • DEPLACE SHOP • DO NOT
         SCROLL • DEPLACE SHOP • DO NOT SCROLL • DEPLACE SHOP • DO NOT SCROLL •
         DEPLACE SHOP • DO NOT SCROLL • DEPLACE SHOP • DO NOT SCROLL • DEPLACE
         SHOP • DO NOT SCROLL • DEPLACE SHOP • DO NOT SCROLL • DEPLACE SHOP • DO

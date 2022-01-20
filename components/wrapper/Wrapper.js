@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled(motion.div)`
   padding-left: ${({ theme }) => theme.layout.small.pageLeftPadding};
   padding-right: ${({ theme }) => theme.layout.small.pageRightPadding};
   margin-top: ${({ theme }) => theme.layout.small.pageTopMargin};
@@ -13,7 +14,16 @@ const StyledWrapper = styled.div`
   }
 `;
 function Wrapper(props) {
-  return <StyledWrapper>{props.children}</StyledWrapper>;
+  return (
+    <StyledWrapper
+      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ ease: "easeOut" }}
+    >
+      {props.children}
+    </StyledWrapper>
+  );
 }
 
 export default Wrapper;

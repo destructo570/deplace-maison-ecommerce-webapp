@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const StyledProductDetails = styled.section`
   position: relative;
@@ -10,7 +11,7 @@ export const StyledProductDetails = styled.section`
   }
 `;
 
-export const StyledProductTitle = styled.div`
+export const StyledProductTitle = styled(motion.div)`
   h4 {
     font-weight: 400;
     font-size: 1.5rem;
@@ -132,7 +133,7 @@ export const StyledDropDown = styled.div`
   }
 `;
 
-export const StyledAddToCartButton = styled.div`
+export const StyledAddToCartButton = styled(motion.div)`
   position: sticky;
   bottom: 0.6em;
   left: 0px;

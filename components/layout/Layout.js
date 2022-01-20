@@ -4,6 +4,7 @@ import Cart from "../cart/Cart";
 import { useContext, useEffect, useState } from "react";
 import CartContext from "../../store/cart-context";
 import { getCart } from "../../lib/CartUtil";
+import { AnimatePresence } from "framer-motion";
 
 let isFirstRender = true;
 
@@ -29,7 +30,7 @@ function Layout(props) {
     <>
       {isCartShown && <Cart onHideCart={onShowCart} />}
       <Navigation onShowCart={onShowCart} />
-      {props.children}
+      <AnimatePresence exitBeforeEnter>{props.children}</AnimatePresence>
       <Footer />
     </>
   );

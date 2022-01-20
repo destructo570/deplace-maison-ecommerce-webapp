@@ -4,7 +4,11 @@ import { StyledCategoryDetails, StyledCategoryItem } from "./styledComponents";
 function CategoryItems() {
   return (
     <>
-      <StyledCategoryItem>
+      <StyledCategoryItem
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 0.35 }}
+      >
         <Image
           src="https://imgur.com/Ks6yn76.jpeg"
           alt="woman's collection"
@@ -16,7 +20,11 @@ function CategoryItems() {
           <p>MAN</p>
         </StyledCategoryDetails>
       </StyledCategoryItem>
-      <StyledCategoryItem>
+      <StyledCategoryItem
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 0.35, delay: 0.25 }}
+      >
         <Image
           src="https://imgur.com/IoDYvMx.jpeg"
           alt="men's collection"
