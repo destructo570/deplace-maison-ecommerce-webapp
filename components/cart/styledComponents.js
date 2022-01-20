@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const StyledCart = styled.div`
+export const StyledCart = styled(motion.div)`
   position: fixed;
   right: 0px;
   top: 0px;
@@ -31,7 +32,7 @@ export const StyledCart = styled.div`
 //Styled BackDrop
 //
 
-export const StyledBackDrop = styled.div`
+export const StyledBackDrop = styled(motion.div)`
   background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   top: 0px;

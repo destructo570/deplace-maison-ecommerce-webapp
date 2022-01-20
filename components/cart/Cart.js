@@ -40,7 +40,12 @@ function Cart(props) {
 
   return (
     <CartModal onClose={onCloseHandler}>
-      <StyledCart>
+      <StyledCart
+        initial={{ x: 50, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 0.15 }}
+        exit={{ opacity: 0 }}
+      >
         <CartHeader onClose={onCloseHandler} />
         {CartItems}
         <CartSummary onClose={onCloseHandler} />
