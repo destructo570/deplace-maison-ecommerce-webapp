@@ -19,37 +19,40 @@ export async function getServerSideProps(context) {
       props: {},
     };
   }
+  const orders = [];
+  try {
+    //Firebase Orders data
+    const usersOrders = query(
+      collection(db, "users", session.user.email, "orders")
+    );
+    const querySnapshot = await getDocs(usersOrders);
+    //Stripe Orders
+    orders = await Promise.all(
+      querySnapshot.docs.map(async (order) => ({
+        id: order.id,
+        amount: order.data().amount,
+        amountShipping: order.data().amount_shipping,
+        images: order.data().images,
+        timestamp: moment(order.data().timestamp.toDate()).unix(),
+        items: (
+          await stripe.checkout.sessions.listLineItems(order.id, {
+            limit: 100,
+          })
+        ).data,
+      }))
+    );
 
-  //Firebase Orders data
-  const usersOrders = query(
-    collection(db, "users", session.user.email, "orders")
-  );
-  const querySnapshot = await getDocs(usersOrders);
-
-  //Stripe Orders
-  const orders = await Promise.all(
-    querySnapshot.docs.map(async (order) => ({
-      id: order.id,
-      amount: order.data().amount,
-      amountShipping: order.data().amount_shipping,
-      images: order.data().images,
-      timestamp: moment(order.data().timestamp.toDate()).unix(),
-      items: (
-        await stripe.checkout.sessions.listLineItems(order.id, {
-          limit: 100,
-        })
-      ).data,
-    }))
-  );
-
-  //Sort the orders by date
-  const sortedOrders = orders.sort((first, second) => {
-    return second.timestamp - first.timestamp;
-  });
+    //Sort the orders by date
+    orders = orders.sort((first, second) => {
+      return second.timestamp - first.timestamp;
+    });
+  } catch (error) {
+    console.log(error.message);
+  }
 
   return {
     props: {
-      orders: sortedOrders,
+      orders,
     },
   };
 }
