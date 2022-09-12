@@ -2,7 +2,7 @@
 
 A clone of deplace maison ecoomerce website using React/Next JS with stripe payment integration and firebase for storing orders.
 
-## [Live Demo](https://deplace-maison-ecommerce-webapp.vercel.app/)
+## [Live Demo](https://deplace-maison-ecommerce-webapp-951b22zlw-destructo570.vercel.app/)
 
 ## Disclaimer
 
