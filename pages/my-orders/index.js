@@ -19,7 +19,7 @@ export async function getServerSideProps(context) {
       props: {},
     };
   }
-  const orders = [];
+  let orders = [];
   try {
     //Firebase Orders data
     const usersOrders = query(
