@@ -1,4 +1,4 @@
-# Deplace Maison Ecommerce Webapp NextJs and ReactJS
+## Deplace Maison Ecommerce Webapp NextJs and ReactJS
 
 A clone of deplace maison ecoomerce website using React/Next JS with stripe payment integration and firebase for storing orders.
 
