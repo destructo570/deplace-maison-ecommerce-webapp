@@ -26,6 +26,19 @@ You can checkout the original website [here.](https://www.deplacemaison.com/)
 - ContextApi for app wide state management
 - Local storage for storing user cart
 
+<details>
+  <summary><h3>🌈Screenshots</h3></summary>
+  
+  ![alt text](https://imgur.com/snvQ2FA.png)
+  ![alt text](https://imgur.com/KnTSLpO.png)
+  ![alt text](https://imgur.com/yFEEclR.png)
+  ![alt text](https://imgur.com/DfAypPV.png)
+  <img src="https://imgur.com/obSyX6J.png" width=32%>
+  <img src="https://imgur.com/aJBZddm.png" width=32%>
+  <img src="https://imgur.com/1djQz8u.png" width=32%>
+  
+</details>
+
 
 ## Installation
 
