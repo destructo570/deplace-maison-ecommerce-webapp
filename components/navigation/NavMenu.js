@@ -110,28 +110,26 @@ function NavMenu(props) {
       animate="visible"
       variants={navVariant}
     >
-      <StyledNavLinkTitle>Tabs</StyledNavLinkTitle>
+      <StyledNavLinkTitle>Menú</StyledNavLinkTitle>
       <StyledNavStoreLinks>
         <li>
           <motion.p onClick={shopLinkHandler} variants={linksVariant}>
-            Shop
+            La Casa
           </motion.p>
         </li>
         <li>
           <motion.p onClick={myOrderLinkHandler} variants={linksVariant}>
-            My Orders
+            Reservas
           </motion.p>
         </li>
         <li>
-          <motion.p
-            onClick={!session ? signIn : signOut}
-            variants={linksVariant}
-          >
-            {!session ? "Login" : "Logout"}
+          <motion.p onClick={myOrderLinkHandler} variants={linksVariant}>
+            Actividades
           </motion.p>
         </li>
+        
         <li>
-          <motion.p variants={linksVariant}>About</motion.p>
+          <motion.p variants={linksVariant}>Sobre nosotros</motion.p>
         </li>
       </StyledNavStoreLinks>
       <StyledNavInfoLinks>
@@ -142,17 +140,17 @@ function NavMenu(props) {
         </li>
         <li>
           <motion.p onClick={returnsLinkHandler} variants={linksVariant}>
-            Returns
+            Cancelaciones
           </motion.p>
         </li>
         <li>
           <motion.p onClick={termsLinkHandler} variants={linksVariant}>
-            Terms
+            Términos legales
           </motion.p>
         </li>
         <li>
           <motion.p onClick={privacyLinkHandler} variants={linksVariant}>
-            Privacy
+            Políticia de privacidad
           </motion.p>
         </li>
       </StyledNavInfoLinks>
@@ -161,7 +159,10 @@ function NavMenu(props) {
         <img src={instagramIcon.src} alt=""></img>
       </StyledNavSocialLinks>
       <StyledNavInquiry variants={otherVariant}>
-        Inquiries <br /> info@deplacemaison.com
+        Consultas <br /> casacarmencc@gmail.com <br />
+        <div>
+            <h4>Telf: +34 639 952 615</h4>
+          </div>
       </StyledNavInquiry>
     </StyledNavMenu>
   );

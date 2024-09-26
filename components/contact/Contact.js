@@ -7,30 +7,23 @@ function Contact() {
       <StyledContact>
         <StyledContactItem>
           <h1>
-            Although we might look like haphazards, we're actually very thought
-            through.
+            No te quedes con dudas, si quieres consultar o comentarnos algo, cuéntanos.
           </h1>
           <div>
-            <h4>general request</h4>
-            <a href="mailto:info@deplacemaison.com">info@deplacemaison.com</a>
+            <h4>Consultas generales</h4>
+            <a href="mailto:casacarmencc@gmail.com">casacarmencc@gmail.com</a>
           </div>
           <div>
-            <h4>sales</h4>
-            <a href="mailto:sales@deplacemaison.com">sales@deplacemaison.com</a>
-          </div>
-
-          <div>
-            <h4>address</h4>
+            <h4>Dirección</h4>
             <h2>
-              Via Bramante, 14 <br />
-              62014, Corridonia <br />
-              (MC) <br />
-              Italy
+              Calle Mondeño, 12<br />
+              10692 El Batán, Cáceres <br />
+              España
             </h2>
           </div>
           <div>
-            <h4>phone</h4>
-            <a href="#">+ 39 333 560 7925</a>
+            <h4>Teléfono</h4>
+            <a href="#">+34 639 952 615</a>
           </div>
         </StyledContactItem>
       </StyledContact>

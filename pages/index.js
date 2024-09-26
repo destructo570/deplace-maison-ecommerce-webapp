@@ -10,9 +10,7 @@ export default function Home(props) {
     <main>
       <Collections />
       <ScrollingDivider />
-      <PromoInfo />
-      <PromoProducts products={props.promoProducts.data} />
-      <Testimonials />
+      
     </main>
   );
 }

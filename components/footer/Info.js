@@ -11,15 +11,16 @@ function Info() {
             <Link href="/faq">Faq</Link>
           </li>
           <li>
-            <Link href="/returns">Returns</Link>
+            <Link href="/contact">Contacto</Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link href="/returns">Cancelaciones</Link>
           </li>
+        
         </ul>
       </div>
       <StyledSecondaryLink>
-        <Link href="/credits">Credits</Link>
+        <Link href="/credits">Créditos</Link>
       </StyledSecondaryLink>
     </StyledInfo>
   );
