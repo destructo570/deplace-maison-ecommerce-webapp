@@ -31,7 +31,7 @@ export const StyledLogo = styled.div`
 `;
 
 export const StyledNavIcon = styled.div`
-  width: 40px;
+  width: 70px;
 
   &:hover {
     cursor: pointer;
@@ -40,9 +40,6 @@ export const StyledNavIcon = styled.div`
   filter: ${({ isVisible, theme }) =>
     isVisible ? theme.color.backgroundFilter : theme.color.primaryTextFilter};
 
-  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
-    display: none;
-  }
 `;
 
 export const StyledCartItem = styled.div`
@@ -114,14 +111,8 @@ export const StyledNavStoreLinks = styled.ul`
   }
   p:hover {
     cursor: pointer;
-  }
-
-  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
-    //Hide the login button in medium and large screens
-    li:nth-child(3) {
-      display: none;
-    }
-  }
+    color: white; 
+  } 
 `;
 
 export const StyledNavInfoLinks = styled.ul`
@@ -138,6 +129,7 @@ export const StyledNavInfoLinks = styled.ul`
 
   p:hover {
     cursor: pointer;
+    color: white; 
   }
 `;
 
@@ -150,6 +142,7 @@ export const StyledNavSocialLinks = styled(motion.div)`
 
   img:hover {
     cursor: pointer;
+    
   }
 
   img + img {

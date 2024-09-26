@@ -64,6 +64,9 @@ export const StyledInfo = styled.div`
     text-decoration: none;
     color: ${({ theme }) => theme.color.primaryText};
     font-size: 1.3rem;
+    &:hover {
+      color: #00ab39; // Cambia a verde en hover
+    }
   }
 
   div:last-child {
@@ -93,6 +96,9 @@ export const StyledPolicy = styled.div`
     text-decoration: none;
     color: ${({ theme }) => theme.color.primaryText};
     font-size: 1.3rem;
+    &:hover {
+      color: #00ab39; // Cambia a verde en hover
+    }
   }
 `;
 

@@ -14,7 +14,6 @@ import {
   StyledNavActions,
   StyledActions,
 } from "./styledComponents";
-import CartContext from "../../store/cart-context";
 import { useRouter } from "next/router";
 import NavMenu from "./NavMenu";
 
@@ -36,14 +35,6 @@ function Navigation(props) {
     }
   };
 
-  const ordersHandler = () => {
-    router.push("/my-orders");
-  };
-
-  const shopHandler = () => {
-    router.push("/products");
-  };
-
   return (
     <StyledNavigation isVisible={isNavMenuShown}>
       <StyledNavigationBar>
@@ -53,15 +44,6 @@ function Navigation(props) {
         <StyledNavIcon isVisible={isNavMenuShown}>
           <img src={nav.src} onClick={onNavHandler} alt="nav menu"></img>
         </StyledNavIcon>
-        <StyledNavActions>
-          <StyledActions>
-            <StyledNavLink onClick={shopHandler}>Shop</StyledNavLink>
-            <StyledNavLink onClick={ordersHandler}>My Orders</StyledNavLink>
-            <StyledNavLink onClick={!session ? signIn : signOut}>
-              {!session ? "Login" : "Logout"}
-            </StyledNavLink>
-          </StyledActions>
-        </StyledNavActions>
       </StyledNavigationBar>
       {isNavMenuShown && <NavMenu onNavClick={onNavHandler} />}
     </StyledNavigation>
