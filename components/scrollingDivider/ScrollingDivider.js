@@ -13,7 +13,7 @@ function ScrollingDivider() {
         pauseOnHover={false}
         reverse={true}
       >
-        DONDE EL DESCANSO TE DA VIDA
+        Donde el descanso te da vida
       </Marquee>
     </StyledScrollingDivider>
   );

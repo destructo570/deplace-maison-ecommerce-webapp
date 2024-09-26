@@ -119,6 +119,16 @@ function NavMenu(props) {
         </li>
         <li>
           <motion.p onClick={myOrderLinkHandler} variants={linksVariant}>
+            Eventos
+          </motion.p>
+        </li>
+        <li>
+          <motion.p onClick={myOrderLinkHandler} variants={linksVariant}>
+            Entorno
+          </motion.p>
+        </li>
+        <li>
+          <motion.p onClick={myOrderLinkHandler} variants={linksVariant}>
             Reservas
           </motion.p>
         </li>

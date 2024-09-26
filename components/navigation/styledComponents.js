@@ -18,12 +18,11 @@ export const StyledNavigationBar = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1em 1.5em;
+  background-color: rgba(255, 255, 255, 0.9);
 `;
 
 export const StyledLogo = styled.div`
-  width: 80px;
-  filter: ${({ isVisible, theme }) =>
-    isVisible ? theme.color.backgroundFilter : theme.color.primaryTextFilter};
+  width: 70px;
 
   &:hover {
     cursor: pointer;
@@ -36,10 +35,6 @@ export const StyledNavIcon = styled.div`
   &:hover {
     cursor: pointer;
   }
-
-  filter: ${({ isVisible, theme }) =>
-    isVisible ? theme.color.backgroundFilter : theme.color.primaryTextFilter};
-
 `;
 
 export const StyledCartItem = styled.div`
@@ -98,7 +93,7 @@ export const StyledNavMenu = styled(motion.div)`
 `;
 
 export const StyledNavLinkTitle = styled.p`
-  margin-top: 8.2em;
+  margin-top: 7.2em;
   padding-bottom: 0.3em;
   border-bottom: 1.5px solid ${({ theme }) => theme.color.background};
 `;
@@ -107,7 +102,7 @@ export const StyledNavStoreLinks = styled.ul`
   margin: 2em 0;
   p {
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 300;
   }
   p:hover {
     cursor: pointer;
@@ -134,7 +129,7 @@ export const StyledNavInfoLinks = styled.ul`
 `;
 
 export const StyledNavSocialLinks = styled(motion.div)`
-  margin-top: 8.2em;
+  margin-top: 4.2em;
   img {
     filter: invert(1) sepia(1%) saturate(0%) hue-rotate(175deg);
     max-width: 35px;
@@ -158,7 +153,6 @@ export const StyledNavInquiry = styled(motion.div)`
   font-size: 1.4rem;
   font-weight: 600;
   border-top: 1.5px solid ${({ theme }) => theme.color.background};
-  border-bottom: 1.5px solid ${({ theme }) => theme.color.background};
 `;
 
 export const StyledNavLink = styled.p`
