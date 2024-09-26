@@ -6,6 +6,7 @@ function Info() {
     <StyledInfo>
       <div>
         <p>Info</p>
+        <br />
         <ul>
           <li>
             <Link href="/faq">Faq</Link>

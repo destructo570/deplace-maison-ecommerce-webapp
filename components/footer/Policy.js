@@ -6,6 +6,7 @@ function Policy() {
     <StyledPolicy>
       <div>
         <p>Políticas</p>
+        <br />
         <ul>
           <li>
             <Link href="/terms">Términos</Link>
