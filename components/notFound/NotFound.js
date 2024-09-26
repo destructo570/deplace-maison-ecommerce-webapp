@@ -18,7 +18,7 @@ function NotFound() {
         Donde el descanso te da vida
       </Marquee>
       <p>
-        Wrap the cassette up and <Link href="/">come back</Link> to home.
+        Parece que aquí no hay nada <Link href="/">vuelve al inicio</Link> de la web.
       </p>
     </StyledNotFound>
   );

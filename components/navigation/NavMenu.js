@@ -155,8 +155,13 @@ function NavMenu(props) {
         </li>
       </StyledNavInfoLinks>
       <StyledNavSocialLinks variants={otherVariant}>
-        <img src={facebookIcon.src} alt=""></img>
-        <img src={instagramIcon.src} alt=""></img>
+      <a href="https://www.facebook.com/casacarmencc/" target="_blank" rel="noopener noreferrer">
+  <img src={facebookIcon.src} alt="Facebook Icon" />
+</a>
+<a href="https://www.instagram.com/casacarmen.es/" target="_blank" rel="noopener noreferrer">
+  <img src={instagramIcon.src} alt="Instagram Icon" />
+</a>
+
       </StyledNavSocialLinks>
       <StyledNavInquiry variants={otherVariant}>
         Consultas <br /> casacarmencc@gmail.com <br />

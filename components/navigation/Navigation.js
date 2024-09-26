@@ -19,7 +19,7 @@ import { useRouter } from "next/router";
 import NavMenu from "./NavMenu";
 
 function Navigation(props) {
-  const cartCtx = useContext(CartContext);
+
   const router = useRouter();
   const { data: session } = useSession();
   const [isNavMenuShown, setIsNavMenuShown] = useState(false);

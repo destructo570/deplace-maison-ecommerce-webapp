@@ -16,8 +16,13 @@ function Other() {
         <img src={arrowIcon.src} alt=""></img>
       </StytledIcon>
       <StyledSocial>
-        <img src={facebook.src} alt="facebook page" />
-        <img src={instagram.src} alt="instagram page" />
+      <a href="https://www.facebook.com/casacarmencc/" target="_blank" rel="noopener noreferrer">
+  <img src={facebook.src} alt="Facebook page" />
+</a>
+<a href="https://www.instagram.com/casacarmen.es/" target="_blank" rel="noopener noreferrer">
+  <img src={instagram.src} alt="Instagram page" />
+</a>
+
       </StyledSocial>
     </StyledOther>
   );
