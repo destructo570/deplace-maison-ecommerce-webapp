@@ -21,7 +21,7 @@ function Info() {
         </ul>
       </div>
       <StyledSecondaryLink>
-        <Link href="/credits">Créditos</Link>
+        <Link href="/credits">Nosotras</Link>
       </StyledSecondaryLink>
     </StyledInfo>
   );

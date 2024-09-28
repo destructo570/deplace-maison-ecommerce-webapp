@@ -1,12 +1,17 @@
 import Collections from "../components/collections/Collections";
 import ScrollingDivider from "../components/scrollingDivider/ScrollingDivider";
+import returns from "../components/returns/Returns";
 import axios from "axios";
+
 
 export default function Home(props) {
   return (
     <main>
+        <Returns />
       <Collections />
       <ScrollingDivider />
+    
+     
       
     </main>
   );

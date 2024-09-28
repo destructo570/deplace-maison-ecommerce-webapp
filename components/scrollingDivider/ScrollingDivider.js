@@ -4,6 +4,7 @@ import { StyledScrollingDivider } from "./styledComponent";
 function ScrollingDivider() {
   return (
     <StyledScrollingDivider>
+    
       <Marquee
         duration={70000}
         width="100%"

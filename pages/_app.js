@@ -11,9 +11,9 @@ function MyApp({ Component, pageProps: { session, ...pageProps }, router }) {
       <GlobalStyles />
       <SessionProvider session={session}>       
           <Layout>
-            <AnimatePresence exitBeforeEnter>
-              <Component {...pageProps} key={router.route} />
-            </AnimatePresence>
+          <AnimatePresence mode="wait">
+  <Component {...pageProps} key={router.route} />
+</AnimatePresence>
           </Layout>
       </SessionProvider>
     </ThemeProvider>
