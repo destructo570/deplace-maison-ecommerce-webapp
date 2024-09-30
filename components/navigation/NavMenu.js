@@ -110,28 +110,36 @@ function NavMenu(props) {
       animate="visible"
       variants={navVariant}
     >
-      <StyledNavLinkTitle>Tabs</StyledNavLinkTitle>
+      <StyledNavLinkTitle>Menú</StyledNavLinkTitle>
       <StyledNavStoreLinks>
         <li>
           <motion.p onClick={shopLinkHandler} variants={linksVariant}>
-            Shop
+            La Casa
           </motion.p>
         </li>
         <li>
           <motion.p onClick={myOrderLinkHandler} variants={linksVariant}>
-            My Orders
+            Eventos
           </motion.p>
         </li>
         <li>
-          <motion.p
-            onClick={!session ? signIn : signOut}
-            variants={linksVariant}
-          >
-            {!session ? "Login" : "Logout"}
+          <motion.p onClick={myOrderLinkHandler} variants={linksVariant}>
+            Entorno
           </motion.p>
         </li>
         <li>
-          <motion.p variants={linksVariant}>About</motion.p>
+          <motion.p onClick={myOrderLinkHandler} variants={linksVariant}>
+            Reservas
+          </motion.p>
+        </li>
+        <li>
+          <motion.p onClick={myOrderLinkHandler} variants={linksVariant}>
+            Actividades
+          </motion.p>
+        </li>
+        
+        <li>
+          <motion.p variants={linksVariant}>Sobre nosotros</motion.p>
         </li>
       </StyledNavStoreLinks>
       <StyledNavInfoLinks>
@@ -142,26 +150,34 @@ function NavMenu(props) {
         </li>
         <li>
           <motion.p onClick={returnsLinkHandler} variants={linksVariant}>
-            Returns
+            Cancelaciones
           </motion.p>
         </li>
         <li>
           <motion.p onClick={termsLinkHandler} variants={linksVariant}>
-            Terms
+            Términos legales
           </motion.p>
         </li>
         <li>
           <motion.p onClick={privacyLinkHandler} variants={linksVariant}>
-            Privacy
+            Políticia de privacidad
           </motion.p>
         </li>
       </StyledNavInfoLinks>
       <StyledNavSocialLinks variants={otherVariant}>
-        <img src={facebookIcon.src} alt=""></img>
-        <img src={instagramIcon.src} alt=""></img>
+      <a href="https://www.facebook.com/casacarmencc/" target="_blank" rel="noopener noreferrer">
+  <img src={facebookIcon.src} alt="Facebook Icon" />
+</a>
+<a href="https://www.instagram.com/casacarmen.es/" target="_blank" rel="noopener noreferrer">
+  <img src={instagramIcon.src} alt="Instagram Icon" />
+</a>
+
       </StyledNavSocialLinks>
       <StyledNavInquiry variants={otherVariant}>
-        Inquiries <br /> info@deplacemaison.com
+        Consultas <br /> casacarmencc@gmail.com <br />
+        <div>
+            <h4>Telf: +34 639 952 615</h4>
+          </div>
       </StyledNavInquiry>
     </StyledNavMenu>
   );

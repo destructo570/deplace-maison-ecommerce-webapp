@@ -7,7 +7,7 @@ function Contact() {
       <StyledContact>
         <StyledContactItem>
           <h1>
-            No te quedes con dudas, si quieres consultar o comentarnos algo, cuéntanos.
+            Aquí todo lo que puedes hacer
           </h1>
           <div>
             <h4>Consultas generales</h4>

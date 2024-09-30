@@ -5,20 +5,20 @@ function Policy() {
   return (
     <StyledPolicy>
       <div>
-        <p>Policy</p>
+        <p>Políticas</p>
+        <br />
         <ul>
           <li>
-            <Link href="/terms">Terms</Link>
+            <Link href="/terms">Términos</Link>
           </li>
           <li>
-            <Link href="/privacy">Privacy</Link>
+            <Link href="/privacy">Privacidad</Link>
           </li>
           <li>
-            <Link href="/cookie">Cookie</Link>
+            <Link href="/cookie">Cookies</Link>
           </li>
         </ul>
       </div>
-      <div>&copy; 2021 DEPLACE MAISON</div>
     </StyledPolicy>
   );
 }

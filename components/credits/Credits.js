@@ -6,22 +6,18 @@ function Credits() {
     <Wrapper>
       <StyledCreditsHeader>
         <h1>
-          Cre-
-          <br />
-          dits
+          Créditos
         </h1>
+        <br/>
+        <h2>Somos un equipo que trabajamos para ofreceros el mejor servicio en Casa Carmen.</h2>
         <ul>
-          <li>
-            <h3>niccolò miranda</h3>
-            <h3>art direction, dev, illustration</h3>
+        <li>
+            <h3>María del Carmen Vicente</h3>
+            <h4>CEO, Relaciones públicas, Mantenimiento, Innovación y coordinación.</h4>
           </li>
           <li>
-            <h3>luca mariotti</h3>
-            <h3>dev</h3>
-          </li>
-          <li>
-            <h3>Ricardo Mendieta</h3>
-            <h3>SPECIAL DEV THANKS (CURSOR)</h3>
+            <h3>Chema Vicente</h3>
+            <h4>Desarrollo web, foto, community manager, gestión de plataformas, asesor tecnológico.</h4>
           </li>
         </ul>
       </StyledCreditsHeader>

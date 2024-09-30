@@ -1,6 +1,5 @@
 import Navigation from "../navigation/Navigation";
 import Footer from "../footer/Footer";
-import Cart from "../cart/Cart";
 import { useContext, useEffect, useState } from "react";
 import CartContext from "../../store/cart-context";
 import { getCart } from "../../lib/CartUtil";

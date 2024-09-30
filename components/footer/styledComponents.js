@@ -4,8 +4,8 @@ export const StyledFooter = styled.footer`
   margin-top: 3em;
   padding: 2em;
   background-color: ${({ theme }) => theme.color.footerBackground};
-  display: grid;
-  grid-gap: 2.5em;
+  display: flex;
+  grid-gap: 7.5em;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   text-transform: uppercase;
@@ -14,7 +14,7 @@ export const StyledFooter = styled.footer`
   max-width: ${({ theme }) => theme.layout.maxWidth};
 
   @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
-    grid-template-columns: 2fr repeat(3, 1fr);
+    grid-template-columns: 3fr repeat(3, 1fr);
     margin-left: auto;
     margin-right: auto;
   }
@@ -64,6 +64,9 @@ export const StyledInfo = styled.div`
     text-decoration: none;
     color: ${({ theme }) => theme.color.primaryText};
     font-size: 1.3rem;
+    &:hover {
+      color: #00ab39; // Cambia a verde en hover
+    }
   }
 
   div:last-child {
@@ -93,6 +96,9 @@ export const StyledPolicy = styled.div`
     text-decoration: none;
     color: ${({ theme }) => theme.color.primaryText};
     font-size: 1.3rem;
+    &:hover {
+      color: #00ab39; // Cambia a verde en hover
+    }
   }
 `;
 

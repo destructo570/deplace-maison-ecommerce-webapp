@@ -6,20 +6,22 @@ function Info() {
     <StyledInfo>
       <div>
         <p>Info</p>
+        <br />
         <ul>
           <li>
             <Link href="/faq">Faq</Link>
           </li>
           <li>
-            <Link href="/returns">Returns</Link>
+            <Link href="/contact">Contacto</Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link href="/returns">Cancelaciones</Link>
           </li>
+        
         </ul>
       </div>
       <StyledSecondaryLink>
-        <Link href="/credits">Credits</Link>
+        <Link href="/credits">Nosotras</Link>
       </StyledSecondaryLink>
     </StyledInfo>
   );

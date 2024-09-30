@@ -18,12 +18,11 @@ export const StyledNavigationBar = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1em 1.5em;
+  background-color: rgba(255, 255, 255, 0.9);
 `;
 
 export const StyledLogo = styled.div`
-  width: 80px;
-  filter: ${({ isVisible, theme }) =>
-    isVisible ? theme.color.backgroundFilter : theme.color.primaryTextFilter};
+  width: 50px;
 
   &:hover {
     cursor: pointer;
@@ -31,17 +30,10 @@ export const StyledLogo = styled.div`
 `;
 
 export const StyledNavIcon = styled.div`
-  width: 40px;
+  width: 50px;
 
   &:hover {
     cursor: pointer;
-  }
-
-  filter: ${({ isVisible, theme }) =>
-    isVisible ? theme.color.backgroundFilter : theme.color.primaryTextFilter};
-
-  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
-    display: none;
   }
 `;
 
@@ -101,7 +93,7 @@ export const StyledNavMenu = styled(motion.div)`
 `;
 
 export const StyledNavLinkTitle = styled.p`
-  margin-top: 8.2em;
+  margin-top: 7.2em;
   padding-bottom: 0.3em;
   border-bottom: 1.5px solid ${({ theme }) => theme.color.background};
 `;
@@ -110,18 +102,12 @@ export const StyledNavStoreLinks = styled.ul`
   margin: 2em 0;
   p {
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 300;
   }
   p:hover {
     cursor: pointer;
-  }
-
-  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
-    //Hide the login button in medium and large screens
-    li:nth-child(3) {
-      display: none;
-    }
-  }
+    color: white; 
+  } 
 `;
 
 export const StyledNavInfoLinks = styled.ul`
@@ -138,11 +124,12 @@ export const StyledNavInfoLinks = styled.ul`
 
   p:hover {
     cursor: pointer;
+    color: white; 
   }
 `;
 
 export const StyledNavSocialLinks = styled(motion.div)`
-  margin-top: 8.2em;
+  margin-top: 4.2em;
   img {
     filter: invert(1) sepia(1%) saturate(0%) hue-rotate(175deg);
     max-width: 35px;
@@ -150,6 +137,7 @@ export const StyledNavSocialLinks = styled(motion.div)`
 
   img:hover {
     cursor: pointer;
+    
   }
 
   img + img {
@@ -165,7 +153,6 @@ export const StyledNavInquiry = styled(motion.div)`
   font-size: 1.4rem;
   font-weight: 600;
   border-top: 1.5px solid ${({ theme }) => theme.color.background};
-  border-bottom: 1.5px solid ${({ theme }) => theme.color.background};
 `;
 
 export const StyledNavLink = styled.p`
@@ -186,13 +173,6 @@ export const StyledNavLink = styled.p`
 
 export const StyledNavActions = styled.div`
   display: flex;
-
-  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
-    //Add left margin to cart icon when login button is visible
-    div {
-      margin-left: 1em;
-    }
-  }
 `;
 
 export const StyledActions = styled.div`
@@ -201,4 +181,14 @@ export const StyledActions = styled.div`
   p + p {
     margin-left: 1em;
   }
+`;
+ export const StyledPageTitle = styled.h1`
+  flex: 1;
+  text-align: center;
+  font-size: clamp(2.5rem, 3vw, 1.5rem);
+  letter-spacing: 3px;
+  font-weight: normal;
+  font-family: "TTrailer";
+  color: #004517;  
+  margin: 0;
 `;

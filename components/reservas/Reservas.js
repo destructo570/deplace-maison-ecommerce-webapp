@@ -10,7 +10,7 @@ import {
   StyledSubHeading,
 } from "./styledComponents";
 
-function Collections({ isvisible }) {
+function Collections() {
   const router = useRouter();
 
   const exploreHandler = () => {
@@ -29,16 +29,20 @@ function Collections({ isvisible }) {
     right: "0px",
     minHeight: "inherit",
   };
-
-  // Controla la visibilidad usando el prop isVisible
-  if (!isvisible) {
-    return true; // No renderizar el componente si isVisible es false
-  }
-  
-
   return (
     <Wrapper>
-      <StyledCollections exit={{ opacity: 50 }}>
+      <StyledCollections exit={{ opacity: 0 }}>
+      <Marquee
+        duration={60000}
+        width="100%"
+        height="100%"
+        axis="x"
+        align="center"
+        pauseOnHover={false}
+        reverse={true}
+      >
+        Donde el descanso te da vida
+      </Marquee>
         <StyledHeading>
           <motion.h1 initial={initialTitleState}>
             <motion.span

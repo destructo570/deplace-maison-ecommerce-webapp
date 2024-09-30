@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const themeLight = {
   color: {
-    background: "#fcf9ee",
+    background: "#00AB39",
     navBackground: "rgb(252,249,238, 0.9)",
     backgroundFilter: "invert(1) sepia(1%) saturate(0%) hue-rotate(175deg);",
     footerBackground: "#FBF8EE",
