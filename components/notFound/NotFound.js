@@ -15,7 +15,7 @@ function NotFound() {
         pauseOnHover={false}
         reverse={true}
       >
-        Donde el descanso te da vida
+        +  Arregla esto perra   
       </Marquee>
       <p>
         Parece que aquí no hay nada <Link href="/">vuelve al inicio</Link> de la web.

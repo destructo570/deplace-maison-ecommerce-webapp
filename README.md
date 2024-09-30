@@ -1,1 +1,1 @@
-## Country house Webapp NextJs and ReactJS
+## Country house Webapp React + NextJs  

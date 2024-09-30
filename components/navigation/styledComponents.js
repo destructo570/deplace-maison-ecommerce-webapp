@@ -22,7 +22,7 @@ export const StyledNavigationBar = styled.nav`
 `;
 
 export const StyledLogo = styled.div`
-  width: 70px;
+  width: 50px;
 
   &:hover {
     cursor: pointer;
@@ -30,7 +30,7 @@ export const StyledLogo = styled.div`
 `;
 
 export const StyledNavIcon = styled.div`
-  width: 70px;
+  width: 50px;
 
   &:hover {
     cursor: pointer;
@@ -173,13 +173,6 @@ export const StyledNavLink = styled.p`
 
 export const StyledNavActions = styled.div`
   display: flex;
-
-  @media (min-width: ${({ theme }) => theme.layout.medium.size}) {
-    //Add left margin to cart icon when login button is visible
-    div {
-      margin-left: 1em;
-    }
-  }
 `;
 
 export const StyledActions = styled.div`
@@ -188,4 +181,14 @@ export const StyledActions = styled.div`
   p + p {
     margin-left: 1em;
   }
+`;
+ export const StyledPageTitle = styled.h1`
+  flex: 1;
+  text-align: center;
+  font-size: clamp(2.5rem, 3vw, 1.5rem);
+  letter-spacing: 3px;
+  font-weight: normal;
+  font-family: "TTrailer";
+  color: #004517;  
+  margin: 0;
 `;
