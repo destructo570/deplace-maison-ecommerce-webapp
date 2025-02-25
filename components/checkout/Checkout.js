@@ -15,7 +15,7 @@ import Wrapper from "../wrapper/Wrapper";
 
 //TODO: Import public key using environment variables
 const stripePromise = loadStripe(
-  ""
+  "pk_test_51K6THjSHw2d4uoKkCWjB5qbUf3ZG1aaSqyEkO5sgKNxTu4cE8tjWUEinla6MwWuH9l7UUirRe4zgVLDgvSFojmPf002UhOkJBi"
 );
 
 function Checkout() {
